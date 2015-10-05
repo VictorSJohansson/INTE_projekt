@@ -13,7 +13,8 @@ public class GoogleSearch {
 		String address = "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=";
 		String query = "java tutorial";
 		String charset = "UTF-8";
-	 
+		String något = "";
+		
 		URL url = new URL(address + URLEncoder.encode(query, charset));
 	 
 		BufferedReader in = new BufferedReader(new InputStreamReader(

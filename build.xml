@@ -1,0 +1,7 @@
+<project name="TestFramework" default="build" basedir=".">
+	<target name="build" description="No description yet">
+		<mkdir dir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\OurBuild\classes"/>
+		<javac srcdir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\src\org\test\just_fun"
+			destdir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\OurBuild\classes"/>
+	</target>
+</project>
