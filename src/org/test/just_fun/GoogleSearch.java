@@ -7,13 +7,12 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class GoogleSearch {
-
+	
 	public static void main(String[] args) throws IOException {
 		 
 		String address = "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=";
 		String query = "java tutorial";
 		String charset = "UTF-8";
-		String något = "";
 		
 		URL url = new URL(address + URLEncoder.encode(query, charset));
 	 
