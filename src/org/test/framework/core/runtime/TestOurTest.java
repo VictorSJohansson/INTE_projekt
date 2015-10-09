@@ -1,6 +1,4 @@
-package org.test.framework;
-
-import org.test.framework.OurTest;
+package org.test.framework.core.runtime;
 
 import org.junit.*;
 

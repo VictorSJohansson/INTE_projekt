@@ -1,4 +1,4 @@
-package org.test.framework;
+package org.test.framework.core.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
