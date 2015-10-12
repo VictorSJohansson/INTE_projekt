@@ -5,12 +5,12 @@ import java.lang.reflect.InvocationTargetException;
 
 public class TestCase {
 
-	java.lang.reflect.Method method;
-	String name;
+	private java.lang.reflect.Method method;
+	private String methodName;
 
-	public TestCase(String name)
+	public TestCase(String methodName)
 	{
-		this.name = name;
+		this.methodName = methodName;
 	}
 	
 	public void setUp()
@@ -22,6 +22,11 @@ public class TestCase {
 	{
 		
 	}
+	
+	public TestResult run()
+	{
+		return run(new TestResult());
+	}
 
 	public TestResult run(TestResult result)
 	{
@@ -29,7 +34,7 @@ public class TestCase {
 		{
 			result.testStarted();
 			this.setUp();	
-			method = this.getClass().getMethod(name);
+			method = this.getClass().getMethod(methodName);
 			method.invoke(this);
 			this.tearDown();
 		}
