@@ -62,6 +62,11 @@ public class TestCaseTest extends TestCase {
 		
 		assert("2 run, 1 failed".equals(result.summary()));
 	}
+	
+	public void assertion(int i, int y)
+	{
+		assert i == y;
+	}
 
 	public static void main(String[] args)
 	{
@@ -72,6 +77,7 @@ public class TestCaseTest extends TestCase {
 		suite.add(new TestCaseTest("testFailedResultFormatting"));
 		suite.add(new TestCaseTest("testFailedResult"));
 		suite.add(new TestCaseTest("testSuite"));
+//		suite.add(new TestCaseTest("assertion"));
 		
 		TestResult result = new TestResult();
 		suite.run(result);

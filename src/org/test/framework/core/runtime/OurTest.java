@@ -1,4 +1,4 @@
-package org.test.framework.core.runtime.old;
+package org.test.framework.core.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 
 public @interface OurTest {
 
-	public String test() default "";
+	public String methodName() default "";
 		
 }

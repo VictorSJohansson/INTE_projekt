@@ -1,12 +1,13 @@
 package org.test.framework.core.runtime.old;
 
 import org.junit.*;
+import org.test.framework.core.runtime.OurTest;
 
 public class TestOurTest {
 
 	Object o;
 	
-	@OurTest
+	@OurTest(methodName = "")
 	public void test()
 	{
 		//Test
