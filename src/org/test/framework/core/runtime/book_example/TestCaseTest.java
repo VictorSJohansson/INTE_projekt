@@ -51,7 +51,7 @@ public class TestCaseTest extends TestCase {
 		result.testFailed();
 		assert("1 run, 1 failed".equals(result.summary()));
 	}
-	
+
 	public void testSuite()
 	{
 		suite = new TestSuite();
@@ -59,10 +59,10 @@ public class TestCaseTest extends TestCase {
 		suite.add(new WasRun("testBrokenMethod"));
 
 		suite.run(result);
-		
+
 		assert("2 run, 1 failed".equals(result.summary()));
 	}
-	
+
 	public void assertion(int i, int y)
 	{
 		assert i == y;
@@ -71,17 +71,17 @@ public class TestCaseTest extends TestCase {
 	public static void main(String[] args)
 	{
 		TestSuite suite = new TestSuite();
-		
+
 		suite.add(new TestCaseTest("testTemplateMethod"));
 		suite.add(new TestCaseTest("testResult"));
 		suite.add(new TestCaseTest("testFailedResultFormatting"));
 		suite.add(new TestCaseTest("testFailedResult"));
 		suite.add(new TestCaseTest("testSuite"));
-//		suite.add(new TestCaseTest("assertion"));
-		
+		// suite.add(new TestCaseTest("assertion"));
+
 		TestResult result = new TestResult();
 		suite.run(result);
-		
+
 		System.out.println(result.summary());
 	}
 }

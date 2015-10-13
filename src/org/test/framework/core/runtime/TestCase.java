@@ -8,7 +8,7 @@ public class TestCase {
 
 	private String methodName;
 	private Method method;
-
+	
 	public TestCase(String methodName)
 	{
 		this.methodName = methodName;
