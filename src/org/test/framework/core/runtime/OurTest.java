@@ -9,7 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 
 public @interface OurTest {
-
-	public String methodName() default "";
 		
 }

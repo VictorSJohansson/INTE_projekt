@@ -7,7 +7,7 @@ public class TestOurTest {
 
 	Object o;
 	
-	@OurTest(methodName = "")
+//	@OurTest(methodName = "")
 	public void test()
 	{
 		//Test

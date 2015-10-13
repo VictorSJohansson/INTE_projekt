@@ -3,24 +3,26 @@ package org.test.framework.core.runtime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Runner {
+import org.test.framework.core.runtime.features.TestFrameworkRunnable;
 
-	List<TestEngine> tests;
+public class TestSuite {
+
+	List<TestCase> tests;
 	
-	public Runner()
+	public TestSuite()
 	{
 		tests = new ArrayList<>();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void add(TestEngine test)
+	public void add(TestCase test)
 	{
 		tests.add(test);
 	}
 	
-	public void run(Result result)
+	public void run(TestResult result)
 	{
-		for(TestEngine test : tests)
+		for(TestCase test : tests)
 		{
 			test.run(result);
 		}

@@ -1,12 +1,12 @@
 package org.test.framework.core.runtime;
 
 
-public class Result {
+public class TestResult {
 
 	int runCount;
 	int errorCount;
 	
-	public Result()
+	public TestResult()
 	{
 		this.runCount = 0;
 		this.errorCount = 0;
