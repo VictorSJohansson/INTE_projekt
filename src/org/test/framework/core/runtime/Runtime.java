@@ -64,10 +64,10 @@ public class Runtime {
 	public TestResult execute()
 	{
 		TestResult result = new TestResult();
-		TestSuite suite = new TestSuite();
 
 		for (Class<?> cl : classList)
 		{
+			TestSuite suite = new TestSuite();
 			List<String> names = getMethodNames(ANNOTATION, cl);
 
 			for (String methodName : names)

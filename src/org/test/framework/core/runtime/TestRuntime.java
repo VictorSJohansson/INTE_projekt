@@ -65,4 +65,11 @@ public class TestRuntime {
 		assertThat(rt.execute().summary(), is("1 run, 1 failed"));
 	}
 	
+	@Test
+	public void testRuntimeClass_Method_ExecuteMethodSeveralConstructorParameter()
+	{
+		rt = new Runtime(TestClassException.class, TestClass.class);
+		assertThat(rt.execute().summary(), is("2 run, 1 failed"));
+	}
+	
 }
