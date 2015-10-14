@@ -14,9 +14,8 @@ public class Test_Boolean extends Primitive{
 		if (a==0){
 			return true;
 		}
-		else{    
+		else    
 			return false;
-		}
 	}
 	
 	//compare two booleans, return true if not equal
@@ -25,8 +24,7 @@ public class Test_Boolean extends Primitive{
 		if(a!=0){
 			return true;
 		}
-		else{
+		else
 			return false;
-		}
 	}
 }
