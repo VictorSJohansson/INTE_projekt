@@ -57,16 +57,25 @@ public class Runtime {
 	/**
 	 * Add a list of classes to the classList
 	 */
-	 
+
 	public void addClass(List<Class<?>> cl)
 	{
 		classList.addAll(cl);
 	}
 
 	/**
-	 * Add a class to the classList
+	 * Add a array of classes to the classList
 	 */
 	
+	public void addClass(Class<?>... cl)
+	{
+		classList.addAll(new ArrayList<Class<?>>(Arrays.asList(cl)));
+	}
+
+	/**
+	 * Add a class to the classList
+	 */
+
 	public void addClass(Class<?> cl)
 	{
 		classList.add(cl);

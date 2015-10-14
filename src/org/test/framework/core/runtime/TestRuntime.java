@@ -91,4 +91,12 @@ public class TestRuntime {
 		rt.addClass(classes);
 	}
 	
+	@Test
+	public void testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray()
+	{
+		Class<?>[]cl = {TEST_CLASS, ANNOTATION};
+		
+		rt.addClass(cl);
+	}
+	
 }
