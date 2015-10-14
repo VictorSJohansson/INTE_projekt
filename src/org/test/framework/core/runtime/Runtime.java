@@ -22,7 +22,8 @@ public class Runtime {
 	{
 		// classList = new ArrayList<>();
 		// classList.add(TestClass.class);
-		this(TestClass.class);
+		// this(TestClass.class);
+		this(new ArrayList<Class<?>>());
 	}
 
 	/**
@@ -32,14 +33,29 @@ public class Runtime {
 
 	public Runtime(Class<?>... cl)
 	{
-		classList = Arrays.asList(cl);
+		this(Arrays.asList(cl));
+	}
+	
+	public Runtime(List<Class<?>> cl)
+	{
+		classList = cl;
 	}
 
 	/**
 	 * Receive all method names in a list from input class which contains the
 	 * asked annotation.
 	 */
+	
+	public void empty()
+	{
+		classList.clear();;
+	}
 
+	public void add(Class<?> cl)
+	{
+		classList.add(cl);
+	}
+	
 	public List<String> getMethodNames(Class<? extends Annotation> annotation,
 			Class<?> cl)
 	{
@@ -64,7 +80,7 @@ public class Runtime {
 	public TestResult execute()
 	{
 		TestResult result = new TestResult();
-
+		
 		for (Class<?> cl : classList)
 		{
 			TestSuite suite = new TestSuite();

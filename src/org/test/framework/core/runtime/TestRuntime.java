@@ -23,19 +23,21 @@ public class TestRuntime {
 	@Before
 	public void initialize()
 	{
-		rt = new Runtime();
+		rt = new Runtime(TEST_CLASS);
 	}
 
 	@Test
 	public void testRuntimeClass_Constructor_EmptyConstructor()
 	{
+		rt = new Runtime();
+		rt.add(TEST_CLASS);
 		helpMethod_ListIsSame();
 	}
 
 	@Test
 	public void testRuntimeClass_Constructor_ParameterConstructor()
 	{
-		rt = new Runtime(TEST_CLASS);
+//		rt = new Runtime(TEST_CLASS);
 		helpMethod_ListIsSame();
 	}
 
@@ -55,7 +57,7 @@ public class TestRuntime {
 	@Test
 	public void testRuntimeClass_Method_executeMethodSuccess()
 	{
-		assertThat(rt.execute().summary(), is("1 run, 0 failed"));
+		assertThat(rt.execute().summary(), is("2 run, 0 failed"));
 	}
 
 	@Test
@@ -68,8 +70,8 @@ public class TestRuntime {
 	@Test
 	public void testRuntimeClass_Method_ExecuteMethodSeveralConstructorParameter()
 	{
-		rt = new Runtime(TestClassException.class, TestClass.class);
-		assertThat(rt.execute().summary(), is("2 run, 1 failed"));
+		rt = new Runtime(TestClass.class, TestClassException.class);
+		assertThat(rt.execute().summary(), is("3 run, 1 failed"));
 	}
 	
 }
