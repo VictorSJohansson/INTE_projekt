@@ -43,6 +43,11 @@ public class Runtime {
 	{
 		classList = cl;
 	}
+	
+	public int size()
+	{
+		return classList.size();
+	}
 
 	/**
 	 * Clears the current classList. Can be useful when runtime has executed a
@@ -64,9 +69,9 @@ public class Runtime {
 	}
 
 	/**
-	 * Add a array of classes to the classList
+	 * Add an array of classes to the classList
 	 */
-	
+
 	public void addClass(Class<?>... cl)
 	{
 		classList.addAll(new ArrayList<Class<?>>(Arrays.asList(cl)));
@@ -114,7 +119,7 @@ public class Runtime {
 		{
 			TestSuite suite = new TestSuite();
 			List<String> names = getMethodNames(ANNOTATION, cl);
-
+			
 			for (String methodName : names)
 			{
 				suite.add(new TestCase(methodName));
