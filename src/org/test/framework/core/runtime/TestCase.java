@@ -12,8 +12,9 @@ import java.lang.reflect.Method;
 
 public class TestCase {
 
-	private String methodName;
-	private Method method;
+
+	String methodName;
+	Method method;
 
 	public TestCase(String methodName)
 	{
@@ -56,6 +57,9 @@ public class TestCase {
 
 	public TestResult run(TestResult result)
 	{
+		if(methodName.isEmpty())
+			throw new NullPointerException();
+		
 		try
 		{
 			result.testStarted();
@@ -105,6 +109,9 @@ public class TestCase {
 
 	public TestResult run(TestResult result, Class<?> cl)
 	{
+		if(methodName.isEmpty())
+			throw new NullPointerException();
+		
 		try
 		{
 			result.testStarted();

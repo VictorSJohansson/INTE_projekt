@@ -43,7 +43,7 @@ public class Runtime {
 	{
 		classList = cl;
 	}
-	
+
 	public int size()
 	{
 		return classList.size();
@@ -119,7 +119,7 @@ public class Runtime {
 		{
 			TestSuite suite = new TestSuite();
 			List<String> names = getMethodNames(ANNOTATION, cl);
-			
+
 			for (String methodName : names)
 			{
 				suite.add(new TestCase(methodName));
