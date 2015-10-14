@@ -22,18 +22,24 @@ public class Test_ByteTest {
     }
 	
 	@Test
-	public void Greater_Test() {
+	public void greater_Test() {
 		assertTrue(Test_Byte.byte_Greater((byte)1, (byte)0));
 		assertFalse(Test_Byte.byte_Greater((byte)0, (byte)0));
 		assertFalse(Test_Byte.byte_Greater((byte)0, (byte)1));
 	}
 	
 	@Test
-	public void Lesser_Test() {
-		assertTrue(Test_Byte.byte_Lesser((byte)0, (byte)1));
-		assertFalse(Test_Byte.byte_Lesser((byte)0, (byte)0));
-		assertFalse(Test_Byte.byte_Lesser((byte)1, (byte)0));
+	public void less_Test() {
+		assertTrue(Test_Byte.byte_Less((byte)0, (byte)1));
+		assertFalse(Test_Byte.byte_Less((byte)0, (byte)0));
+		assertFalse(Test_Byte.byte_Less((byte)1, (byte)0));
 	}
 	
-	
+	@Test
+	public void divisor_Test() {
+		byte x = 1;
+		byte y = (byte) (x * 2);
+		assertTrue(Test_Byte.byte_Divisor(x, y));
+		assertFalse(Test_Byte.byte_Divisor(y, x));
+	}
 }

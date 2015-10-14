@@ -12,8 +12,13 @@ public class Test_Byte extends Primitive {
 		return x > y;
 	}
 	
-	public static boolean byte_Lesser(byte x, byte y) {
+	public static boolean byte_Less(byte x, byte y) {
 		// TODO Auto-generated method stub
 		return x < y;
+	}
+
+	public static boolean byte_Divisor(byte x, byte y) {
+		// TODO Auto-generated method stub
+		return y%x == 0;
 	}
 }
