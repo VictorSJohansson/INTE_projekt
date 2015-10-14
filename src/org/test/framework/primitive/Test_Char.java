@@ -2,7 +2,8 @@ package src.org.test.framework.primitive;
 
 
 /**
- * Write a description of class Test_Char here.
+ * Test bla bla
+
  * 
  * @author (your name) 
  * @version (a version number or a date)
