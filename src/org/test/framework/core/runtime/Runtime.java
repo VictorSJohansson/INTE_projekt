@@ -14,8 +14,8 @@ public class Runtime {
 	public List<Class<?>> classList;
 
 	/**
-	 * Empty constructor with a hardcoded testClass, which we will have to
-	 * remove later.
+	 * Empty constructor which creates a new empty classList for the runtime
+	 * class
 	 */
 
 	public Runtime()
@@ -27,35 +27,55 @@ public class Runtime {
 	}
 
 	/**
-	 * Constructor which takes classes as an parameter, These can later on be
-	 * executed.
+	 * Constructor which takes classes as an parameter.
 	 */
 
 	public Runtime(Class<?>... cl)
 	{
-		this(Arrays.asList(cl));
+		this(new ArrayList<Class<?>>(Arrays.asList(cl)));
 	}
-	
+
+	/**
+	 * Constructor which takes a list of classes as an parameter.
+	 */
+
 	public Runtime(List<Class<?>> cl)
 	{
 		classList = cl;
 	}
 
 	/**
-	 * Receive all method names in a list from input class which contains the
-	 * asked annotation.
+	 * Clears the current classList. Can be useful when runtime has executed a
+	 * fixed amount of classes and dont want to execute them again.
 	 */
-	
-	public void empty()
+
+	public void emptyClasses()
 	{
-		classList.clear();;
+		classList.clear();
 	}
 
-	public void add(Class<?> cl)
+	/**
+	 * Add a list of classes to the classList
+	 */
+	 
+	public void addClass(List<Class<?>> cl)
+	{
+		classList.addAll(cl);
+	}
+
+	/**
+	 * Add a class to the classList
+	 */
+	
+	public void addClass(Class<?> cl)
 	{
 		classList.add(cl);
 	}
-	
+
+	/**
+	 * Receive all method names in a list from the input class.
+	 */
+
 	public List<String> getMethodNames(Class<? extends Annotation> annotation,
 			Class<?> cl)
 	{
@@ -73,14 +93,14 @@ public class Runtime {
 	}
 
 	/**
-	 * Execute all the added classes in classList with the proper annotation
-	 * 
+	 * Execute all the added classes in classList with the proper annotation,
+	 * returns a TestResult over the progress of all the testcases
 	 */
 
 	public TestResult execute()
 	{
 		TestResult result = new TestResult();
-		
+
 		for (Class<?> cl : classList)
 		{
 			TestSuite suite = new TestSuite();

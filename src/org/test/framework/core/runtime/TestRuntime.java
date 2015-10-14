@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -30,7 +31,7 @@ public class TestRuntime {
 	public void testRuntimeClass_Constructor_EmptyConstructor()
 	{
 		rt = new Runtime();
-		rt.add(TEST_CLASS);
+		rt.addClass(TEST_CLASS);
 		helpMethod_ListIsSame();
 	}
 
@@ -72,6 +73,22 @@ public class TestRuntime {
 	{
 		rt = new Runtime(TestClass.class, TestClassException.class);
 		assertThat(rt.execute().summary(), is("3 run, 1 failed"));
+	}
+	
+	@Test
+	public void testRuntimeClass_Method_AddClass_AddOneClass()
+	{
+		rt.addClass(ANNOTATION);
+	}
+	
+	@Test
+	public void testRuntimeClass_Method_addClass_TryAddSeveralClassesFromList()
+	{
+		List<Class<?>> classes = new ArrayList<>();
+		classes.add(TEST_CLASS);
+		classes.add(TestClassException.class);
+		
+		rt.addClass(classes);
 	}
 	
 }
