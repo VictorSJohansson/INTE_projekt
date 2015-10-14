@@ -14,30 +14,80 @@ public class Runtime {
 	public List<Class<?>> classList;
 
 	/**
-	 * Empty constructor with a hardcoded testClass, which we will have to
-	 * remove later.
+	 * Empty constructor which creates a new empty classList for the runtime
+	 * class
 	 */
 
 	public Runtime()
 	{
 		// classList = new ArrayList<>();
 		// classList.add(TestClass.class);
-		this(TestClass.class);
+		// this(TestClass.class);
+		this(new ArrayList<Class<?>>());
 	}
 
 	/**
-	 * Constructor which takes classes as an parameter, These can later on be
-	 * executed.
+	 * Constructor which takes classes as an parameter.
 	 */
 
 	public Runtime(Class<?>... cl)
 	{
-		classList = Arrays.asList(cl);
+		this(new ArrayList<Class<?>>(Arrays.asList(cl)));
 	}
 
 	/**
-	 * Receive all method names in a list from input class which contains the
-	 * asked annotation.
+	 * Constructor which takes a list of classes as an parameter.
+	 */
+
+	public Runtime(List<Class<?>> cl)
+	{
+		classList = cl;
+	}
+	
+	public int size()
+	{
+		return classList.size();
+	}
+
+	/**
+	 * Clears the current classList. Can be useful when runtime has executed a
+	 * fixed amount of classes and dont want to execute them again.
+	 */
+
+	public void emptyClasses()
+	{
+		classList.clear();
+	}
+
+	/**
+	 * Add a list of classes to the classList
+	 */
+
+	public void addClass(List<Class<?>> cl)
+	{
+		classList.addAll(cl);
+	}
+
+	/**
+	 * Add an array of classes to the classList
+	 */
+
+	public void addClass(Class<?>... cl)
+	{
+		classList.addAll(new ArrayList<Class<?>>(Arrays.asList(cl)));
+	}
+
+	/**
+	 * Add a class to the classList
+	 */
+
+	public void addClass(Class<?> cl)
+	{
+		classList.add(cl);
+	}
+
+	/**
+	 * Receive all method names in a list from the input class.
 	 */
 
 	public List<String> getMethodNames(Class<? extends Annotation> annotation,
@@ -57,8 +107,8 @@ public class Runtime {
 	}
 
 	/**
-	 * Execute all the added classes in classList with the proper annotation
-	 * 
+	 * Execute all the added classes in classList with the proper annotation,
+	 * returns a TestResult over the progress of all the testcases
 	 */
 
 	public TestResult execute()
@@ -69,7 +119,7 @@ public class Runtime {
 		{
 			TestSuite suite = new TestSuite();
 			List<String> names = getMethodNames(ANNOTATION, cl);
-
+			
 			for (String methodName : names)
 			{
 				suite.add(new TestCase(methodName));

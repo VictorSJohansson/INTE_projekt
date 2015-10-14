@@ -131,7 +131,7 @@ public class TestCase {
 		{
 			// TODO Auto-generated catch block
 			result.testFailed();
-			System.out.println("InvocationTargetException");
+//			System.out.println("InvocationTargetException");
 			// e.printStackTrace();
 		}
 		catch (NoSuchMethodException e)
