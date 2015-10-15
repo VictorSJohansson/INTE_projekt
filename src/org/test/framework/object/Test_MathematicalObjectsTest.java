@@ -1,4 +1,5 @@
 package src.org.test.framework.object;
+import java.awt.Rectangle;
 
 
 
@@ -8,37 +9,25 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class Test_MathematicalObjectsTest.
+ * The test class for Test_MathematicalObjectsTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Pinar Larsson   
+ * @version 15/10/2015
  */
-public class Test_MathematicalObjectsTest
-{
+public class Test_MathematicalObjectsTest{
+    Rectangle r1,r2; 
     /**
-     * Default constructor for test class Test_MathematicalObjectsTest
+     * This method is going to test if equals_TwoRectangles() methid works properly
      */
-    public Test_MathematicalObjectsTest()
-    {
+    
+    public void test_equals_TwoRectangles(){
+           
+        r1 = new Rectangle(5,5);
+        r2 = new Rectangle(5,5);
+        
+        assertTrue(Test_MathematicalObjects.equals_TwoRectangles(r1,r2));
+
     }
 
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
 }
