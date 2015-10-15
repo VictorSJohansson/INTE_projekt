@@ -1,6 +1,7 @@
 package src.org.test.framework.object;
-import java.awt.Rectangle;
+import java.awt.*;
 import javafx.scene.shape.Circle;
+import java.util.Arrays;
 
 
 
@@ -81,4 +82,21 @@ public class Test_MathematicalObjectsTest{
         assertTrue(Test_MathematicalObjects.identical_TwoCircles(c1,c2));
 
     }
+    
+    /**
+     * This method is going to test if identical_Polygons() method works properly
+     */
+    @Test
+    public void test_identical_Polygons(){
+        int[] p1_x = {1,2,3};
+        int[] p2_x = {1,2,3};
+        int[] p1_y = {4,5,6};
+        int[] p2_y = {4,5,6};
+        Polygon p1 = new Polygon(p1_x,p1_y,3);
+        Polygon p2 = new Polygon(p2_x,p2_y,3);
+        
+        assertTrue(Test_MathematicalObjects.identical_Polygons(p1,p2));
+
+    }
 }
+    

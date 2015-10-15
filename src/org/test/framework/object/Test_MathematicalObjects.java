@@ -1,6 +1,7 @@
 package src.org.test.framework.object;
-import java.awt.Rectangle;
+import java.awt.*;
 import javafx.scene.shape.Circle;
+import java.util.Arrays;
 
 /**
  * This class is going to compare mathematical objects of the same kind with each other.
@@ -89,5 +90,26 @@ public class Test_MathematicalObjects
         int test2 = Double.compare(x1, x2);
         int test3 = Double.compare(y1, y2);
         return test1 == 0 && test2 == 0 && test3 == 0;
+    
+        
+    }
+    
+         /**
+     * This method will compare two polygons to determine if they are equal
+     * 
+     *
+     * 
+     */
+    public static boolean identical_Polygons(Polygon a, Polygon b)
+    {
+        int a_n = a.npoints;
+        int b_n = b.npoints;
+        int[] a_xor = a.xpoints;
+        int[] b_xor = b.xpoints;
+        int[] a_yor = a.ypoints;
+        int[] b_yor = b.ypoints;
+        
+        return Arrays.equals(a_xor, b_xor) && Arrays.equals(a_yor, b_yor) && a_n == b_n;
+        
     }
 }
