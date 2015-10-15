@@ -114,35 +114,46 @@ public class Runtime {
 	public TestResult execute()
 	{
 		TestResult result = new TestResult();
+		
+		iterateClassList(result);
 
+		return result;
+	}
+
+	private void iterateClassList(TestResult result)
+	{
 		for (Class<?> cl : classList)
 		{
 			TestSuite suite = new TestSuite();
 			List<String> names = getMethodNames(ANNOTATION, cl);
 
-			for (String methodName : names)
-			{
-				try
-				{
-					suite.add(new TestCase(methodName, cl.newInstance()));
-				}
-				catch (InstantiationException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				catch (IllegalAccessException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				// TestCase t = new TestCase(s);
-				// t.run(result, TestClass.class);
-			}
+			iterateMethodNames(cl, suite, names);
 
-			suite.run(result, cl);
+			suite.run(result);
 		}
+	}
 
-		return result;
+	private void iterateMethodNames(Class<?> cl, TestSuite suite,
+			List<String> names)
+	{
+		for (String methodName : names)
+		{
+			try
+			{
+				suite.add(new TestCase(methodName, cl.newInstance()));
+			}
+			catch (InstantiationException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (IllegalAccessException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			// TestCase t = new TestCase(s);
+			// t.run(result, TestClass.class);
+		}
 	}
 }

@@ -21,15 +21,15 @@ public class TestSuite {
 		tests.add(test);
 	}
 
-	public void run(TestResult result)
-	{
-		for (TestCase test : tests)
-		{
-			test.run(result);
-		}
-	}
+	// public void run(TestResult result)
+	// {
+	// for (TestCase test : tests)
+	// {
+	// test.run(result);
+	// }
+	// }
 
-	public void run(TestResult result, Class<?> cl)
+	public void run(TestResult result)
 	{
 		for (TestCase test : tests)
 		{
