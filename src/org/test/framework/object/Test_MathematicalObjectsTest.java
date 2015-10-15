@@ -16,17 +16,30 @@ import org.junit.Test;
  */
 public class Test_MathematicalObjectsTest{
     
-    Rectangle r1,r2; 
+    
     /**
      * This method is going to test if equals_TwoRectangles() methid works properly
      */
     @Test
     public void test_equals_TwoRectangles(){
            
-        r1 = new Rectangle(4,5);
-        r2 = new Rectangle(5,5);
+        Rectangle r1 = new Rectangle(5,5,6,6);
+        Rectangle r2 = new Rectangle(6,6);
         
         assertTrue(Test_MathematicalObjects.equals_TwoRectangles(r1,r2));
+
+    }
+    
+    /**
+     * This method is going to test if identical_TwoRectangles() methid works properly
+     */
+    @Test
+    public void test_identical_TwoRectangles(){
+           
+        Rectangle r1 = new Rectangle(5,5,6,6);
+        Rectangle r2 = new Rectangle(5,5,6,6);
+        
+        assertTrue(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
 
     }
 

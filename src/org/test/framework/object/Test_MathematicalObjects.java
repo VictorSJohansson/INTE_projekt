@@ -26,5 +26,22 @@ public class Test_MathematicalObjects
         return test1 == 0 && test2 == 0;
     }
     
+     /**
+     * This method will compare two rectangles to determine of they are equal (same coordinates and
+     * same dimensions) 
+     *
+     * 
+     */
+    public static boolean identical_TwoRectangles(Rectangle a, Rectangle b)
+    {
+        double height1 = a.getHeight();
+        double height2 = b.getHeight();
+        double width1 = a.getWidth();
+        double width2 = b.getWidth();
+        int test1 = Double.compare(height1, height2);
+        int test2 = Double.compare(width1, width2);
+        return test1 == 0 && test2 == 0 && a.x == b.x && a.y == b.y;
+    }
+    
 
 }
