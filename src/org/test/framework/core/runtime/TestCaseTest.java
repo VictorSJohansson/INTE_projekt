@@ -2,6 +2,7 @@
 package org.test.framework.core.runtime;
 
 import org.junit.Test;
+import org.test.framework.TestClassWithSetup;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -34,27 +35,98 @@ public class TestCaseTest {
 	{
 		assertThat(tc.method, IsNull.nullValue());
 	}
-	
-	@Test(expected=NullPointerException.class)
+
+	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_NullConstructor_cannotRun()
 	{
 		tc.run();
 	}
-	
-	@Test(expected=NullPointerException.class)
+
+	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_EmptyConstructor_cannotRun()
 	{
 		tc = new TestCase("");
 		tc.run();
 	}
-	
-	
-	
+
 	@Test
 	public void testTestCaseClass_Constructor_Parameter_CanRun()
 	{
-		tc = new TestCase("testMethod", this.getClass());
-		tc.run(new TestResult());
-	}
+		try
+		{
+			tc = new TestCase("testMethod", this.getClass().newInstance());
+			tc.run(new TestResult());
+		}
+		catch (InstantiationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	
+	}
+
+	@Test
+	public void testTestCaseClass_Method_Run_TestResultIsCorrect()
+	{
+		try
+		{
+			tc = new TestCase("testMethod", TestClass.class.newInstance());
+			assertThat(tc.run().summary(), is("1 run, 0 failed"));
+		}
+		catch (InstantiationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test
+	public void testTestCaseClass_Method_Run_TestResultIsIncorrect()
+	{
+		try
+		{
+			tc = new TestCase("test", TestClass.class.newInstance());
+			assertThat(tc.run().summary(), is("1 run, 1 failed"));
+		}
+		catch (InstantiationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test
+	public void testTestCaseClass_Method_Setup_addSetupValue()
+	{
+		try
+		{
+			Object instance = TestClassWithSetup.class.newInstance();
+			new TestCase("testMethod", instance).run();
+			assertThat(((TestClassWithSetup) instance).setup, is(true));
+		}
+		catch (InstantiationException | IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 }

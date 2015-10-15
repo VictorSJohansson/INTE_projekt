@@ -122,7 +122,20 @@ public class Runtime {
 
 			for (String methodName : names)
 			{
-				suite.add(new TestCase(methodName, cl));
+				try
+				{
+					suite.add(new TestCase(methodName, cl.newInstance()));
+				}
+				catch (InstantiationException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				catch (IllegalAccessException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				// TestCase t = new TestCase(s);
 				// t.run(result, TestClass.class);
 			}
