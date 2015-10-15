@@ -7,7 +7,7 @@ import org.test.framework.core.runtime.Test;
 public class TestClassWithSetup implements Test {
 
 	public boolean setup = false;
-	
+	public boolean teardown = false;
 	@Override
 	public void setup()
 	{
@@ -17,7 +17,7 @@ public class TestClassWithSetup implements Test {
 	@Override
 	public void teardown()
 	{
-		// TODO Auto-generated method stub
+		teardown = true;
 	}
 
 	@OurTest

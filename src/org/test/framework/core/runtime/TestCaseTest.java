@@ -39,14 +39,14 @@ public class TestCaseTest {
 	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_NullConstructor_cannotRun()
 	{
-		tc.run();
+		assertThat(tc.run().summary(), is("0 run, 0 failed"));
 	}
 
 	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_EmptyConstructor_cannotRun()
 	{
 		tc = new TestCase("");
-		tc.run();
+		assertThat(tc.run().summary(), is("0 run, 0 failed"));
 	}
 
 	@Test
@@ -55,7 +55,7 @@ public class TestCaseTest {
 		try
 		{
 			tc = new TestCase("testMethod", this.getClass().newInstance());
-			tc.run(new TestResult());
+			assertThat(tc.run().summary(), is("1 run, 1 failed"));
 		}
 		catch (InstantiationException e)
 		{
@@ -111,7 +111,7 @@ public class TestCaseTest {
 		}
 
 	}
-
+	
 	@Test
 	public void testTestCaseClass_Method_Setup_addSetupValue()
 	{
@@ -126,7 +126,22 @@ public class TestCaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+	}
+	
+	@Test
+	public void testTestCaseClass_Method_Teardown_addTeardownValue()
+	{
+		try
+		{
+			Object instance = TestClassWithSetup.class.newInstance();
+			new TestCase("testMethod", instance).run();
+			assertThat(((TestClassWithSetup) instance).teardown, is(true));
+		}
+		catch (InstantiationException | IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

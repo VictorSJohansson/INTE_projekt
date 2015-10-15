@@ -5,9 +5,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Creates a simple testcase, one testcase is bound to one test. After a
+ * Creates a simple testcase. One testcase is bound to one test and result. After a
  * testcase is created you run the case, either as an child if you use
- * inheritance or by adding the class which is used in the run.
+ * inheritance or by adding the class instance to the testcase.
  */
 
 public class TestCase implements Test {
@@ -130,16 +130,13 @@ public class TestCase implements Test {
 	public TestResult run(TestResult result)
 	{
 		if (methodName.isEmpty())
-			throw new NullPointerException();
+			throw new NullPointerException("MethodName is empty");
 
 		try
 		{
 			result.testStarted();
 
-			if (instance instanceof Test)
-				((Test) instance).setup();
-			else
-				this.setup();
+			initializeSetup();
 
 			// if()
 			// {
@@ -152,10 +149,7 @@ public class TestCase implements Test {
 			// method = cl.getMethod(methodName);
 			// method.invoke(cl.newInstance());
 
-			if (instance instanceof Test)
-				((Test) instance).teardown();
-			else
-				this.teardown();
+			initializeTeardown();
 		}
 		catch (IllegalAccessException e)
 		{
@@ -191,6 +185,22 @@ public class TestCase implements Test {
 		}
 
 		return result;
+	}
+
+	private void initializeTeardown()
+	{
+		if (instance instanceof Test)
+			((Test) instance).teardown();
+		else
+			this.teardown();
+	}
+
+	private void initializeSetup()
+	{
+		if (instance instanceof Test)
+			((Test) instance).setup();
+		else
+			this.setup();
 	}
 
 	/**
