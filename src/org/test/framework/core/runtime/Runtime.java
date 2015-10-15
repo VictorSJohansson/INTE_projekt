@@ -122,7 +122,7 @@ public class Runtime {
 
 			for (String methodName : names)
 			{
-				suite.add(new TestCase(methodName));
+				suite.add(new TestCase(methodName, cl));
 				// TestCase t = new TestCase(s);
 				// t.run(result, TestClass.class);
 			}

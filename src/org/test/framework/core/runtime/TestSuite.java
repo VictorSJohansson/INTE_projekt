@@ -33,7 +33,7 @@ public class TestSuite {
 	{
 		for (TestCase test : tests)
 		{
-			test.run(result, cl);
+			test.run(result);
 		}
 	}
 }

@@ -53,8 +53,8 @@ public class TestCaseTest {
 	@Test
 	public void testTestCaseClass_Constructor_Parameter_CanRun()
 	{
-		tc = new TestCase("testMethod");
-		tc.run(new TestResult(), this.getClass());
+		tc = new TestCase("testMethod", this.getClass());
+		tc.run(new TestResult());
 	}
 	
 }

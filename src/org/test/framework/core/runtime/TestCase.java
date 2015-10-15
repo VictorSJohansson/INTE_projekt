@@ -12,13 +12,20 @@ import java.lang.reflect.Method;
 
 public class TestCase {
 
-
 	String methodName;
 	Method method;
+	Class<?> cl;
 
 	public TestCase(String methodName)
 	{
 		this.methodName = methodName;
+		this.cl = this.getClass();
+	}
+	
+	public TestCase(String methodName, Class<?> cl)
+	{
+		this.methodName = methodName;
+		this.cl = cl;
 	}
 
 	/**
@@ -57,61 +64,9 @@ public class TestCase {
 
 	public TestResult run(TestResult result)
 	{
-		if(methodName.isEmpty())
+		if (methodName.isEmpty())
 			throw new NullPointerException();
-		
-		try
-		{
-			result.testStarted();
-			this.setup();
-			method = this.getClass().getMethod(methodName);
-			method.invoke(this);
-			this.tearDown();
-		}
-		catch (IllegalAccessException e)
-		{
-			// TODO Auto-generated catch block
-			result.testFailed();
-			e.printStackTrace();
-		}
-		catch (IllegalArgumentException e)
-		{
-			// TODO Auto-generated catch block
-			result.testFailed();
-			e.printStackTrace();
-		}
-		catch (InvocationTargetException e)
-		{
-			// TODO Auto-generated catch block
-			result.testFailed();
-			e.printStackTrace();
-		}
-		catch (NoSuchMethodException e)
-		{
-			// TODO Auto-generated catch block
-			result.testFailed();
-			e.printStackTrace();
-		}
-		catch (SecurityException e)
-		{
-			// TODO Auto-generated catch block
-			result.testFailed();
-			e.printStackTrace();
-		}
 
-		return result;
-	}
-
-	/**
-	 * Run a simple testcase, which takes the class parameter and run the method
-	 * and update result with how it went.
-	 */
-
-	public TestResult run(TestResult result, Class<?> cl)
-	{
-		if(methodName.isEmpty())
-			throw new NullPointerException();
-		
 		try
 		{
 			result.testStarted();
@@ -124,21 +79,19 @@ public class TestCase {
 		{
 			// TODO Auto-generated catch block
 			result.testFailed();
-			System.out.println("IllegalAccessException");
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 		catch (IllegalArgumentException e)
 		{
 			// TODO Auto-generated catch block
 			result.testFailed();
-			System.out.println("IllegalArgumentException");
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 		catch (InvocationTargetException e)
 		{
 			// TODO Auto-generated catch block
 			result.testFailed();
-//			System.out.println("InvocationTargetException");
+			// System.out.println("InvocationTargetException");
 			// e.printStackTrace();
 		}
 		catch (NoSuchMethodException e)
@@ -146,14 +99,13 @@ public class TestCase {
 			// TODO Auto-generated catch block
 			result.testFailed();
 			System.out.println("NoSuchMethodException");
-			// e.printStackTrace();
+//			e.printStackTrace();
 		}
 		catch (SecurityException e)
 		{
 			// TODO Auto-generated catch block
 			result.testFailed();
-			System.out.println("SecurityException");
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 		catch (InstantiationException e)
 		{
@@ -165,4 +117,68 @@ public class TestCase {
 
 		return result;
 	}
+
+	/**
+	 * Run a simple testcase, which takes the class parameter and run the method
+	 * and update result with how it went.
+	 */
+
+//	public TestResult run(TestResult result, Class<?> cl)
+//	{
+//		if (methodName.isEmpty())
+//			throw new NullPointerException();
+//
+//		try
+//		{
+//			result.testStarted();
+//			this.setup();
+//			method = cl.getMethod(methodName);
+//			method.invoke(cl.newInstance());
+//			this.tearDown();
+//		}
+//		catch (IllegalAccessException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			System.out.println("IllegalAccessException");
+//			// e.printStackTrace();
+//		}
+//		catch (IllegalArgumentException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			System.out.println("IllegalArgumentException");
+//			// e.printStackTrace();
+//		}
+//		catch (InvocationTargetException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			// System.out.println("InvocationTargetException");
+//			// e.printStackTrace();
+//		}
+//		catch (NoSuchMethodException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			System.out.println("NoSuchMethodException");
+//			// e.printStackTrace();
+//		}
+//		catch (SecurityException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			System.out.println("SecurityException");
+//			// e.printStackTrace();
+//		}
+//		catch (InstantiationException e)
+//		{
+//			// TODO Auto-generated catch block
+//			result.testFailed();
+//			System.out.println("InstantiationException");
+//			// e.printStackTrace();
+//		}
+//
+//		return result;
+//	}
 }
