@@ -1,2 +1,0 @@
-INDEX VERSION 1.127+/Users/victorjohansson/Documents/Programming/Stockholms Universtiet/INTE_projekt/.metadata/.plugins/org.eclipse.jdt.core
-1618240322.index
