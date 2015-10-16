@@ -46,8 +46,8 @@ public class Test_MathematicalObjects
     }
     
     /**
-     * This method will compare two rectangles to determine if they are equal (same coordinates and
-     * same dimensions) 
+     * This method will determine if a rectangle is a square or not.
+     * 
      *
      * 
      */
