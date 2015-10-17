@@ -1,4 +1,4 @@
-package src.org.test.framework.object;
+package org.test.framework.object;
 import java.awt.*;
 import javafx.scene.shape.Circle;
 import java.util.Arrays;
