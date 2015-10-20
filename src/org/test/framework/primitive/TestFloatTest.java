@@ -21,16 +21,16 @@ public class TestFloatTest {
 	
 	@Test
 	public void greater_Test() {
-		assertTrue(TestFloat.float_Greater((float)1, (float)0));
-		assertFalse(TestFloat.float_Greater((float)0, (float)0));
-		assertFalse(TestFloat.float_Greater((float)0, (float)1));
+		assertTrue(TestFloat.greater((float)1, (float)0));
+		assertFalse(TestFloat.greater((float)0, (float)0));
+		assertFalse(TestFloat.greater((float)0, (float)1));
 	}
 	
 	@Test
 	public void less_Test() {
-		assertTrue(TestFloat.float_Less((float)0, (float)1));
-		assertFalse(TestFloat.float_Less((float)0, (float)0));
-		assertFalse(TestFloat.float_Less((float)1, (float)0));
+		assertTrue(TestFloat.less((float)0, (float)1));
+		assertFalse(TestFloat.less((float)0, (float)0));
+		assertFalse(TestFloat.less((float)1, (float)0));
 	}
 	
 	@Test

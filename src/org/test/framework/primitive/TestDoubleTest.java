@@ -21,7 +21,7 @@ public class TestDoubleTest
     @Test
     public void equals_Test()
     {
-        assertTrue(TestDouble.double_Equals(1.5, 1.5));
+        assertTrue(TestDouble.equals(1.5, 1.5));
         
     }
     
@@ -31,7 +31,7 @@ public class TestDoubleTest
     @Test
     public void greater_Test()
     {
-        assertTrue(TestDouble.double_Greater(1.5, 1.4));
+        assertTrue(TestDouble.greater(1.5, 1.4));
         
     }
     
@@ -41,7 +41,7 @@ public class TestDoubleTest
     @Test
     public void less_Test()
     {
-        assertTrue(TestDouble.double_Less(1.3, 1.4));
+        assertTrue(TestDouble.less(1.3, 1.4));
        
     }
     
@@ -51,8 +51,18 @@ public class TestDoubleTest
     @Test
     public void integerValue_Test()
     {
-        assertTrue(TestDouble.double_IntegerValue(2.3, 1.4));
+        assertTrue(TestDouble.equalIntegerValue(2.3, 1.4));
        
     }
-    }
+    
+    @Test
+	public void valueWithinFloatRange_Test() { //added by John Thorelli 20/10/2015
+		double x = Float.MAX_VALUE + 1;
+		assertFalse(TestDouble.valueWithinFloatRange(x));
+		x = Float.MIN_VALUE - 1;
+		assertFalse(TestDouble.valueWithinFloatRange(x));
+		x = 0;
+		assertTrue(TestDouble.valueWithinFloatRange(x));
+	}
+}
 

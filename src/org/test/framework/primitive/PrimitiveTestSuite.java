@@ -230,7 +230,83 @@ public class PrimitiveTestSuite {
 	
 	//Float*********************************************************************************************
 	
+	public void equals_Test() {
+        assertTrue(Primitive.float_Equals(Float.MAX_VALUE, Float.MAX_VALUE));
+        assertFalse(Primitive.float_Equals(Float.MAX_VALUE, Float.MIN_VALUE));
+        
+    }
+	
+	@Test
+	public void greater_Test() {
+		assertTrue(Primitive.greater((float)1, (float)0));
+		assertFalse(Primitive.greater((float)0, (float)0));
+		assertFalse(Primitive.greater((float)0, (float)1));
+	}
+	
+	@Test
+	public void less_Test() {
+		assertTrue(Primitive.less((float)0, (float)1));
+		assertFalse(Primitive.less((float)0, (float)0));
+		assertFalse(Primitive.less((float)1, (float)0));
+	}
+	
+	@Test
+	public void sameIntegerValue_Test() {
+		assertTrue(Primitive.sameIntegerValue((float)5.3, (float)5.7));
+		assertFalse(Primitive.sameIntegerValue((float)8.5, (float)8.5));
+	}
+	
 	//Doubble*******************************************************************************************
+	
+    /**
+     * This method tests if double_Equals(x,y) works.
+     */
+    @Test
+    public void equals_Test()
+    {
+        assertTrue(Primitive.equals(1.5, 1.5));
+        
+    }
+    
+     /**
+     * This method tests if double_Greater(x,y) works.
+     */
+    @Test
+    public void greater_Test()
+    {
+        assertTrue(Primitive.greater(1.5, 1.4));
+        
+    }
+    
+    /**
+     * This method tests if double_Less(x,y) works.
+     */
+    @Test
+    public void less_Test()
+    {
+        assertTrue(Primitive.less(1.3, 1.4));
+       
+    }
+    
+    /**
+     * This method tests if double_IntegerValue(x,y) works.
+     */
+    @Test
+    public void integerValue_Test()
+    {
+        assertTrue(Primitive.equalIntegerValue(2.3, 1.4));
+       
+    }
+    
+    @Test
+	public void valueWithinFloatRange_Test() { //added by John Thorelli 20/10/2015
+		double x = Float.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinFloatRange(x));
+		x = Float.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinFloatRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinFloatRange(x));
+	}
 	
 	//Char**********************************************************************************************
 }

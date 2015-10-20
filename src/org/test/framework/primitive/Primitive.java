@@ -132,9 +132,145 @@ public class Primitive {
 	
 	//Long**********************************************************************************************
 	
+	/*
+	 * This method checks to see if long x and long y holds the same value
+	 * and returns true if they do, false otherwise.
+	 */
+	public static boolean equals(long x, long y){
+		
+		int a = Long.compare(x, y);
+		if(a==1){
+			return true;
+		}
+		else 
+			return false;
+	}
+	
+	/*
+	 * This method returns true if long x is greater than long y.
+	 */
+	public static boolean greater(long x, long y){
+		
+		int a = Long.compare(x, y);
+		if(a>0){
+			return true;
+		}
+		else 
+			return false;
+	}
+	
+	/*
+	 * Compares two longs and returns true if x is less than y.
+	 */
+	public static boolean less(long x, long y){
+		
+		int a = Long.compare(x, y);
+		if(a<0){
+			return true;
+		}
+		else 
+			return false;
+	}
+	
+    public static boolean divisor(long x, long y) { //added by John Thorelli 20/10/2015
+        return y%x == 0;
+    }
+
+	public static boolean valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Int.MIN_VALUE || x > Int.MAX_VALUE)
+			return false;
+		return true;
+	}
+
+	public static boolean valueWithinShortRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Short.MIN_VALUE || x > Short.MAX_VALUE)
+			return false;
+		return true;
+	}
+
+	public static boolean valueWithinByteRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE)
+			return false;
+		return true;
+	}
+	
 	//Float*********************************************************************************************
 	
+	public static boolean equals(short x, float y) {
+		// TODO Auto-generated method stub
+		return y == x;
+	}
+
+	public static boolean greater(float x, float y) {
+		// TODO Auto-generated method stub
+		return x > y;
+	}
+	
+	public static boolean less(float x, float y) {
+		// TODO Auto-generated method stub
+		return x < y;
+	}
+
+	public static boolean sameIntegerValue(float x, float y) {
+		// TODO Auto-generated method stub
+        int a = (int) x;
+        int b = (int) y;
+        return a == b;
+    }
+	
 	//Doubble*******************************************************************************************
+	
+    /**
+   * Following method tests if given doubles x and y are equal to each other.
+   */
+  public static boolean equals(double x, double y)
+  {  
+      int a = Double.compare(x, y);
+      if(a == 0)
+      return true;
+      else
+      return false;
+  }
+   
+  /**
+   * Following method tests if, for given doubles x and y, it holds that x is greater than y.
+   */
+  public static boolean greater(double x, double y)
+  {
+      int a = Double.compare(x, y);
+      if(a > 0)
+      return true;
+      else
+      return false;
+  }
+  
+   /**
+   * Following method tests if, for given doubles x and y, it holds that x is less than y.
+   */
+  public static boolean less(double x, double y)
+  {
+      int a = Double.compare(x, y);
+      if(a < 0)
+      return true;
+      else
+      return false;
+  }
+
+   /**
+   * Following method tests if, for given doubles x and y, they have the same integer value.
+   */
+  public static boolean equalIntegerValue(double x, double y)
+  {
+      int a = (int) x;
+      int b = (int) y;
+      return a == b;
+  }
+
+	public static boolean valueWithinFloatRange(double x) { //added by John Thorelli 20/10/2015
+		if(x < Float.MIN_VALUE || x > Float.MAX_VALUE)
+			return false;
+		return true;
+	} 
 	
 	//Char**********************************************************************************************
 }

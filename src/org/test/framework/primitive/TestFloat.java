@@ -8,17 +8,17 @@ package src.org.test.framework.primitive;
  */
 public class TestFloat {
 
-	public static boolean float_Equals(short x, float y) {
+	public static boolean equals(short x, float y) {
 		// TODO Auto-generated method stub
 		return y == x;
 	}
 
-	public static boolean float_Greater(float x, float y) {
+	public static boolean greater(float x, float y) {
 		// TODO Auto-generated method stub
 		return x > y;
 	}
 	
-	public static boolean float_Less(float x, float y) {
+	public static boolean less(float x, float y) {
 		// TODO Auto-generated method stub
 		return x < y;
 	}
