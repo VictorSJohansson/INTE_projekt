@@ -9,22 +9,22 @@ package src.org.test.framework.primitive;
 
 public class TestShort extends Primitive {
 
-	public static boolean short_Equals(short x, short y) {
+	public static boolean equals(short x, short y) {
 		// TODO Auto-generated method stub
 		return y == x;
 	}
 
-	public static boolean short_Greater(short x, short y) {
+	public static boolean greater(short x, short y) {
 		// TODO Auto-generated method stub
 		return x > y;
 	}
 	
-	public static boolean short_Less(short x, short y) {
+	public static boolean less(short x, short y) {
 		// TODO Auto-generated method stub
 		return x < y;
 	}
 
-	public static boolean short_Divisor(short x, short y) {
+	public static boolean divisor(short x, short y) {
 		// TODO Auto-generated method stub
 		return y%x == 0;
 	}

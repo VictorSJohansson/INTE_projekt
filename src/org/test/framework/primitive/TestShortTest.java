@@ -23,24 +23,24 @@ public class TestShortTest {
 	
 	@Test
 	public void greater_Test() {
-		assertTrue(TestShort.short_Greater((short)1, (short)0));
-		assertFalse(TestShort.short_Greater((short)0, (short)0));
-		assertFalse(TestShort.short_Greater((short)0, (short)1));
+		assertTrue(TestShort.greater((short)1, (short)0));
+		assertFalse(TestShort.greater((short)0, (short)0));
+		assertFalse(TestShort.greater((short)0, (short)1));
 	}
 	
 	@Test
 	public void less_Test() {
-		assertTrue(TestShort.short_Less((short)0, (short)1));
-		assertFalse(TestShort.short_Less((short)0, (short)0));
-		assertFalse(TestShort.short_Less((short)1, (short)0));
+		assertTrue(TestShort.less((short)0, (short)1));
+		assertFalse(TestShort.less((short)0, (short)0));
+		assertFalse(TestShort.less((short)1, (short)0));
 	}
 	
 	@Test
 	public void divisor_Test() {
 		short x = 1;
 		short y = (short) (x * 2);
-		assertTrue(TestShort.short_Divisor(x, y));
-		assertFalse(TestShort.short_Divisor(y, x));
+		assertTrue(TestShort.divisor(x, y));
+		assertFalse(TestShort.divisor(y, x));
 	}
 	
 	@Test
