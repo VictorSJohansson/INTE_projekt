@@ -1,9 +1,6 @@
 
 package org.test.framework.primitive;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -14,15 +11,4 @@ import org.junit.runners.Suite.SuiteClasses;
 		Test_IntTest.class, Test_LongTest.class })
 public class PrimitiveTestSuite {
 	
-	//tests boolean_Equals
-	@Test
-	public void equals_Test(){
-		assertTrue(Test_Boolean.boolean_Equals(true, true));
-	}
-	
-	//tests boolean_NotEquals
-	@Test
-	public void notEquals_Test(){
-		assertTrue(Test_Boolean.boolean_NotEquals(true, false));
-	}
 }
