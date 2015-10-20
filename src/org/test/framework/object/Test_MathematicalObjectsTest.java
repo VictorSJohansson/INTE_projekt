@@ -1,9 +1,8 @@
 package org.test.framework.object;
+
 import java.awt.*;
 import javafx.scene.shape.Circle;
 import java.util.Arrays;
-
-
 
 import static org.junit.Assert.*;
 import org.junit.After;

@@ -11,7 +11,6 @@ import org.junit.Test;
  * @author  (John Thorelli)
  * @version (16-10-2015)
  */
-
 public class Test_FloatTest {
 	
     public void equals_Test() {

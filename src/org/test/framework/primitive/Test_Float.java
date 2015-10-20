@@ -6,7 +6,6 @@ package org.test.framework.primitive;
  * @author  (John Thorelli)
  * @version (16-10-2015)
  */
-
 public class Test_Float {
 
 	public static boolean float_Equals(short x, float y) {
