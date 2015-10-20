@@ -11,7 +11,7 @@ public class TestChar extends Primitive
 {
     /* This method will compare two char.
      */
-    public static boolean equals_Char(char a, char b )
+    public static boolean equals(char a, char b )
     {        
         return a == b;
     }

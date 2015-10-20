@@ -18,8 +18,9 @@ public class TestCharTest
 	 *
 	 */
 	@Test
-	public void test_equals_Char()
+	public void equals_Test()
 	{
-		assertTrue(TestChar.equals_Char('a','a'));
+		assertTrue(TestChar.equals('a','a'));
+		assertFalse(TestChar.equals('a','b'));
 	}
 }

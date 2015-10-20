@@ -309,4 +309,15 @@ public class PrimitiveTestSuite {
 	}
 	
 	//Char**********************************************************************************************
+    
+	/**
+	 * Tests if equals_Char() method works properly.
+	 *
+	 */
+	@Test
+	public void equals_Test()
+	{
+		assertTrue(TestChar.equals('a','a'));
+		assertFalse(TestChar.equals('a','b'));
+	}
 }

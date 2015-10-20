@@ -273,4 +273,11 @@ public class Primitive {
 	} 
 	
 	//Char**********************************************************************************************
+	
+    /* This method will compare two char.
+     */
+    public static boolean equals(char a, char b )
+    {        
+        return a == b;
+    }
 }
