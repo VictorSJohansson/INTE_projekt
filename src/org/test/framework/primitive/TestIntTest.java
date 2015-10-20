@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 
 
@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class Test_IntTest
+public class TestIntTest
 {
 
     /**
@@ -22,7 +22,7 @@ public class Test_IntTest
     @Test
     public void equals_Test()
     {
-        assertTrue(Test_Int.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+        assertTrue(TestInt.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
         
     }
     
@@ -33,7 +33,7 @@ public class Test_IntTest
     @Test
     public void greater_Test()
     {
-        assertTrue(Test_Int.int_Greater(5,3));
+        assertTrue(TestInt.int_Greater(5,3));
         
     }
     
@@ -43,7 +43,7 @@ public class Test_IntTest
     @Test
     public void less_Test()
     {
-        assertTrue(Test_Int.int_Less(3,5));
+        assertTrue(TestInt.int_Less(3,5));
         
     }
     
@@ -53,7 +53,7 @@ public class Test_IntTest
     @Test
     public void divisor_Test()
     {
-        assertTrue(Test_Int.int_Divisor(3,6));
+        assertTrue(TestInt.int_Divisor(3,6));
         
     }
 }

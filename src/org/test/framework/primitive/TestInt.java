@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 
 /**
@@ -7,7 +7,7 @@ package org.test.framework.primitive;
  * @author Pinar Larsson
  * @version 11/10/2015
  */
-public class Test_Int extends Primitive
+public class TestInt extends Primitive
 {   
 
      /**

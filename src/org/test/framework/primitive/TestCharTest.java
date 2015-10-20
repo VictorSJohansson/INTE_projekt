@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author  Pinar Larsson
  * @version 15/10/2015
  */
-public class Test_CharTest
+public class TestCharTest
 {
 	/**
 	 * Tests if equals_Char() method works properly.
@@ -20,6 +20,6 @@ public class Test_CharTest
 	@Test
 	public void test_equals_Char()
 	{
-		assertTrue(Test_Char.equals_Char('a','a'));
+		assertTrue(TestChar.equals_Char('a','a'));
 	}
 }

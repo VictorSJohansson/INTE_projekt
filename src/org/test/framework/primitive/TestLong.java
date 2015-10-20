@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -9,7 +9,7 @@ import org.junit.Test;
  * @author Victor Johansson
  * @version 13-10-2015
  */
-public class Test_Long {
+public class TestLong {
 	
 	/*
 	 * This method checks to see if long x and long y holds the same value

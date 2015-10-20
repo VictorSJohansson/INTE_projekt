@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 
 /**
@@ -7,7 +7,7 @@ package org.test.framework.primitive;
  * @Pinar Larsson    
  * @14/10/2015
  */
-public class Test_Char extends Primitive
+public class TestChar extends Primitive
 {
     /* This method will compare two char.
      */

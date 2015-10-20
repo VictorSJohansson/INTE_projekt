@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 
 
@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class Test_DoubleTest
+public class TestDoubleTest
 {
     /**
      * This method tests if double_Equals(x,y) works.
@@ -21,7 +21,7 @@ public class Test_DoubleTest
     @Test
     public void equals_Test()
     {
-        assertTrue(Test_Double.double_Equals(1.5, 1.5));
+        assertTrue(TestDouble.double_Equals(1.5, 1.5));
         
     }
     
@@ -31,7 +31,7 @@ public class Test_DoubleTest
     @Test
     public void greater_Test()
     {
-        assertTrue(Test_Double.double_Greater(1.5, 1.4));
+        assertTrue(TestDouble.double_Greater(1.5, 1.4));
         
     }
     
@@ -41,7 +41,7 @@ public class Test_DoubleTest
     @Test
     public void less_Test()
     {
-        assertTrue(Test_Double.double_Less(1.3, 1.4));
+        assertTrue(TestDouble.double_Less(1.3, 1.4));
        
     }
     
@@ -51,7 +51,7 @@ public class Test_DoubleTest
     @Test
     public void integerValue_Test()
     {
-        assertTrue(Test_Double.double_IntegerValue(2.3, 1.4));
+        assertTrue(TestDouble.double_IntegerValue(2.3, 1.4));
        
     }
     }

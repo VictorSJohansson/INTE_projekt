@@ -17,13 +17,13 @@ public class TestBooleanTest {
 	//tests boolean_Equals
 	@Test
 	public void equals_Test(){
-		assertTrue(Test_Boolean.equals(true, true));
+		assertTrue(TestBoolean.equals(true, true));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Test_Boolean.notEquals(true, false));
+		assertTrue(TestBoolean.notEquals(true, false));
 	}
 
 }

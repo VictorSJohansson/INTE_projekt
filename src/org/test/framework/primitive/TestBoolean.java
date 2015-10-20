@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 /**
  * 
@@ -6,7 +6,7 @@ package org.test.framework.primitive;
  * @version 13/10/2015
  *
  */
-public class Test_Boolean extends Primitive{
+public class TestBoolean extends Primitive{
 	
 	//compare two booleans, return true if equal
 	public static boolean equals(boolean x, boolean y){

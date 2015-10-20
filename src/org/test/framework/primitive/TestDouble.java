@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 
 /**
@@ -7,7 +7,7 @@ package org.test.framework.primitive;
  * @author Pinar Larsson
  * @version 12/10/2015
  */
-public class Test_Double extends Primitive
+public class TestDouble extends Primitive
 {
       /**
      * Following method tests if given doubles x and y are equal to each other.

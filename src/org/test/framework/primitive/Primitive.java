@@ -9,6 +9,8 @@ package org.test.framework.primitive;
 
 public class Primitive {
 	
+	//Booleans******************************************************************************************
+
 	//compare two booleans, return true if equal
 	public static boolean equals(boolean x, boolean y){
 		int a = Boolean.compare(x, y);
@@ -28,4 +30,38 @@ public class Primitive {
 		else
 			return false;
 	}
+	
+	//Byte**********************************************************************************************
+	
+	public static boolean equals(byte x, byte y) {
+		// TODO Auto-generated method stub
+		return y == x;
+	}
+
+	public static boolean greater(byte x, byte y) {
+		// TODO Auto-generated method stub
+		return x > y;
+	}
+	
+	public static boolean less(byte x, byte y) {
+		// TODO Auto-generated method stub
+		return x < y;
+	}
+
+	public static boolean divisor(byte x, byte y) {
+		// TODO Auto-generated method stub
+		return y%x == 0;
+	}
+	
+	//Short*********************************************************************************************
+	
+	//Int***********************************************************************************************
+	
+	//Long**********************************************************************************************
+	
+	//Float*********************************************************************************************
+	
+	//Doubble*******************************************************************************************
+	
+	//Char**********************************************************************************************
 }
