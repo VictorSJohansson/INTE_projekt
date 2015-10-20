@@ -1,7 +1,62 @@
-<!-- <project name="TestFramework" default="build" basedir=".">
-	<target name="build" description="No description yet">
-		<mkdir dir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\OurBuild\classes"/>
-		<javac srcdir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\src\org\test\just_fun"
-			destdir="C:\Users\Sebastian\Dropbox\Programmering\Version Control\INTE_PROJEKT_GIT\INTE_projekt\OurBuild\classes"/>
+<project name="TestFramework" default="compile" basedir=".">
+	<description>
+		Projekt INTE HT2015
+	</description>
+	
+	<property name="src" location="src"/>
+	<property name="build" location="build"/>
+	<property name="dist" location="dist"/>
+	
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}"/>
 	</target>
-</project> -->
+	
+	<!-- Run jUnit -->
+	<target name="junit" depends="init">
+		
+		<junit printsummary="yes" haltonfailure="no">
+		
+			<classpath>
+				<fileset dir="lib">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+			
+		</junit>
+	
+	</target>
+			
+	
+	<target name="compile" depends="init, junit"
+			description="compile the source">
+		<!-- Compile the java code from ${src} into ${build} -->
+		
+
+				<javac  includeantruntime="false" 
+						srcdir="${src}" 
+						destdir="${build}"
+						classpath="lib/*.jar"
+				/>
+	</target>
+	
+	<!-- IS NOT RUNNING SINCE DEFAULT = compile -->
+	
+	<target name="dist" depends="compile"
+		description="generate the distribution">
+	<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib"/>
+		
+	<!-- Put everything in ${build} into the TestFramework-${DSTAMP}.jar file -->
+		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}.jar" basedir="${build}"/>
+	</target>
+	
+	<target name="clean"
+		description="clean up">
+	<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>
