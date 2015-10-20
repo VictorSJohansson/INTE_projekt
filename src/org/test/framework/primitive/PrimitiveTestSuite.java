@@ -103,7 +103,130 @@ public class PrimitiveTestSuite {
 	
 	//Int***********************************************************************************************
 	
+    /**
+     * This method tests if int_Equals(x,y) works.
+     */
+    @Test
+    public void equals_Test()
+    {
+        assertTrue(Primitive.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+        
+    }
+    
+    
+    /**
+     * This method tests if int_Greater(x,y) works.
+     */
+    @Test
+    public void greater_Test()
+    {
+        assertTrue(Primitive.int_Greater(5,3));
+        
+    }
+    
+     /**
+     * This method tests if int_Less(x,y) works.
+     */
+    @Test
+    public void less_Test()
+    {
+        assertTrue(Primitive.int_Less(3,5));
+        
+    }
+    
+     /**
+     * This method tests if int_Divisor(x,y) works.
+     */
+    @Test
+    public void divisor_Test()
+    {
+        assertTrue(Primitive.int_Divisor(3,6));
+        
+    }
+    
+	@Test
+	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+		int x = Short.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinShortRange(x));
+		x = Short.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinShortRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinShortRange(x));
+	}
+	
+	@Test
+	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+		int x = Byte.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinByteRange(x));
+		x = Byte.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinByteRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinByteRange(x));
+	}
+	
 	//Long**********************************************************************************************
+	
+	/*
+	 * This test checks if the long_Equals method works.
+	 */
+	@Test
+	public void equalsTest(){
+		assertTrue(Primitive.equals(1234567, 1234567));	
+	}
+	
+	/*
+	 * Tests if long_Greater works.
+	 */
+	@Test
+	public void greaterTest(){
+		assertTrue(Primitive.greater(234567, 234566));
+	}
+	
+	/*
+	 * This test checks to see if long_Less works.
+	 */
+	@Test
+	public void lessTest(){
+		assertTrue(Primitive.less(123456, 12345));
+	}
+
+    @Test
+    public void divisor_Test() { //added by John Thorelli 20/10/2015
+    	long x = 1;
+		long y = (long) (x * 2);
+		assertTrue(Primitive.divisor(x, y));
+		assertFalse(Primitive.divisor(y, x));      
+    }
+    
+	@Test
+	public void valueWithinIntRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Int.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinIntRange(x));
+		x = Int.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinIntRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinIntRange(x));
+	}
+	
+	@Test
+	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Short.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinShortRange(x));
+		x = Short.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinShortRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinShortRange(x));
+	}
+	
+	@Test
+	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Byte.MAX_VALUE + 1;
+		assertFalse(Primitive.valueWithinByteRange(x));
+		x = Byte.MIN_VALUE - 1;
+		assertFalse(Primitive.valueWithinByteRange(x));
+		x = 0;
+		assertTrue(Primitive.valueWithinByteRange(x));
+	}
 	
 	//Float*********************************************************************************************
 	

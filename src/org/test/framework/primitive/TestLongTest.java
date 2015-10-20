@@ -17,7 +17,7 @@ public class TestLongTest {
 	 */
 	@Test
 	public void equalsTest(){
-		assertTrue(TestLong.long_Equals(1234567, 1234567));	
+		assertTrue(TestLong.equals(1234567, 1234567));	
 	}
 	
 	/*
@@ -25,7 +25,7 @@ public class TestLongTest {
 	 */
 	@Test
 	public void greaterTest(){
-		assertTrue(TestLong.long_Greater(234567, 234566));
+		assertTrue(TestLong.greater(234567, 234566));
 	}
 	
 	/*
@@ -33,7 +33,44 @@ public class TestLongTest {
 	 */
 	@Test
 	public void lessTest(){
-		assertTrue(TestLong.long_Less(123456, 12345));
+		assertTrue(TestLong.less(123456, 12345));
 	}
 
+    @Test
+    public void divisor_Test() { //added by John Thorelli 20/10/2015
+    	long x = 1;
+		long y = (long) (x * 2);
+		assertTrue(TestLong.divisor(x, y));
+		assertFalse(TestLong.divisor(y, x));      
+    }
+    
+	@Test
+	public void valueWithinIntRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Int.MAX_VALUE + 1;
+		assertFalse(TestLong.valueWithinIntRange(x));
+		x = Int.MIN_VALUE - 1;
+		assertFalse(TestLong.valueWithinIntRange(x));
+		x = 0;
+		assertTrue(TestLong.valueWithinIntRange(x));
+	}
+	
+	@Test
+	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Short.MAX_VALUE + 1;
+		assertFalse(TestLong.valueWithinShortRange(x));
+		x = Short.MIN_VALUE - 1;
+		assertFalse(TestLong.valueWithinShortRange(x));
+		x = 0;
+		assertTrue(TestLong.valueWithinShortRange(x));
+	}
+	
+	@Test
+	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+		long x = Byte.MAX_VALUE + 1;
+		assertFalse(TestLong.valueWithinByteRange(x));
+		x = Byte.MIN_VALUE - 1;
+		assertFalse(TestLong.valueWithinByteRange(x));
+		x = 0;
+		assertTrue(TestLong.valueWithinByteRange(x));
+	}
 }

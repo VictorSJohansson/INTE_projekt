@@ -15,7 +15,7 @@ public class TestLong {
 	 * This method checks to see if long x and long y holds the same value
 	 * and returns true if they do, false otherwise.
 	 */
-	public static boolean long_Equals(long x, long y){
+	public static boolean equals(long x, long y){
 		
 		int a = Long.compare(x, y);
 		if(a==1){
@@ -28,7 +28,7 @@ public class TestLong {
 	/*
 	 * This method returns true if long x is greater than long y.
 	 */
-	public static boolean long_Greater(long x, long y){
+	public static boolean greater(long x, long y){
 		
 		int a = Long.compare(x, y);
 		if(a>0){
@@ -41,7 +41,7 @@ public class TestLong {
 	/*
 	 * Compares two longs and returns true if x is less than y.
 	 */
-	public static boolean long_Less(long x, long y){
+	public static boolean less(long x, long y){
 		
 		int a = Long.compare(x, y);
 		if(a<0){
@@ -50,5 +50,26 @@ public class TestLong {
 		else 
 			return false;
 	}
+	
+    public static boolean divisor(long x, long y) { //added by John Thorelli 20/10/2015
+        return y%x == 0;
+    }
 
+	public static boolean valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Int.MIN_VALUE || x > Int.MAX_VALUE)
+			return false;
+		return true;
+	}
+
+	public static boolean valueWithinShortRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Short.MIN_VALUE || x > Short.MAX_VALUE)
+			return false;
+		return true;
+	}
+
+	public static boolean valueWithinByteRange(long x) { //added by John Thorelli 20/10/2015
+		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE)
+			return false;
+		return true;
+	}
 }

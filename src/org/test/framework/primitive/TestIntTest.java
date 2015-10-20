@@ -56,4 +56,24 @@ public class TestIntTest
         assertTrue(TestInt.int_Divisor(3,6));
         
     }
+    
+	@Test
+	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+		int x = Short.MAX_VALUE + 1;
+		assertFalse(TestInt.valueWithinShortRange(x));
+		x = Short.MIN_VALUE - 1;
+		assertFalse(TestInt.valueWithinShortRange(x));
+		x = 0;
+		assertTrue(TestInt.valueWithinShortRange(x));
+	}
+	
+	@Test
+	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+		int x = Byte.MAX_VALUE + 1;
+		assertFalse(TestInt.valueWithinByteRange(x));
+		x = Byte.MIN_VALUE - 1;
+		assertFalse(TestInt.valueWithinByteRange(x));
+		x = 0;
+		assertTrue(TestInt.valueWithinByteRange(x));
+	}
 }
