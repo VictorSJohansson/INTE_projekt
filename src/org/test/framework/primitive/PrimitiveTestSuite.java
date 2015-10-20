@@ -10,5 +10,5 @@ import org.junit.runners.Suite.SuiteClasses;
 { Test_BooleanTest.class, Test_ByteTest.class, Test_DoubleTest.class,
 		Test_IntTest.class, Test_LongTest.class })
 public class PrimitiveTestSuite {
-
+	
 }

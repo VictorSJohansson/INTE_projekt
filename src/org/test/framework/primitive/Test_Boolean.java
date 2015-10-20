@@ -9,22 +9,22 @@ package org.test.framework.primitive;
 public class Test_Boolean extends Primitive{
 	
 	//compare two booleans, return true if equal
-	public static boolean boolean_Equals(boolean x, boolean y){
+	public static void boolean_Equals(boolean x, boolean y){
 		int a = Boolean.compare(x, y);
 		if (a==0){
-			return true;
+			return; //do something
 		}
 		else    
-			return false;
+			return; //do something else
 	}
 	
 	//compare two booleans, return true if not equal
-	public static boolean boolean_NotEquals(boolean x, boolean y){
+	public static void boolean_NotEquals(boolean x, boolean y){
 		int a = Boolean.compare(x,y);
 		if(a!=0){
-			return true;
+			return; //do something
 		}
 		else
-			return false;
+			return; //do something else
 	}
 }

@@ -1,5 +1,7 @@
 package org.test.framework.primitive;
 
-public class Primitive {
-
+public abstract class Primitive {
+	public abstract void equals();
+	
+	
 }
