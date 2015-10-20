@@ -10,19 +10,19 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(value = Suite.class)
 @SuiteClasses(value =
-{ Test_BooleanTest.class, Test_ByteTest.class, Test_DoubleTest.class,
+{ TestBooleanTest.class, Test_ByteTest.class, Test_DoubleTest.class,
 		Test_IntTest.class, Test_LongTest.class })
 public class PrimitiveTestSuite {
 	
 	//tests boolean_Equals
 	@Test
 	public void equals_Test(){
-		assertTrue(Test_Boolean.boolean_Equals(true, true));
+		assertTrue(Primitive.equals(true, true));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Test_Boolean.boolean_NotEquals(true, false));
+		assertTrue(Primitive.notEquals(true, false));
 	}
 }

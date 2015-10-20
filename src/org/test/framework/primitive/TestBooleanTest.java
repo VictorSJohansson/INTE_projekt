@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package src.org.test.framework.primitive;
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -12,18 +12,18 @@ import org.junit.Test;
  * @version 13-10-2015
  */
 
-public class Test_BooleanTest {
+public class TestBooleanTest {
 	
 	//tests boolean_Equals
 	@Test
 	public void equals_Test(){
-		assertTrue(Test_Boolean.boolean_Equals(true, true));
+		assertTrue(Test_Boolean.equals(true, true));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Test_Boolean.boolean_NotEquals(true, false));
+		assertTrue(Test_Boolean.notEquals(true, false));
 	}
 
 }
