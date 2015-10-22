@@ -321,7 +321,8 @@ public class Primitive {
     //Fail**********************************************************************************************
     
     /*
-     * This method records a failed test in the TestLogger.
+     * This method creates and appends a LogEntry in the TestLogger with a failed test with
+     * two parameters.
      */
     public static void fail(String testName, Object value1, Object value2){
     	
@@ -329,6 +330,10 @@ public class Primitive {
     	TestLogger.append(entry);
     }
     
+    /*
+     * This method creates and appends a LogEntry in the TestLogger with a failed test with
+     * one parameter.
+     */
     public static void fail(String testName, Object value){
     	LogEntry entry = new LogEntry(testName, value);
     	TestLogger.append(entry);
