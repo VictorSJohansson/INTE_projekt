@@ -1,5 +1,8 @@
 package org.test.framework.primitive;
 
+import org.test.framework.core.runtime.TestLogger;
+import org.test.framework.core.runtime.LogEntry;
+
 /**
  * This class will contain test cases for all of javas primitive variables. 
  * 
@@ -17,8 +20,10 @@ public class Primitive {
 		if (a==0){
 			return true;
 		}
-		else    
+		else{    
+			fail("equals", x, y);
 			return false;
+		}
 	}
 	
 	//compare two booleans, return true if not equal
@@ -27,20 +32,34 @@ public class Primitive {
 		if(a!=0){
 			return true; 
 		}
-		else
+		else{
+			fail("notEquals", x, y);
 			return false;
+		}
 	}
 	
 	//Byte**********************************************************************************************
 	
 	public static boolean equals(byte x, byte y) {
 		// TODO Auto-generated method stub
-		return y == x;
+		if (x==y){
+			return true;
+		}
+		else{
+			fail("equals", x, y);
+			return false;
+		}
 	}
 
 	public static boolean greater(byte x, byte y) {
 		// TODO Auto-generated method stub
-		return x > y;
+		if (x>y){
+			return true;
+		}
+		else{
+			fail("greater", true, false);
+			return false;
+		}
 	}
 	
 	public static boolean less(byte x, byte y) {
@@ -177,7 +196,7 @@ public class Primitive {
     }
 
 	public static boolean valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
-		if(x < Int.MIN_VALUE || x > Int.MAX_VALUE)
+		if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE)
 			return false;
 		return true;
 	}
@@ -279,5 +298,16 @@ public class Primitive {
     public static boolean equals(char a, char b )
     {        
         return a == b;
+    }
+    
+    //Fail**********************************************************************************************
+    
+    /*
+     * This method records a failed test in the TestLogger.
+     */
+    public static void fail(String testName, Object expected, Object actual){
+  
+    	LogEntry entry = new LogEntry(testName, expected, actual);
+    	TestLogger.append(entry);
     }
 }
