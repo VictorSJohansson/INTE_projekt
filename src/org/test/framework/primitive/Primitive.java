@@ -18,7 +18,7 @@ public class Primitive {
 	public static void equals(boolean x, boolean y){
 		int a = Boolean.compare(x, y);
 		if (a!=0){   
-			fail("equals boolean", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -26,7 +26,7 @@ public class Primitive {
 	public static void notEquals(boolean x, boolean y){
 		int a = Boolean.compare(x,y);
 		if(a==0){
-			fail("notEquals", false, true);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -36,7 +36,7 @@ public class Primitive {
 	public static void equals(byte x, byte y) {
 		// TODO Auto-generated method stub
 		if (x!=y){
-			fail("equals", x, y);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -44,7 +44,7 @@ public class Primitive {
 	public static void greater(byte x, byte y) {
 		// TODO Auto-generated method stub
 		if (x<y || x==y){
-			fail("greater", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -52,7 +52,7 @@ public class Primitive {
 	public static void less(byte x, byte y) {
 		// TODO Auto-generated method stub
 		if (x>y || x==y){
-			fail("less byte", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 
@@ -60,7 +60,7 @@ public class Primitive {
 	public static void divisor(byte x, byte y) {
 		// TODO Auto-generated method stub
 		if (y%x != 0){
-			fail("divisor byte", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -70,7 +70,7 @@ public class Primitive {
 	public static void equals(short x, short y) {
 		// TODO Auto-generated method stub
 		if (y != x){
-			fail("equals short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}	
 	}
 
@@ -78,7 +78,7 @@ public class Primitive {
 	public static void greater(short x, short y) {
 		// TODO Auto-generated method stub
 		if (x < y || x == y){
-			fail("greater short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 			return;
 		}
 	}
@@ -87,7 +87,7 @@ public class Primitive {
 	public static void less(short x, short y) {
 		// TODO Auto-generated method stub
 		if (x > y || x==y){
-			fail("less short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 
@@ -95,7 +95,7 @@ public class Primitive {
 	public static void divisor(short x, short y) {
 		// TODO Auto-generated method stub
 		if (y%x != 0){
-			fail("divisor short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 			return;
 		}
 	}
@@ -103,7 +103,7 @@ public class Primitive {
 	public static void valueWithinByteRange(short x) {
 		// TODO Auto-generated method stub
 		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE){
-			fail("valueWithinByteRange", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
 	
@@ -115,7 +115,7 @@ public class Primitive {
    public static void equals(int x, int y)
    {  
        if (x != y){
-			fail("equals int", true, false);
+    	   fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
    }
     
@@ -126,7 +126,7 @@ public class Primitive {
    public static void greater(int x, int y)
    {
        if (x < y || x == y){
-			fail("greater int", true, false);
+    	   fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
    }
    
@@ -136,7 +136,7 @@ public class Primitive {
    public static void less(int x, int y)
    {
        if (x > y || x == y){
-			fail("less int", true, false);
+    	   fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
    }
    
@@ -146,19 +146,19 @@ public class Primitive {
    public static void divisor(int x, int y)
    {
        if (y%x != 0){
-			fail("divisor int", true, false);
+    	   fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
    }
    
    public static void valueWithinShortRange(int x) { //added by John Thorelli 20/10/2015
 		if(x < Short.MIN_VALUE || x > Short.MAX_VALUE){
-			fail("valueWithinShortRange", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
    }
    
 	public static void valueWithinByteRange(int x) { //added by John Thorelli 20/10/2015
 		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE){
-			fail("valueWithinByteRange", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
 	
@@ -172,7 +172,7 @@ public class Primitive {
 		
 		int a = Long.compare(x, y);
 		if(a!=1){
-			fail("equals long", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -183,7 +183,7 @@ public class Primitive {
 		
 		int a = Long.compare(x, y);
 		if(a<0 || a == 0){
-			fail("long greater", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
@@ -194,31 +194,31 @@ public class Primitive {
 		
 		int a = Long.compare(x, y);
 		if(a>0 || a == 0){
-			fail("long less", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
     public static void divisor(long x, long y) { //added by John Thorelli 20/10/2015
     	if (y%x != 0){
-			fail("divisor long", true, false);
+    		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
     }
 
 	public static void valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
 		if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE){
-			fail("valueWithinIntRange long", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
 
 	public static void valueWithinShortRange(long x) { //added by John Thorelli 20/10/2015
 		if(x < Short.MIN_VALUE || x > Short.MAX_VALUE){
-			fail("valueWithinShortRange long", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
 
 	public static void valueWithinByteRange(long x) { //added by John Thorelli 20/10/2015
 		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE){
-			fail("valueWithinByteRange long", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
 	
@@ -227,21 +227,21 @@ public class Primitive {
 	public static void equals(short x, float y) {
 		// TODO Auto-generated method stub
 		if(y != x){
-			fail("equals short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 
 	public static void greater(float x, float y) {
 		// TODO Auto-generated method stub
 		if(x < y || x == y){
-			fail("greater short", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 	
 	public static void less(float x, float y) {
 		// TODO Auto-generated method stub
 		if(x > y || x == y){
-			fail("less float", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
 	}
 
@@ -250,7 +250,7 @@ public class Primitive {
         int a = (int) x;
         int b = (int) y;
 		if(a!=b){
-			fail("sameIntegerValue float", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
     }
 	
@@ -263,7 +263,7 @@ public class Primitive {
   {  
       int a = Double.compare(x, y);
       if(a != 0){
-    	  fail("equals double", true, false);
+    	  fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
       }
   }
    
@@ -274,7 +274,7 @@ public class Primitive {
   {
       int a = Double.compare(x, y);
       if(a < 0 || a == 0){
-    	  fail("greater double", true, false);
+    	  fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
       }
   }
   
@@ -285,7 +285,7 @@ public class Primitive {
   {
       int a = Double.compare(x, y);
       if(a > 0 || a == 0){
-    	  fail("less double", true, false);
+    	  fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 	   }
   }
 
@@ -297,13 +297,13 @@ public class Primitive {
       int a = (int) x;
       int b = (int) y;
       if(a != b){
-    	  fail("equalIntegerValue double", true, false);
+    	  fail(Thread.currentThread().getStackTrace()[1].getMethodName(), a, b);
       }
   }
 
 	public static void valueWithinFloatRange(double x) { //added by John Thorelli 20/10/2015
 		if(x < Float.MIN_VALUE || x > Float.MAX_VALUE){
-			fail("valueWithinFloatRange double", true, false);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	} 
 	
@@ -314,7 +314,7 @@ public class Primitive {
     public static void equals(char a, char b )
     {        
         if(a!=b){
-        	fail("equals char", true, false);
+        	fail(Thread.currentThread().getStackTrace()[1].getMethodName(), a, b);
         }
     }
     
@@ -323,9 +323,14 @@ public class Primitive {
     /*
      * This method records a failed test in the TestLogger.
      */
-    public static void fail(String testName, Object expected, Object actual){
-  
-    	LogEntry entry = new LogEntry(testName, expected, actual);
+    public static void fail(String testName, Object value1, Object value2){
+    	
+    	LogEntry entry = new LogEntry(testName, value1, value2);
+    	TestLogger.append(entry);
+    }
+    
+    public static void fail(String testName, Object value){
+    	LogEntry entry = new LogEntry(testName, value);
     	TestLogger.append(entry);
     }
 }
