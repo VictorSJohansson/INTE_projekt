@@ -14,7 +14,7 @@ public class TestLogger {
 	 * This class keeps track of all failed tests
 	 */
 	
-	private static List <LogEntry> tests;
+	private static List <LogEntry> tests = new ArrayList<LogEntry>();;
 	//private long start;
 	//private long end;
 	//private static List <Long> times;
@@ -50,6 +50,12 @@ public class TestLogger {
 			}
 		}
 	}
+	
+	public static int getSize(){
+		return tests.size();
+	}
+	
+
 
 	
 	/*
