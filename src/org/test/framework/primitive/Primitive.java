@@ -12,6 +12,28 @@ import org.test.framework.core.runtime.LogEntry;
 
 public class Primitive {
 	
+	//This method assures that the Object "obj" is a float number wrapper class
+	public static boolean isAFloatNumber(Object obj) {
+		if(obj instanceof Float)
+			return true;
+		if(obj instanceof Double)
+			return true;
+		return false;
+	}
+	
+	//This method assures that the Object "obj" is a number wrapper class 
+	private static boolean isANumber(Object obj) {
+		if(obj instanceof Byte)
+			return true;
+		if(obj instanceof Short)
+			return true;
+		if(obj instanceof Integer)
+			return true;
+		if(obj instanceof Long)
+			return true;
+		return isAFloatNumber(obj);
+	}
+	
 	//Booleans******************************************************************************************
 
 	//compare two booleans, fails test if not equal
@@ -64,6 +86,23 @@ public class Primitive {
 		}
 	}
 	
+	//Compares a byte with an object, fails if that object is not a number equal to that byte
+	public static void equals(byte b, Object obj) {
+		short s;
+		float f;
+		if(isANumber(obj)) {
+			if(isAFloatNumber(obj)) {
+				f = (float)obj;
+				if(f == b)
+					return;
+				s = (short)obj;
+				if(s == b)
+					return;
+			}
+		}
+		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+	}
+    
 	//Short*********************************************************************************************
 	
 	//compare two shorts. fails test if x and y do not hold the same value
@@ -106,6 +145,23 @@ public class Primitive {
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
+	
+	//Compares a short with an object, fails if that object is not a number equal to that short
+		public static void equals(short s, Object obj) {
+			int i;
+			float f;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					f = (float)obj;
+					if(f == s)
+						return;
+					i = (int)obj;
+					if(i == s)
+						return;
+				}
+			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
+		}
 	
 	//Int***********************************************************************************************
 	
@@ -161,6 +217,23 @@ public class Primitive {
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
 		}
 	}
+	
+	//Compares an int with an object, fails if that object is not a number equal to that int
+			public static void equals(int i, Object obj) {
+				long l;
+				float f;
+				if(isANumber(obj)) {
+					if(isAFloatNumber(obj)) {
+						f = (float)obj;
+						if(f == i)
+							return;
+						l = (long)obj;
+						if(l == i)
+							return;
+					}
+				}
+				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+			}
 	
 	//Long**********************************************************************************************
 	
@@ -222,6 +295,23 @@ public class Primitive {
 		}
 	}
 	
+	//Compares a long with an object, fails if that object is not a number equal to that long
+			public static void equals(long l, Object obj) {
+				long l2;
+				float f;
+				if(isANumber(obj)) {
+					if(isAFloatNumber(obj)) {
+						f = (float)obj;
+						if(f == l2)
+							return;
+						l2 = (long)obj;
+						if(l2 == l)
+							return;
+					}
+				}
+				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+			}
+	
 	//Float*********************************************************************************************
 	
 	public static void equals(short x, float y) {
@@ -253,6 +343,23 @@ public class Primitive {
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
 		}
     }
+	
+	//Compares a float with an object, fails if that object is not a number equal to that float
+	public static void equals(float f, Object obj) {
+		long l;
+		float f2;
+		if(isANumber(obj)) {
+			if(isAFloatNumber(obj)) {
+				f2 = (float)obj;
+				if(f == f2)
+					return;
+				l = (long)obj;
+				if(f == l)
+					return;
+			}
+		}
+		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+	}
 	
 	//Doubble*******************************************************************************************
 	
@@ -307,6 +414,28 @@ public class Primitive {
 		}
 	} 
 	
+	public static void valueWithinIntRange(double x) { //Test if the value of x is within Int range
+		if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE)
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x);
+	}
+	
+	//Compares a double with an object, fails if that object is not a number equal to that double
+		public static void equals(double d, Object obj) {
+			long l;
+			double d2;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					d2 = (float)obj;
+					if(d == d2)
+						return;
+					l = (long)obj;
+					if(d == l)
+						return;
+				}
+			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+		}
+	
 	//Char**********************************************************************************************
 	
     /* This method will compare two char.
@@ -316,6 +445,22 @@ public class Primitive {
         if(a!=b){
         	fail(Thread.currentThread().getStackTrace()[1].getMethodName(), a, b);
         }
+    }
+    
+    //Byte-Short****************************************************************************************
+    
+    /*The following tests will support equals, greater and less between byte and short.
+     * 
+     */
+    
+    public static void equals(short s, byte b) {
+    	if(b != s)
+    		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, b);
+    }
+    
+    public static void greater(short s, byte b) {
+    	if(s <= b)
+    		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, b);
     }
     
     //Fail**********************************************************************************************
