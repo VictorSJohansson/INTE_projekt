@@ -1,40 +1,57 @@
 
 package org.test.framework.primitive;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
+import org.test.framework.core.runtime.TestLogger;
 import org.junit.Test;
+import static org.hamcrest.CoreMatchers.*;
 import org.junit.runner.RunWith;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-@RunWith(value = Suite.class)
-@SuiteClasses(value =
-{ TestBooleanTest.class, TestByteTest.class, TestDoubleTest.class,
-		TestIntTest.class, TestLongTest.class })
+
 public class PrimitiveTestSuite {
 	
+	int failCount = 0;
+
+	
+	/*@Before
+	public void initialize()
+	{
+		logCount = 0;
+	}*/
 	//Booleans******************************************************************************************
 	
 	//tests boolean_Equals
 	@Test
-	public void equals_Test(){
-		assertTrue(Primitive.equals(true, true));
+	public void testequalsTestBoolean(){
+		Primitive.equals(true, true);
+		assertThat(failCount, is(TestLogger.getSize()));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Primitive.notEquals(true, false));
+		Primitive.notEquals(true, false);
+		assertThat(failCount, is(TestLogger.getSize()));
 	}
 	
 	//Byte**********************************************************************************************
 	
 	@Test //Tests the functionality of equals_Test()  
-    public void equals_Test() {
-        assertTrue(Primitive.byte_Equals(Byte.MAX_VALUE, Byte.MAX_VALUE));
-        assertFalse(Primitive.byte_Equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
+    public void equals_TestByte() {
+		Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE);
+		assertThat(failCount, is(TestLogger.getSize()));
+		Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
+		failCount++;
+		assertThat(logCount, is(TestLogger.getSize()));
+		System.out.println(TestLogger.getSize());
+       // assertEquals(logCount, TestLogger.getSize());
+        //assertFalse(Primitive.byte_Equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
+      //  assertEquals(logCount, TestLogger.getSize());
         
     }
 	
