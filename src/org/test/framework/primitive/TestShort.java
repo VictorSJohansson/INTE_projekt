@@ -1,4 +1,4 @@
-package src.org.test.framework.primitive;
+package org.test.framework.primitive;
 
 /**
  * The test class Test_Short.
