@@ -1,9 +1,8 @@
 package org.test.framework.core.runtime;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.IOException;
+//import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
-import java.util.logging.Logger;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -42,11 +41,16 @@ public class TestLogger {
 		String timeStamp = new SimpleDateFormat("yyyy:MM:dd_HH:mm:ss").format(Calendar.getInstance().getTime());
 		System.out.println(timeStamp);
 		for (LogEntry entry : tests){
-			if(entry.getValue2() != null){
-				System.out.println("Failed method " + entry.getTestName() + ": " +entry.getValue1() + " compared to " + entry.getValue2());
+			if (entry instanceof FailEntry){
+				if(((FailEntry)entry).getValue2() != null){
+					System.out.println("Failed method " + entry.getTestName() + ": " +((FailEntry)entry).getValue1() + " compared to " + ((FailEntry)entry).getValue2());
+				}
+				else{
+					System.out.println("Failed test: " + entry.getTestName() + " " + ((FailEntry)entry).getValue1());
+				}
 			}
 			else{
-				System.out.println("Failed test: " + entry.getTestName() + " " + entry.getValue1());
+				System.out.println("Successful test: " + entry.getTestName());
 			}
 		}
 	}
