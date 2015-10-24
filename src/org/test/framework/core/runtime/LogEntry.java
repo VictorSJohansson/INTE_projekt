@@ -1,6 +1,6 @@
 package org.test.framework.core.runtime;
 
-public abstract class LogEntry {
+public class LogEntry {
 	
 	/*
 	 * This class is used to store information about failed tests
