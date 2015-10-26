@@ -19,7 +19,7 @@ public class TestRuntime {
 	private static final Class<TestClass> TEST_CLASS_ONE = TestClass.class;
 	private static final Class<TestClassException> TEST_CLASS_TWO = TestClassException.class;
 
-	private static final Class<OurTest> ANNOTATION = OurFramework.class;
+	private static final Class<OurFramework> ANNOTATION = OurFramework.ANNOTATION;
 
 	private Runtime rt;
 
