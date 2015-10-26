@@ -17,7 +17,21 @@ public class TestCase implements Test {
 
 	public TestCase(String methodName)
 	{
-		this(methodName, this.getClass().newInstance());
+		try
+		{
+			this.methodName = methodName;
+			this.instance = this.getClass().newInstance();
+		}
+		catch (InstantiationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public TestCase(String methodName, Object instance)

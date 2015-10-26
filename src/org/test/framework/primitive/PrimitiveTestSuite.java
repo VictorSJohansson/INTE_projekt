@@ -12,7 +12,7 @@ import org.test.framework.primitive.PrimitiveTestSuite;
 @SuiteClasses(value =
 { TestBooleanTest.class, TestByteTest.class, TestCharTest.class,
 		TestDoubleTest.class, TestFloatTest.class, TestIntTest.class,
-		TestLongTest.class, TestPrimitive.class, TestShortTest.class })
+		TestLongTest.class, testPrimitive.class, TestShortTest.class })
 public class PrimitiveTestSuite {
 
 }

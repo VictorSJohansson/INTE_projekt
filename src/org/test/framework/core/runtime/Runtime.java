@@ -111,7 +111,7 @@ public class Runtime {
 		return iterateClassList();
 	}
 
-	private TestResult iterateClassList(TestResult result)
+	private TestResult iterateClassList()
 	{
 		TestResult result = new TestResult();
 

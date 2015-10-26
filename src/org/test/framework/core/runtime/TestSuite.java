@@ -4,8 +4,6 @@ package org.test.framework.core.runtime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.test.framework.core.runtime.features.TestFrameworkRunnable;
-
 /**
  * 
  * TestSuite class store testcases and then run them by invoking the run method.

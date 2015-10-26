@@ -30,12 +30,6 @@ public class TestCaseTest {
 		assertThat(tc.methodName, IsNull.nullValue());
 	}
 
-	@Test
-	public void testTestCaseClass_Constructor_NullConstructor_Method()
-	{
-		assertThat(tc.method, IsNull.nullValue());
-	}
-
 	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_NullConstructor_cannotRun()
 	{

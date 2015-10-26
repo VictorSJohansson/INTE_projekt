@@ -56,21 +56,21 @@ public class testPrimitive {
     }
 	
 	@Test
-	public void greater_Test() {
+	public void greater_Test_Byte() {
 		assertTrue(Primitive.greater((byte)1, (byte)0));
 		assertFalse(Primitive.greater((byte)0, (byte)0));
 		assertFalse(Primitive.greater((byte)0, (byte)1));
 	}
 	
 	@Test
-	public void less_Test() {
+	public void less_Test_Byte() {
 		assertTrue(Primitive.less((byte)0, (byte)1));
 		assertFalse(Primitive.less((byte)0, (byte)0));
 		assertFalse(Primitive.less((byte)1, (byte)0));
 	}
 	
 	@Test
-	public void divisor_Test() {
+	public void divisor_Test_Byte() {
 		byte x = 1;
 		byte y = (byte) (x * 2);
 		assertTrue(Primitive.divisor(x, y));
@@ -80,28 +80,28 @@ public class testPrimitive {
 	//Short*********************************************************************************************
 	
 	@Test //Tests the functionality of equals_Test()  
-    public void equals_Test() {
+    public void equals_Short_Test() {
         assertTrue(Primitive.short_Equals(Short.MAX_VALUE, Short.MAX_VALUE));
         assertFalse(Primitive.short_Equals(Short.MAX_VALUE, Short.MIN_VALUE));
         
     }
 	
 	@Test
-	public void greater_Test() {
+	public void greater_Test_Short() {
 		assertTrue(Primitive.greater((short)1, (short)0));
 		assertFalse(Primitive.greater((short)0, (short)0));
 		assertFalse(Primitive.greater((short)0, (short)1));
 	}
 	
 	@Test
-	public void less_Test() {
+	public void less_Test_Short() {
 		assertTrue(Primitive.less((short)0, (short)1));
 		assertFalse(Primitive.less((short)0, (short)0));
 		assertFalse(Primitive.less((short)1, (short)0));
 	}
 	
 	@Test
-	public void divisor_Test() {
+	public void divisor_Test_Short() {
 		short x = 1;
 		short y = (short) (x * 2);
 		assertTrue(Primitive.divisor(x, y));
@@ -109,7 +109,7 @@ public class testPrimitive {
 	}
 	
 	@Test
-	public void valueWithinByteRange_Test() {
+	public void valueWithinByteRange_Test_Short() {
 		short x = Byte.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = Byte.MIN_VALUE - 1;
@@ -124,7 +124,7 @@ public class testPrimitive {
      * This method tests if int_Equals(x,y) works.
      */
     @Test
-    public void equals_Test()
+    public void equals_Test_Int()
     {
         assertTrue(Primitive.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
         
@@ -135,7 +135,7 @@ public class testPrimitive {
      * This method tests if int_Greater(x,y) works.
      */
     @Test
-    public void greater_Test()
+    public void greater_Test_Int()
     {
         assertTrue(Primitive.int_Greater(5,3));
         
@@ -145,7 +145,7 @@ public class testPrimitive {
      * This method tests if int_Less(x,y) works.
      */
     @Test
-    public void less_Test()
+    public void less_Test_Int()
     {
         assertTrue(Primitive.int_Less(3,5));
         
@@ -155,14 +155,14 @@ public class testPrimitive {
      * This method tests if int_Divisor(x,y) works.
      */
     @Test
-    public void divisor_Test()
+    public void divisor_Test_Int()
     {
         assertTrue(Primitive.int_Divisor(3,6));
         
     }
     
 	@Test
-	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinShortRange_Test_Int() { //added by John Thorelli 20/10/2015
 		int x = Short.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
 		x = Short.MIN_VALUE - 1;
@@ -172,7 +172,7 @@ public class testPrimitive {
 	}
 	
 	@Test
-	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinByteRange_Test_Int() { //added by John Thorelli 20/10/2015
 		int x = Byte.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = Byte.MIN_VALUE - 1;
@@ -187,7 +187,7 @@ public class testPrimitive {
 	 * This test checks if the long_Equals method works.
 	 */
 	@Test
-	public void equalsTest(){
+	public void equals_Test_Long(){
 		assertTrue(Primitive.equals(1234567, 1234567));	
 	}
 	
@@ -195,7 +195,7 @@ public class testPrimitive {
 	 * Tests if long_Greater works.
 	 */
 	@Test
-	public void greaterTest(){
+	public void greater_Test_Long(){
 		assertTrue(Primitive.greater(234567, 234566));
 	}
 	
@@ -203,12 +203,12 @@ public class testPrimitive {
 	 * This test checks to see if long_Less works.
 	 */
 	@Test
-	public void lessTest(){
+	public void less_Test_Long(){
 		assertTrue(Primitive.less(123456, 12345));
 	}
 
     @Test
-    public void divisor_Test() { //added by John Thorelli 20/10/2015
+    public void divisor_Test_Long() { //added by John Thorelli 20/10/2015
     	long x = 1;
 		long y = (long) (x * 2);
 		assertTrue(Primitive.divisor(x, y));
@@ -216,7 +216,7 @@ public class testPrimitive {
     }
     
 	@Test
-	public void valueWithinIntRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinIntRange_Test_Long() { //added by John Thorelli 20/10/2015
 		long x = Int.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinIntRange(x));
 		x = Int.MIN_VALUE - 1;
@@ -226,7 +226,7 @@ public class testPrimitive {
 	}
 	
 	@Test
-	public void valueWithinShortRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinShortRange_Test_Long() { //added by John Thorelli 20/10/2015
 		long x = Short.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
 		x = Short.MIN_VALUE - 1;
@@ -236,7 +236,7 @@ public class testPrimitive {
 	}
 	
 	@Test
-	public void valueWithinByteRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinByteRange_Test_Long() { //added by John Thorelli 20/10/2015
 		long x = Byte.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = Byte.MIN_VALUE - 1;
@@ -247,28 +247,28 @@ public class testPrimitive {
 	
 	//Float*********************************************************************************************
 	
-	public void equals_Test() {
+	public void equals_Test_Float() {
         assertTrue(Primitive.float_Equals(Float.MAX_VALUE, Float.MAX_VALUE));
         assertFalse(Primitive.float_Equals(Float.MAX_VALUE, Float.MIN_VALUE));
         
     }
 	
 	@Test
-	public void greater_Test() {
+	public void greater_Test_Float() {
 		assertTrue(Primitive.greater((float)1, (float)0));
 		assertFalse(Primitive.greater((float)0, (float)0));
 		assertFalse(Primitive.greater((float)0, (float)1));
 	}
 	
 	@Test
-	public void less_Test() {
+	public void less_Test_Float() {
 		assertTrue(Primitive.less((float)0, (float)1));
 		assertFalse(Primitive.less((float)0, (float)0));
 		assertFalse(Primitive.less((float)1, (float)0));
 	}
 	
 	@Test
-	public void sameIntegerValue_Test() {
+	public void sameIntegerValue_Test_Float() {
 		assertTrue(Primitive.sameIntegerValue((float)5.3, (float)5.7));
 		assertFalse(Primitive.sameIntegerValue((float)8.5, (float)8.5));
 	}
@@ -279,7 +279,7 @@ public class testPrimitive {
      * This method tests if double_Equals(x,y) works.
      */
     @Test
-    public void equals_Test()
+    public void equals_Test_Double()
     {
         assertTrue(Primitive.equals(1.5, 1.5));
         
@@ -289,7 +289,7 @@ public class testPrimitive {
      * This method tests if double_Greater(x,y) works.
      */
     @Test
-    public void greater_Test()
+    public void greater_Test_Double()
     {
         assertTrue(Primitive.greater(1.5, 1.4));
         
@@ -299,7 +299,7 @@ public class testPrimitive {
      * This method tests if double_Less(x,y) works.
      */
     @Test
-    public void less_Test()
+    public void less_Test_Double()
     {
         assertTrue(Primitive.less(1.3, 1.4));
        
@@ -309,14 +309,14 @@ public class testPrimitive {
      * This method tests if double_IntegerValue(x,y) works.
      */
     @Test
-    public void integerValue_Test()
+    public void integerValue_Test_Double()
     {
         assertTrue(Primitive.equalIntegerValue(2.3, 1.4));
        
     }
     
     @Test
-	public void valueWithinFloatRange_Test() { //added by John Thorelli 20/10/2015
+	public void valueWithinFloatRange_Test_Double() { //added by John Thorelli 20/10/2015
 		double x = Float.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinFloatRange(x));
 		x = Float.MIN_VALUE - 1;
@@ -332,7 +332,7 @@ public class testPrimitive {
 	 *
 	 */
 	@Test
-	public void equals_Test()
+	public void equals_Char_Test()
 	{
 		assertTrue(TestChar.equals('a','a'));
 		assertFalse(TestChar.equals('a','b'));
