@@ -143,5 +143,23 @@ public class TestCaseTest {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test(expected=NullPointerException.class)
+	public void testTestCaseClass_Method_run_testNullPointerException_onMethodName()
+	{
+		overrideTestCaseTestBeforeAnnotation(null, TestClassWithSetup.class.newInstance());
+	}
 
+	@Test(expected=NullPointerException.class)
+	public void testTestCaseClass_Method_run_testNullPointerException_onInstance()
+	{
+		overrideTestCaseTestBeforeAnnotation("testMethod", null);
+	}
+
+	public void overrideTestCaseTestBeforeAnnotation(String methodName, String instance)
+	{
+		tc = new TestClass(methodName, instance);
+		tc.run();
+	}
+	
 }

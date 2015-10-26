@@ -17,8 +17,7 @@ public class TestCase implements Test {
 
 	public TestCase(String methodName)
 	{
-		this.methodName = methodName;
-		this.instance = this.getClass();
+		this(methodName, this.getClass().newInstance());
 	}
 
 	public TestCase(String methodName, Object instance)
@@ -71,14 +70,12 @@ public class TestCase implements Test {
 			throw new NullPointerException("Instance is null");
 
 		try
-		{
+		{	
 			result.testStarted();
 
-			initializeSetup();
-
+			runTeardown();
+			
 			instance.getClass().getMethod(methodName).invoke(instance);
-
-			initializeTeardown();
 		}
 		catch (IllegalAccessException e)
 		{
@@ -100,11 +97,15 @@ public class TestCase implements Test {
 		{
 			result.testFailed();
 		}
+		finally
+		{
+			runTeardown();
+		}
 
 		return result;
 	}
 
-	private void initializeTeardown()
+	private void runTeardown()
 	{
 		if (instance instanceof Test)
 			((Test) instance).teardown();
@@ -112,7 +113,7 @@ public class TestCase implements Test {
 			this.teardown();
 	}
 
-	private void initializeSetup()
+	private void runSetup()
 	{
 		if (instance instanceof Test)
 			((Test) instance).setup();

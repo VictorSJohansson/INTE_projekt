@@ -41,7 +41,7 @@ public class Runtime {
 
 	public Runtime(List<Class<?>> cl)
 	{
-		classList = cl;
+		classList = new ArrayList<Class<?>>(cl);
 	}
 
 	public int size()
