@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  * runtime
  */
 
-public @interface OurTest
+public @interface OurFramework
 {
-
+	static final Class<OurFramework> ANNOTATION = OurFramework.class;
 }

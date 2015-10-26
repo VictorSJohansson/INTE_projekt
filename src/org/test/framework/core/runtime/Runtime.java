@@ -9,8 +9,6 @@ import java.util.List;
 
 public class Runtime {
 
-	public static final Class<OurTest> ANNOTATION = @OurFramework.class;
-
 	public List<Class<?>> classList;
 
 	/**
@@ -114,7 +112,7 @@ public class Runtime {
 	public TestResult execute()
 	{
 		TestResult result = new TestResult();
-		
+
 		iterateClassList(result);
 
 		return result;
@@ -125,7 +123,7 @@ public class Runtime {
 		for (Class<?> cl : classList)
 		{
 			TestSuite suite = new TestSuite();
-			List<String> names = getMethodNames(ANNOTATION, cl);
+			List<String> names = getMethodNames(OurFramework.ANNOTATION, cl);
 
 			iterateMethodNames(cl, suite, names);
 
