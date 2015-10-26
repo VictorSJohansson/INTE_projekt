@@ -13,8 +13,6 @@ import java.lang.reflect.Method;
 public class TestCase implements Test {
 
 	String methodName;
-	Method method;
-	// Class<?> cl;
 	Object instance;
 
 	public TestCase(String methodName)
@@ -22,12 +20,6 @@ public class TestCase implements Test {
 		this.methodName = methodName;
 		this.instance = this.getClass();
 	}
-
-	// public TestCase(String methodName, Class<?> cl)
-	// {
-	// this.methodName = methodName;
-	// this.cl = cl;
-	// }
 
 	public TestCase(String methodName, Object instance)
 	{
@@ -90,35 +82,23 @@ public class TestCase implements Test {
 		}
 		catch (IllegalAccessException e)
 		{
-			// TODO Auto-generated catch block
 			result.testFailed();
-			e.printStackTrace();
 		}
 		catch (IllegalArgumentException e)
 		{
-			// TODO Auto-generated catch block
 			result.testFailed();
-			e.printStackTrace();
 		}
 		catch (InvocationTargetException e)
 		{
-			// TODO Auto-generated catch block
 			result.testFailed();
-			// System.out.println("InvocationTargetException");
-			// e.printStackTrace();
 		}
 		catch (NoSuchMethodException e)
 		{
-			// TODO Auto-generated catch block
 			result.testFailed();
-			System.out.println("NoSuchMethodException");
-			// e.printStackTrace();
 		}
 		catch (SecurityException e)
 		{
-			// TODO Auto-generated catch block
 			result.testFailed();
-			e.printStackTrace();
 		}
 
 		return result;
