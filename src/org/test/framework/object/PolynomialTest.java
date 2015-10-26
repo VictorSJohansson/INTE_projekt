@@ -44,4 +44,18 @@ public class PolynomialTest
         assertEquals(p_plus.coef[9],7);
         assertEquals(p_plus.coef[5],3);
     }
+    
+     /**
+     * This method will test minus() method for the class Polynomial
+     *
+     * 
+     */
+    @Test
+    public void test_Minus()
+    {   Polynomial p = new Polynomial(3,5);
+        Polynomial p_minus = p.minus(new Polynomial(7,5));
+        assertEquals(p_minus.deg,5);
+        assertEquals(p_minus.coef[5],-4);
+        
+    }
 }
