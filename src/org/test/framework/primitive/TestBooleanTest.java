@@ -12,18 +12,18 @@ import org.junit.Test;
  * @version 13-10-2015
  */
 
-public class Test_BooleanTest {
+public class TestBooleanTest {
 	
 	//tests boolean_Equals
 	@Test
 	public void equals_Test(){
-		assertTrue(Test_Boolean.boolean_Equals(true, true));
+		assertTrue(TestBoolean.equals(true, true));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Test_Boolean.boolean_NotEquals(true, false));
+		assertTrue(TestBoolean.notEquals(true, false));
 	}
 
 }

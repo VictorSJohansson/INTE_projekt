@@ -6,10 +6,10 @@ package org.test.framework.primitive;
  * @version 13/10/2015
  *
  */
-public class Test_Boolean extends Primitive{
+public class TestBoolean extends Primitive{
 	
 	//compare two booleans, return true if equal
-	public static boolean boolean_Equals(boolean x, boolean y){
+	public static boolean equals(boolean x, boolean y){
 		int a = Boolean.compare(x, y);
 		if (a==0){
 			return true;
@@ -19,12 +19,12 @@ public class Test_Boolean extends Primitive{
 	}
 	
 	//compare two booleans, return true if not equal
-	public static boolean boolean_NotEquals(boolean x, boolean y){
+	public static boolean notEquals(boolean x, boolean y){
 		int a = Boolean.compare(x,y);
 		if(a!=0){
-			return true;
+			return true; 
 		}
 		else
-			return false;
+			return false; 
 	}
 }
