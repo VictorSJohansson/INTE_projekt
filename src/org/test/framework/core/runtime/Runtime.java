@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Runtime {
 
-	public List<Class<?>> classList;
+	private List<Class<?>> classList;
 
 	/**
 	 * Empty constructor which creates a new empty classList for the runtime
@@ -18,9 +18,6 @@ public class Runtime {
 
 	public Runtime()
 	{
-		// classList = new ArrayList<>();
-		// classList.add(TestClass.class);
-		// this(TestClass.class);
 		this(new ArrayList<Class<?>>());
 	}
 
@@ -63,7 +60,7 @@ public class Runtime {
 
 	public void addClass(List<Class<?>> cl)
 	{
-		classList.addAll(cl);
+		classList.addAll(new ArrayList<Class<?>>(cl));
 	}
 
 	/**
@@ -93,12 +90,12 @@ public class Runtime {
 	{
 		List<String> listOfMethodNames = new ArrayList<>();
 
-		Method[] m = cl.getMethods();
+		Method[] methodsInClass = cl.getMethods();
 
-		for (Method met : m)
+		for (Method method : methodsInClass)
 		{
-			if (met.isAnnotationPresent(annotation))
-				listOfMethodNames.add(met.getName());
+			if (method.isAnnotationPresent(annotation))
+				listOfMethodNames.add(method.getName());
 		}
 
 		return listOfMethodNames;
@@ -111,24 +108,24 @@ public class Runtime {
 
 	public TestResult execute()
 	{
-		TestResult result = new TestResult();
-
-		iterateClassList(result);
-
-		return result;
+		return iterateClassList();
 	}
 
-	private void iterateClassList(TestResult result)
+	private TestResult iterateClassList(TestResult result)
 	{
+		TestResult result = new TestResult();
+
 		for (Class<?> cl : classList)
 		{
 			TestSuite suite = new TestSuite();
-			List<String> names = getMethodNames(OurFramework.ANNOTATION, cl);
+			List<String> listOfMethodNames = getMethodNames(OurFramework.ANNOTATION, cl);
 
-			iterateMethodNames(cl, suite, names);
+			iterateMethodNames(cl, suite, listOfMethodNames);
 
 			suite.run(result);
 		}
+
+		return result;
 	}
 
 	private void iterateMethodNames(Class<?> cl, TestSuite suite,
@@ -142,16 +139,12 @@ public class Runtime {
 			}
 			catch (InstantiationException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			catch (IllegalAccessException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			// TestCase t = new TestCase(s);
-			// t.run(result, TestClass.class);
 		}
 	}
 }
