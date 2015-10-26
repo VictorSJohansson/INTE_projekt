@@ -12,8 +12,19 @@ public class Polynomial extends Object
 
     protected int[] coef;
     protected int deg;
+   
+    /**
+     * This contructor will create a polynomial of degree n with a given array of coefficients. 
+     * 
+     * 
+     */
+    public Polynomial(int[] coefficients, int n) {
+        this.coef = coefficients;
+        this.deg = n;
+        
+    }
     
-         /**
+     /**
      * This contructor will create the term c.x^n. 
      * 
      * 
