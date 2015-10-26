@@ -3,13 +3,13 @@ package org.test.framework.core.runtime;
 
 public class TestClass {
 
-	@OurTest
+	@OurFramework
 	public void testMethod()
 	{
 
 	}
 
-	@OurTest
+	@OurFramework
 	public void testOurNextMethod()
 	{
 

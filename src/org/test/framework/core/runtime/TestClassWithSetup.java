@@ -1,13 +1,14 @@
 
 package org.test.framework;
 
-import org.test.framework.core.runtime.OurTest;
+import org.test.framework.core.runtime.OurFramework;
 import org.test.framework.core.runtime.Test;
 
 public class TestClassWithSetup implements Test {
 
-	public boolean setup = false;
-	public boolean teardown = false;
+	boolean setup = false;
+	boolean teardown = false;
+	
 	@Override
 	public void setup()
 	{
@@ -20,7 +21,7 @@ public class TestClassWithSetup implements Test {
 		teardown = true;
 	}
 
-	@OurTest
+	@OurFramework
 	public void testMethod()
 	{
 

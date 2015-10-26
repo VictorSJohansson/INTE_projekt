@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Runtime {
 
-	public static final Class<OurTest> ANNOTATION = OurTest.class;
+	public static final Class<OurTest> ANNOTATION = @OurFramework.class;
 
 	public List<Class<?>> classList;
 
