@@ -17,6 +17,7 @@ public class PolynomialTest
 {
     
 
+    
     /**
      * This method will test degree() method for the class Polynomial
      *
@@ -30,5 +31,17 @@ public class PolynomialTest
         assertEquals(d,5);
     }
 
-    
+     /**
+     * This method will test plus() method for the class Polynomial
+     *
+     * 
+     */
+    @Test
+    public void test_Plus()
+    {   Polynomial p = new Polynomial(3,5);
+        Polynomial p_plus = p.plus(new Polynomial(7,9));
+        assertEquals(p_plus.deg,9);
+        assertEquals(p_plus.coef[9],7);
+        assertEquals(p_plus.coef[5],3);
+    }
 }

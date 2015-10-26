@@ -10,7 +10,7 @@ package src.org.test.framework.object;
 public class Polynomial extends Object
 {
 
-    protected double[] coef;
+    protected int[] coef;
     protected int deg;
     
          /**
@@ -19,7 +19,7 @@ public class Polynomial extends Object
      * 
      */
     public Polynomial(int c, int n) {
-        coef = new double[n+1];
+        coef = new int[n+1];
         coef[n] = c;
         deg = degree();
     }
