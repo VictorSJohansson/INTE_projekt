@@ -6,32 +6,32 @@ import java.util.List;
 
 import org.test.framework.core.runtime.features.TestFrameworkRunnable;
 
+/**
+ * 
+ * TestSuite class store testcases and then run them by invoking the run method.
+ * 
+ * @author Sebastian de Rzewuski
+ * @Contact Sebastian.de.Rzewuski@gmail.com
+ * @Version 1.0
+ */
+
 public class TestSuite {
 
-	List<TestCase> tests;
+	List<TestCase> listOfTestCases;
 
 	public TestSuite()
 	{
-		tests = new ArrayList<>();
-		// TODO Auto-generated constructor stub
+		listOfTestCases = new ArrayList<>();
 	}
 
 	public void add(TestCase test)
 	{
-		tests.add(test);
+		listOfTestCases.add(test);
 	}
-
-	// public void run(TestResult result)
-	// {
-	// for (TestCase test : tests)
-	// {
-	// test.run(result);
-	// }
-	// }
 
 	public void run(TestResult result)
 	{
-		for (TestCase test : tests)
+		for (TestCase test : listOfTestCases)
 		{
 			test.run(result);
 		}
