@@ -47,10 +47,14 @@ public class TestLogger {
 		System.out.println(timeStamp);
 		System.out.println(tests.size() + " tests run");
 		for (LogEntry entry : tests){
-			System.out.println(entry.getTestName() + " " + entry.getSubtasks.size() + " run, " + entry.getFails() + " failed.");
+			System.out.print(entry.getTestName());
+			if(entry.getFails()>0){
+				Sustem.out.print(": FAILED");
+			}
+			System.out.println(entry.getSubtasks.size() + " run, " + entry.getFails() + " failed.");
 			for(Subtask task :LogEntry.getSubtasks)
 			{
-				System.out.println(" -" + task.toString());
+				System.out.println("  -" + task.toString());
 				
 			}
 				/*
