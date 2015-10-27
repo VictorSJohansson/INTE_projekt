@@ -13,6 +13,7 @@ public class TestCase implements Test {
 
 	String methodName;
 	Object instance;
+	LogEntry entry;
 
 	public TestCase(String methodName)
 	{
@@ -20,6 +21,8 @@ public class TestCase implements Test {
 		{
 			this.methodName = methodName;
 			this.instance = this.getClass().newInstance();
+			entry = new LogEntry(methodName);
+			TestLogger.append(entry);
 		}
 		catch (InstantiationException e)
 		{
@@ -37,6 +40,8 @@ public class TestCase implements Test {
 	{
 		this.methodName = methodName;
 		this.instance = instance;
+		entry = new LogEntry(methodName);
+		TestLogger.append(entry);
 	}
 
 	/**
