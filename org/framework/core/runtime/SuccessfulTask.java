@@ -5,5 +5,8 @@ public class SuccessfulTask extends Subtask{
 	public SuccessfulTask(String taskName){
 		super(taskName);
 	}
-
+	
+	public String toString(){
+		return taskName;
+	}
 }
