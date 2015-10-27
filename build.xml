@@ -3,10 +3,31 @@
 		Projekt INTE HT2015
 	</description>
 
+	<!-- Tests is used by junit to print report -->
+	<property name="tests" location="tests" />
+	
+	<!-- Lib is where junit jarfiles are stored -->
+	<property name="lib" location="lib" />
+	
+	<!-- src where the java package is located -->
 	<property name="src" location="org" />
+	
+	<!-- compile where javac will put the compiled version -->
 	<property name="compile" location="bin" />
+	
+	<!-- dist where distribution will be created -->
 	<property name="dist" location="dist" />
 
+	
+	<!-- Used William Brendel's suggested solution to create the solution below: 
+	http://stackoverflow.com/questions/722774/getting-ant-javac-to-recognise-a-classpath -->
+	<path id="junit-classpath">
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement path="${compile}" />
+	</path>
+	
 	<target name="init">
 		<!-- Create the time stamp -->
 		<tstamp />
@@ -17,30 +38,12 @@
 	<target name="compile" depends="init" description="compile the source">
 		<!-- Compile the java code from ${src} into ${build} -->
 
-
-		<!-- Used William Brendel's suggested solution to create the solution below: 
-		http://stackoverflow.com/questions/722774/getting-ant-javac-to-recognise-a-classpath -->
-		<path id="junit-classpath">
-			<fileset dir="lib">
-				<include name="**/*.jar" />
-			</fileset>
-
-			<pathelement path="${compile}" />
-		</path>
-
-
 		<javac includeantruntime="false" destdir="${compile}">
 			<src path="${src}" />
 			<classpath refid="junit-classpath" />
 		</javac>
 
-
-
 	</target>
-
-
-
-	<!-- IS NOT RUNNING SINCE DEFAULT = compile -->
 
 	<target name="dist" depends="compile" description="generate the distribution">
 		<!-- Create the distribution directory -->
@@ -50,6 +53,25 @@
 		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}-${TSTAMP}.jar" basedir="${compile}" />
 	</target>
 
+	<!-- Run jUnit -->
+	<target name="junit" depends="compile" description="run junit test">
+		
+		<mkdir dir="${tests}/org/framework/core/test/" />
+		
+		<junit printsummary="yes" haltonfailure="no">
+		
+			<classpath refid="junit-classpath" />
+			
+			<formatter type="plain" usefile="false"/>
+			<formatter type="plain" />
+			
+			<test name="org.framework.core.test.RuntimeTestSuite" todir="${tests}/org/framework/core/test/"/>
+			
+		</junit>	
+	</target>
+	
+	
+	
 	<target name="clean" description="clean up">
 		<!-- Delete the ${build} and ${dist} directory trees -->
 		<delete dir="${compile}" />
