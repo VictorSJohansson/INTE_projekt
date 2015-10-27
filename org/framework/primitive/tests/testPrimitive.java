@@ -14,8 +14,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 public class testPrimitive {
 	
-	int failCount = 0;
-
 	
 	/*@Before
 	public void initialize()
@@ -27,27 +25,28 @@ public class testPrimitive {
 	//tests boolean_Equals
 	@Test
 	public void testequalsTestBoolean(){
-		Primitive.equals(true, true);
-		assertThat(failCount, is(TestLogger.getSize()));
+		assertTrue(Primitive.equals(true, true), true);
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		Primitive.notEquals(true, false);
-		assertThat(failCount, is(TestLogger.getSize()));
+		assertTrue(Primitive.notEquals(true, false), false);
 	}
 	
 	//Byte**********************************************************************************************
 	
 	@Test //Tests the functionality of equals_Test()  
     public void equals_TestByte() {
-		Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE);
-		assertThat(failCount, is(TestLogger.getSize()));
-		Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
-		failCount++;
-		assertThat(failCount, is(TestLogger.getSize()));
-		System.out.println(TestLogger.getSize());
+		
+		assertFalse(Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE));
+		assertFalse(Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE));
+		//Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE);
+		//assertThat(failCount, is(TestLogger.getSize()));
+		//Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
+		//failCount++;
+		//assertThat(failCount, is(TestLogger.getSize()));
+		//System.out.println(TestLogger.getSize());
        // assertEquals(logCount, TestLogger.getSize());
         //assertFalse(Primitive.byte_Equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
       //  assertEquals(logCount, TestLogger.getSize());
@@ -125,7 +124,7 @@ public class testPrimitive {
     @Test
     public void equals_Test_Int()
     {
-        assertTrue(Primitive.equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+        assertFalse(Primitive.equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
         
     }
     
@@ -203,7 +202,7 @@ public class testPrimitive {
 	 */
 	@Test
 	public void less_Test_Long(){
-		assertTrue(Primitive.less(123456, 12345));
+		assertTrue(Primitive.less(123455, 12346));
 	}
 
     @Test
@@ -269,7 +268,7 @@ public class testPrimitive {
 	@Test
 	public void sameIntegerValue_Test_Float() {
 		assertTrue(Primitive.sameIntegerValue((float)5.3, (float)5.7));
-		assertFalse(Primitive.sameIntegerValue((float)8.5, (float)8.5));
+		assertFalse(Primitive.sameIntegerValue((float)8.5, (float)9.5));
 	}
 	
 	//Doubble*******************************************************************************************
@@ -310,7 +309,8 @@ public class testPrimitive {
     @Test
     public void integerValue_Test_Double()
     {
-        assertTrue(Primitive.equalIntegerValue(2.3, 1.4));
+    	assertTrue(Primitive.equalIntegerValue(2.3, 2.4));
+        assertFalse(Primitive.equalIntegerValue(2.3, 1.4));
     }
     
     @Test

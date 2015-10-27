@@ -1,9 +1,11 @@
 package org.framework.primitive.tests;
 
+import framework.primitve.Primitive;
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 
 /**
  * Test class for Test_Boolean.java
@@ -18,6 +20,7 @@ public class TestBooleanTest {
 	@Test
 	public void equals_Test(){
 		assertTrue(TestBoolean.equals(true, true));
+		assertTrue(true, true);
 	}
 	 
 	//tests boolean_NotEquals
