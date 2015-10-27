@@ -24,14 +24,19 @@ public class TestLogger {
 	private TestLogger(){
 		tests = new ArrayList<LogEntry>();
 		//times = new ArrayList<Long>();
+		
 
 	}
 	
 	/*
 	 * Adds a LogEntry to the arraylist for future printouts
 	 */
-	public static void append (LogEntry entry){
+	public static void appendEntry (LogEntry entry){
 		tests.add(entry);
+	}
+	
+	public static void appendSubtask(Subtask task){
+		tests.get(tests.size-1).append(task);
 	}
 	
 	/*
@@ -41,6 +46,12 @@ public class TestLogger {
 		String timeStamp = new SimpleDateFormat("yyyy:MM:dd_HH:mm:ss").format(Calendar.getInstance().getTime());
 		System.out.println(timeStamp);
 		for (LogEntry entry : tests){
+			System.out.println(entry.getTestName() + " " + entry.getSubtasks.size() + " run, " + entry.getFails() + " failed.");
+			for(Subtask task :LogEntry.getSubtasks)
+			{
+				System.out.println(task.getTaskName());
+			}
+				/*
 			if (entry instanceof FailEntry){
 				if(((FailEntry)entry).getValue2() != null){
 					System.out.println("Failed method " + entry.getTestName() + ": " +((FailEntry)entry).getValue1() + " compared to " + ((FailEntry)entry).getValue2());
@@ -51,7 +62,7 @@ public class TestLogger {
 			}
 			else{
 				System.out.println("Successful test: " + entry.getTestName());
-			}
+			}*/
 		}
 	}
 	
