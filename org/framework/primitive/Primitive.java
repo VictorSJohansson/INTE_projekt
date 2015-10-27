@@ -302,7 +302,7 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
 						return false;
 					}
 					i = (int)obj;
@@ -311,13 +311,13 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
 						return false;
 					}
 					
 				}
 			}
-			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
 			return false;
 		}
 		
@@ -1052,7 +1052,7 @@ public class Primitive {
      * two parameters.
      */
     public static void success(String testName){
-    	TestLogger.append(new SuccessfulEntry(testName));
+    	TestLogger.appendSubtask(new SuccessfulTask(testName));
     }
     
     /*
@@ -1060,6 +1060,8 @@ public class Primitive {
      * one parameter.
      */
     public static void fail(String testName, Object value1, Object value2){
-    	TestLogger.append(new FailEntry(testName, value1, value2));
+    	TestLogger.appendSubtask(new FailedTask(testName, value1, value2));
     }
+    
+
 }

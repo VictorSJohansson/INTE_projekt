@@ -1,4 +1,4 @@
-package org.framework.primitive;
+package org.framework.primitive.tests;
 
 
 
