@@ -7,11 +7,13 @@ public class LogEntry {
 	 */
 	
 	private String testName;
+	private ArrayList<Subtask> tasks = new ArrayList<Subtask>();
 	
 	
 	//Constructor
 	public LogEntry(String testName){
 		this.testName = testName;
+		
 		
 		//Skicka in nullvärde istället
 	}
@@ -19,5 +21,9 @@ public class LogEntry {
 	//Returns name of test
 	public String getTestName(){
 		return testName;
+	}
+	
+	public ArrayList getSubTask(){
+		return tasks;
 	}
 }
