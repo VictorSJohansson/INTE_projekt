@@ -3,6 +3,8 @@ package org.framework.core.runtime;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+
+
 /**
  * Creates a simple testcase. One testcase is bound to one test and result.
  * After a testcase is created you run the case, either as an child if you use
@@ -22,7 +24,7 @@ public class TestCase implements Test {
 			this.methodName = methodName;
 			this.instance = this.getClass().newInstance();
 			entry = new LogEntry(methodName);
-			TestLogger.append(entry);
+			TestLogger.appendEntry(entry);
 		}
 		catch (InstantiationException e)
 		{
@@ -41,7 +43,7 @@ public class TestCase implements Test {
 		this.methodName = methodName;
 		this.instance = instance;
 		entry = new LogEntry(methodName);
-		TestLogger.append(entry);
+		TestLogger.appendEntry(entry);
 	}
 
 	/**

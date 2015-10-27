@@ -5,6 +5,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import org.framework.primitive.*;
+
 /*
  * @author Victor Johansson
  * @version 14-10-2015

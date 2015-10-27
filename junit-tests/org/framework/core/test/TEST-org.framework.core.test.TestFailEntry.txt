@@ -1,9 +1,9 @@
 Testsuite: org.framework.core.test.TestFailEntry
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,029 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,035 sec
 
 Testcase: testFailEntryValue_Value2IsCorrect took 0,003 sec
 Testcase: testFailEntryValue_Value1IsCorrect took 0 sec
-Testcase: testFailEntryConstructorIsNull_Value1IsNull took 0,002 sec
+Testcase: testFailEntryConstructorIsNull_Value1IsNull took 0,003 sec
 Testcase: testFailEntryConstructorIsNull_Value2IsNull took 0 sec
-Testcase: testFailEntryConstructorIsNull_NullTestName took 0,001 sec
+Testcase: testFailEntryConstructorIsNull_NullTestName took 0 sec
 Testcase: testFailEntryTestName_TestNameIsCorrect took 0 sec

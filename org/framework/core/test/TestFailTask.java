@@ -7,6 +7,7 @@ import org.hamcrest.core.IsNull;
 import org.junit.Before;
 import org.junit.Test;
 
+import org.framework.core.runtime.FailTask;
 
 public class TestFailTask {
 	
@@ -31,11 +32,11 @@ public class TestFailTask {
 	@Test
 	public void testFailTaskValue1IsCorrect(){
 		FailTask task = new FailTask("test", 1, null);
-		assertEquals(task.getValue1, 1);
+		assertEquals(task.getValue1(), 1);
 	}
 	
 	public void testFailTaskValue2IsCorrect(){
 		FailTask task = new FailTask("test", 1, 2);
-		assertEquals(task.getValue2, 2);
+		assertEquals(task.getValue2(), 2);
 	}
 }

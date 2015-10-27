@@ -2,15 +2,13 @@ package org.framework.primitive.tests;
 
 import static org.junit.Assert.*;
 
-import org.framework.core.runtime.TestLogger;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.*;
-import org.junit.runner.RunWith;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
 
+import org.framework.core.runtime.TestLogger;
+import org.framework.primitive.*;
 
 public class testPrimitive {
 	
@@ -25,13 +23,13 @@ public class testPrimitive {
 	//tests boolean_Equals
 	@Test
 	public void testequalsTestBoolean(){
-		assertTrue(Primitive.equals(true, true), true);
+		assertTrue(Primitive.equals(true, true));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
-		assertTrue(Primitive.notEquals(true, false), false);
+		assertTrue(Primitive.notEquals(true, false));
 	}
 	
 	//Byte**********************************************************************************************

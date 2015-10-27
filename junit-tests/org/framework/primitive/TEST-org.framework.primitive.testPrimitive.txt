@@ -1,96 +1,356 @@
 Testsuite: org.framework.primitive.testPrimitive
-Tests run: 33, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0,049 sec
+Tests run: 33, Failures: 0, Errors: 32, Skipped: 0, Time elapsed: 0,08 sec
 
-Testcase: valueWithinByteRange_Test_Int took 0,005 sec
-Testcase: less_Test_Byte took 0,001 sec
-Testcase: less_Test_Long took 0,004 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+Testcase: valueWithinByteRange_Test_Int took 0,012 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinByteRange(Unknown Source)
+	at org.framework.primitive.testPrimitive.valueWithinByteRange_Test_Int(Unknown Source)
+
+Testcase: less_Test_Byte took 0,002 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
+	at org.framework.primitive.testPrimitive.less_Test_Byte(Unknown Source)
+
+Testcase: less_Test_Long took 0,003 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
 	at org.framework.primitive.testPrimitive.less_Test_Long(Unknown Source)
 
-Testcase: equals_Test_Double took 0 sec
+Testcase: equals_Test_Double took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
+	at org.framework.primitive.testPrimitive.equals_Test_Double(Unknown Source)
+
 Testcase: divisor_Test_Byte took 0,001 sec
-Testcase: divisor_Test_Long took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.divisor(Unknown Source)
+	at org.framework.primitive.testPrimitive.divisor_Test_Byte(Unknown Source)
+
+Testcase: divisor_Test_Long took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.divisor(Unknown Source)
+	at org.framework.primitive.testPrimitive.divisor_Test_Long(Unknown Source)
+
 Testcase: integerValue_Test_Double took 0,001 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.equalIntegerValue(Unknown Source)
 	at org.framework.primitive.testPrimitive.integerValue_Test_Double(Unknown Source)
 
 Testcase: valueWithinByteRange_Test_Long took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinByteRange(Unknown Source)
+	at org.framework.primitive.testPrimitive.valueWithinByteRange_Test_Long(Unknown Source)
+
 Testcase: sameIntegerValue_Test_Float took 0,001 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.sameIntegerValue(Unknown Source)
 	at org.framework.primitive.testPrimitive.sameIntegerValue_Test_Float(Unknown Source)
 
 Testcase: less_Test_Float took 0,001 sec
-Testcase: less_Test_Short took 0 sec
-Testcase: equals_Char_Test took 0,001 sec
-Testcase: testequalsTestBoolean took 0,009 sec
-	FAILED
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
+	at org.framework.primitive.testPrimitive.less_Test_Float(Unknown Source)
 
-Expected: is <25>
-     but: was <0>
-junit.framework.AssertionFailedError: 
-Expected: is <25>
-     but: was <0>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+Testcase: less_Test_Short took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
+	at org.framework.primitive.testPrimitive.less_Test_Short(Unknown Source)
+
+Testcase: equals_Char_Test took 0,001 sec
+Testcase: testequalsTestBoolean took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
 	at org.framework.primitive.testPrimitive.testequalsTestBoolean(Unknown Source)
 
 Testcase: greater_Test_Int took 0 sec
-Testcase: less_Test_Int took 0 sec
-Testcase: less_Test_Double took 0 sec
-Testcase: greater_Test_Float took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Int(Unknown Source)
+
+Testcase: less_Test_Int took 0,002 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
+	at org.framework.primitive.testPrimitive.less_Test_Int(Unknown Source)
+
+Testcase: less_Test_Double took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.less(Unknown Source)
+	at org.framework.primitive.testPrimitive.less_Test_Double(Unknown Source)
+
+Testcase: greater_Test_Float took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Float(Unknown Source)
+
 Testcase: greater_Test_Short took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Short(Unknown Source)
+
 Testcase: valueWithinByteRange_Test_Short took 0 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinByteRange(Unknown Source)
 	at org.framework.primitive.testPrimitive.valueWithinByteRange_Test_Short(Unknown Source)
 
-Testcase: notEquals_Test took 0,001 sec
-	FAILED
-
-Expected: is <36>
-     but: was <0>
-junit.framework.AssertionFailedError: 
-Expected: is <36>
-     but: was <0>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+Testcase: notEquals_Test took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.notEquals(Unknown Source)
 	at org.framework.primitive.testPrimitive.notEquals_Test(Unknown Source)
 
-Testcase: greater_Test_Byte took 0 sec
-Testcase: greater_Test_Long took 0,001 sec
-Testcase: divisor_Test_Short took 0 sec
-Testcase: equals_Short_Test took 0 sec
-Testcase: equals_Test_Long took 0 sec
-Testcase: valueWithinShortRange_Test_Long took 0,001 sec
-Testcase: equals_TestByte took 0 sec
-	FAILED
+Testcase: greater_Test_Byte took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Byte(Unknown Source)
 
-Expected: is <49>
-     but: was <0>
-junit.framework.AssertionFailedError: 
-Expected: is <49>
-     but: was <0>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+Testcase: greater_Test_Long took 0,006 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Long(Unknown Source)
+
+Testcase: divisor_Test_Short took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.divisor(Unknown Source)
+	at org.framework.primitive.testPrimitive.divisor_Test_Short(Unknown Source)
+
+Testcase: equals_Short_Test took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
+	at org.framework.primitive.testPrimitive.equals_Short_Test(Unknown Source)
+
+Testcase: equals_Test_Long took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
+	at org.framework.primitive.testPrimitive.equals_Test_Long(Unknown Source)
+
+Testcase: valueWithinShortRange_Test_Long took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinShortRange(Unknown Source)
+	at org.framework.primitive.testPrimitive.valueWithinShortRange_Test_Long(Unknown Source)
+
+Testcase: equals_TestByte took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
 	at org.framework.primitive.testPrimitive.equals_TestByte(Unknown Source)
 
-Testcase: equals_Test_Int took 0,001 sec
-Testcase: valueWithinIntRange_Test_Long took 0 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+Testcase: equals_Test_Int took 0 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.equals(Unknown Source)
+	at org.framework.primitive.testPrimitive.equals_Test_Int(Unknown Source)
+
+Testcase: valueWithinIntRange_Test_Long took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinIntRange(Unknown Source)
 	at org.framework.primitive.testPrimitive.valueWithinIntRange_Test_Long(Unknown Source)
 
 Testcase: valueWithinFloatRange_Test_Double took 0,001 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinFloatRange(Unknown Source)
 	at org.framework.primitive.testPrimitive.valueWithinFloatRange_Test_Double(Unknown Source)
 
-Testcase: divisor_Test_Int took 0 sec
-Testcase: greater_Test_Double took 0 sec
-Testcase: valueWithinShortRange_Test_Int took 0 sec
+Testcase: divisor_Test_Int took 0,001 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.divisor(Unknown Source)
+	at org.framework.primitive.testPrimitive.divisor_Test_Int(Unknown Source)
+
+Testcase: greater_Test_Double took 0,002 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.success(Unknown Source)
+	at org.framework.primitive.Primitive.greater(Unknown Source)
+	at org.framework.primitive.testPrimitive.greater_Test_Double(Unknown Source)
+
+Testcase: valueWithinShortRange_Test_Int took 0,002 sec
+	Caused an ERROR
+-1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at org.framework.core.runtime.TestLogger.appendSubtask(Unknown Source)
+	at org.framework.primitive.Primitive.fail(Unknown Source)
+	at org.framework.primitive.Primitive.valueWithinShortRange(Unknown Source)
+	at org.framework.primitive.testPrimitive.valueWithinShortRange_Test_Int(Unknown Source)
+

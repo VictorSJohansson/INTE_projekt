@@ -152,18 +152,17 @@ public class Primitive {
 					return true;
 				}
 				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-					return false;
+					s = (short)obj;
+					if(b > s) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+						return false;
+					}
 				}
-				s = (short)obj;
-				if(b > s) {
-					success(Thread.currentThread().getStackTrace()[1].getMethodName());
-					return true;
-				}
-				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-					return false;
-				}
+				
 				
 			}
 		}
@@ -183,18 +182,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-						return false;
+						s = (short)obj;
+						if(b < s) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true;
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+							return false;
+						}
 					}
-					s = (short)obj;
-					if(b < s) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true;
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-						return false;
-					}
+					
 					
 				}
 			}
@@ -302,18 +300,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
-						return false;
+						i = (int)obj;
+						if(s > i) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true;
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
+							return false;
+						}
 					}
-					i = (int)obj;
-					if(s > i) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true;
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
-						return false;
-					}
+					
 					
 				}
 			}
@@ -333,22 +330,21 @@ public class Primitive {
 								return true;
 							}
 							else {
-								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-								return false;
+								i = (int)obj;
+								if(s < i) {
+									success(Thread.currentThread().getStackTrace()[1].getMethodName());
+									return true;
+								}
+								else {
+									fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
+									return false;
+								}
 							}
-							i = (int)obj;
-							if(s < i) {
-								success(Thread.currentThread().getStackTrace()[1].getMethodName());
-								return true;
-							}
-							else {
-								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
-								return false;
-							}
+							
 							
 						}
 					}
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
 					return false;
 				}
 	
@@ -471,18 +467,17 @@ public class Primitive {
 					return true;
 				}
 				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-					return false;
+					l = (long)obj;
+					if(i > l) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+						return false;
+					}
 				}
-				l = (long)obj;
-				if(i > l) {
-					success(Thread.currentThread().getStackTrace()[1].getMethodName());
-					return true;
-				}
-				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-					return false;
-				}
+				
 			}
 		}
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
@@ -501,18 +496,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-						return false;
+						l = (long)obj;
+						if(i < l) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true;
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+							return false;
+						}
 					}
-					l = (long)obj;
-					if(i < l) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true;
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-						return false;
-					}
+					
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
@@ -648,18 +642,17 @@ public class Primitive {
 					return true;
 				}
 				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
-					return false;
+					l2 = (long)obj;
+					if(l > l2) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true; 
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+						return false;
+					}
 				}
-				l2 = (long)obj;
-				if(l > l2) {
-					success(Thread.currentThread().getStackTrace()[1].getMethodName());
-					return true; 
-				}
-				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
-					return false;
-				}
+				
 			}
 		}
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
@@ -678,18 +671,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
-						return false;
+						l2 = (long)obj;
+						if(l < l2) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true; 
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+							return false;
+						}
 					}
-					l2 = (long)obj;
-					if(l < l2) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true; 
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
-						return false;
-					}
+					
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
@@ -782,18 +774,17 @@ public class Primitive {
 					return true;
 				}
 				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
-					return false;
+					l = (long)obj;
+					if(f > l) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+						return false;
+					}
 				}
-				l = (long)obj;
-				if(f > l) {
-					success(Thread.currentThread().getStackTrace()[1].getMethodName());
-					return true;
-				}
-				else {
-					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
-					return false;
-				}
+				
 			}
 		}
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
@@ -812,18 +803,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
-						return false;
+						l = (long)obj;
+						if(f < l) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true;
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+							return false;
+						}
 					}
-					l = (long)obj;
-					if(f < l) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true;
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
-						return false;
-					}
+					
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
@@ -953,18 +943,17 @@ public class Primitive {
 						return true;
 					}
 					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
-						return false;
+						l = (long)obj;
+						if(d > l) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true;
+						}
+						else {
+							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+							return false;
+						}
 					}
-					l = (long)obj;
-					if(d > l) {
-						success(Thread.currentThread().getStackTrace()[1].getMethodName());
-						return true;
-					}
-					else {
-						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
-						return false;
-					}
+					
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
@@ -983,18 +972,17 @@ public class Primitive {
 								return true;
 							}
 							else {
-								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
-								return false;
+								l = (long)obj;
+								if(d < l) {
+									success(Thread.currentThread().getStackTrace()[1].getMethodName());
+									return true;
+								}
+								else {
+									fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+									return false;
+								}
 							}
-							l = (long)obj;
-							if(d < l) {
-								success(Thread.currentThread().getStackTrace()[1].getMethodName());
-								return true;
-							}
-							else {
-								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
-								return false;
-							}
+							
 						}
 					}
 					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);

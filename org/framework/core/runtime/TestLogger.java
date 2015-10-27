@@ -36,7 +36,7 @@ public class TestLogger {
 	}
 	
 	public static void appendSubtask(Subtask task){
-		tests.get(tests.size-1).append(task);
+		tests.get(tests.size()-1).addTask(task);
 	}
 	
 	/*
@@ -49,10 +49,11 @@ public class TestLogger {
 		for (LogEntry entry : tests){
 			System.out.print(entry.getTestName());
 			if(entry.getFails()>0){
-				Sustem.out.print(": FAILED");
+				System.out.print(": FAILED");
 			}
-			System.out.println(entry.getSubtasks.size() + " run, " + entry.getFails() + " failed.");
-			for(Subtask task :LogEntry.getSubtasks)
+			System.out.println(entry.getSubtask().size() + " run, " + entry.getFails() + " failed.");
+			
+			for(Subtask task :entry.getSubtask())
 			{
 				System.out.println("  -" + task.toString());
 				

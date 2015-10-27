@@ -1,7 +1,7 @@
 Testsuite: org.framework.primitive.TestLongTest
-Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0,025 sec
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0,031 sec
 
-Testcase: valueWithinIntRange_Test took 0,005 sec
+Testcase: valueWithinIntRange_Test took 0,01 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -9,7 +9,7 @@ junit.framework.AssertionFailedError
 
 Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec
-Testcase: equalsTest took 0,001 sec
+Testcase: equalsTest took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -17,7 +17,7 @@ junit.framework.AssertionFailedError
 
 Testcase: greaterTest took 0 sec
 Testcase: valueWithinByteRange_Test took 0 sec
-Testcase: lessTest took 0 sec
+Testcase: lessTest took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError

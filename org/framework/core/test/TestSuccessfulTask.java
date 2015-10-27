@@ -7,8 +7,13 @@ import org.hamcrest.core.IsNull;
 import org.junit.Before;
 import org.junit.Test;
 
+import org.framework.core.runtime.Subtask;
+import org.framework.core.runtime.SuccessfulTask;
+
+
 public class TestSuccessfulTask {
-FailTask task;
+
+	Subtask task;
 	
 	@Before
 	public void initialize(){
@@ -22,7 +27,7 @@ FailTask task;
 
 	@Test
 	public void testSuccessfulTaskTestName_TestNameIsCorrect(){
-		Successful task = new SuccessfulTask("test");
+		SuccessfulTask task = new SuccessfulTask("test");
 		assertEquals(task.getTaskName(), "test");
 	}
 }

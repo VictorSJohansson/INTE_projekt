@@ -7,7 +7,8 @@ import org.hamcrest.core.IsNull;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.framework.core.runtime.SubTask;
+
+import org.framework.core.runtime.Subtask;
 
 public class TestSubtask {
 
