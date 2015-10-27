@@ -7,8 +7,9 @@ public class Subtask {
 		this.taskName=taskName;
 	}
 	
-	public String toString(){
+	public String getTaskName(){
 		return taskName;
 	}
+
 
 }
