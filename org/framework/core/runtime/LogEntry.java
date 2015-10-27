@@ -1,21 +1,22 @@
 package org.framework.core.runtime;
 
+import java.util.ArrayList;
+
 public class LogEntry {
 	
 	/*
-	 * This class is used to store information about failed tests
+	 * This class is used to store information about tests
 	 */
 	
 	private String testName;
-	private ArrayList<Subtask> tasks = new ArrayList<Subtask>();
+	private ArrayList<Subtask> tasks;
+	private int fails;
 	
 	
 	//Constructor
 	public LogEntry(String testName){
 		this.testName = testName;
-		
-		
-		//Skicka in nullvärde istället
+		this.tasks = new ArrayList<Subtask>();
 	}
 
 	//Returns name of test
@@ -23,7 +24,18 @@ public class LogEntry {
 		return testName;
 	}
 	
-	public ArrayList getSubTask(){
+	public void addTask(Subtask task){
+		tasks.add(task);
+		if (task instanceof FailTask){
+			fails+=1;
+		}
+	}
+	
+	public int getFails(){
+		return fails;
+	}
+	
+	public ArrayList getSubtask(){
 		return tasks;
 	}
 }
