@@ -170,6 +170,37 @@ public class Primitive {
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
 		return false;
 	}
+	
+	//Compares a byte with an object, fails if that object is not a number with a value greater than that byte
+		public static boolean less(byte b, Object obj) {
+			short s;
+			float f;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					f = (float)obj;
+					if(b < f) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+						return false;
+					}
+					s = (short)obj;
+					if(b < s) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+						return false;
+					}
+					
+				}
+			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+			return false;
+		}
     
 	//Short*********************************************************************************************
 	
@@ -289,6 +320,37 @@ public class Primitive {
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
 			return false;
 		}
+		
+		//Compares a short with an object, fails if that object is not a number with a value greater than that short
+				public static boolean less(short s, Object obj) {
+					int i;
+					float f;
+					if(isANumber(obj)) {
+						if(isAFloatNumber(obj)) {
+							f = (float)obj;
+							if(s < f) {
+								success(Thread.currentThread().getStackTrace()[1].getMethodName());
+								return true;
+							}
+							else {
+								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+								return false;
+							}
+							i = (int)obj;
+							if(s < i) {
+								success(Thread.currentThread().getStackTrace()[1].getMethodName());
+								return true;
+							}
+							else {
+								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+								return false;
+							}
+							
+						}
+					}
+					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
+					return false;
+				}
 	
 	//Int***********************************************************************************************
 	
@@ -376,56 +438,86 @@ public class Primitive {
 	}
 	
 	//Compares an int with an object, fails if that object is not a number equal to that int
-			public static boolean equals(int i, Object obj) {
-				long l;
-				float f;
-				if(isANumber(obj)) {
-					if(isAFloatNumber(obj)) {
-						f = (float)obj;
-						if(f == i) {
-							success(Thread.currentThread().getStackTrace()[1].getMethodName());
-							return true;
-						}
-						l = (long)obj;
-						if(l == i) {
-							success(Thread.currentThread().getStackTrace()[1].getMethodName());
-							return true;
-						}
-					}
+	public static boolean equals(int i, Object obj) {
+		long l;
+		float f;
+		if(isANumber(obj)) {
+			if(isAFloatNumber(obj)) {
+				f = (float)obj;
+				if(f == i) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
+					return true;
 				}
-				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-				return false;
+				l = (long)obj;
+				if(l == i) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
+					return true;
+				}
 			}
+		}
+		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+		return false;
+	}
 			
-			//Compares an int with an object, fails if that object is not a number with a value less than that int
-			public static boolean equals(int i, Object obj) {
-				long l;
-				float f;
-				if(isANumber(obj)) {
-					if(isAFloatNumber(obj)) {
-						f = (float)obj;
-						if(i > f) {
-							success(Thread.currentThread().getStackTrace()[1].getMethodName());
-							return true;
-						}
-						else {
-							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-							return false;
-						}
-						l = (long)obj;
-						if(i > l) {
-							success(Thread.currentThread().getStackTrace()[1].getMethodName());
-							return true;
-						}
-						else {
-							fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-							return false;
-						}
+	//Compares an int with an object, fails if that object is not a number with a value less than that int
+	public static boolean greater(int i, Object obj) {
+		long l;
+		float f;
+		if(isANumber(obj)) {
+			if(isAFloatNumber(obj)) {
+				f = (float)obj;
+				if(i > f) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
+					return true;
+				}
+				else {
+					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+					return false;
+				}
+				l = (long)obj;
+				if(i > l) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
+					return true;
+				}
+				else {
+					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+					return false;
+				}
+			}
+		}
+		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+		return false;
+	}
+	
+	//Compares an int with an object, fails if that object is not a number with a value greater than that int
+		public static boolean less(int i, Object obj) {
+			long l;
+			float f;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					f = (float)obj;
+					if(i < f) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+						return false;
+					}
+					l = (long)obj;
+					if(i < l) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+						return false;
 					}
 				}
-				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
-				return false;
 			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
+			return false;
+		}
 	
 	//Long**********************************************************************************************
 	
@@ -545,7 +637,7 @@ public class Primitive {
 	}
 			
 	//Compares a long with an object, fails if that object is not a number with a value less than that long
-	public static boolean equals(long l, Object obj) {
+	public static boolean greater(long l, Object obj) {
 		long l2;
 		float f;
 		if(isANumber(obj)) {
@@ -573,6 +665,36 @@ public class Primitive {
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
 		return false;
 	}
+	
+	//Compares a long with an object, fails if that object is not a number with a value greater than that long
+		public static boolean less(long l, Object obj) {
+			long l2;
+			float f;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					f = (float)obj;
+					if(l < f) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+						return false;
+					}
+					l2 = (long)obj;
+					if(l < l2) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true; 
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+						return false;
+					}
+				}
+			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
+			return false;
+		}
 	
 	//Float*********************************************************************************************
 	
@@ -649,7 +771,7 @@ public class Primitive {
 	}
 	
 	//Compares a float with an object, fails if that object is not a number with a value less than that float
-	public static boolean equals(float f, Object obj) {
+	public static boolean greater(float f, Object obj) {
 		long l;
 		float f2;
 		if(isANumber(obj)) {
@@ -677,6 +799,36 @@ public class Primitive {
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
 		return false;
 	}
+	
+	//Compares a float with an object, fails if that object is not a number with a value greater than that float
+		public static boolean less(float f, Object obj) {
+			long l;
+			float f2;
+			if(isANumber(obj)) {
+				if(isAFloatNumber(obj)) {
+					f2 = (float)obj;
+					if(f < f2) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+						return false;
+					}
+					l = (long)obj;
+					if(f < l) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
+						return true;
+					}
+					else {
+						fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+						return false;
+					}
+				}
+			}
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
+			return false;
+		}
 	
 	//Doubble*******************************************************************************************
 	
@@ -790,7 +942,7 @@ public class Primitive {
 		}
 		
 		//Compares a double with an object, fails if that object is not a number with a value less than that double
-		public static boolean equals(double d, Object obj) {
+		public static boolean greater(double d, Object obj) {
 			long l;
 			double d2;
 			if(isANumber(obj)) {
@@ -818,6 +970,36 @@ public class Primitive {
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
 			return false;
 		}
+		
+		//Compares a double with an object, fails if that object is not a number with a value greater than that double
+				public static boolean less(double d, Object obj) {
+					long l;
+					double d2;
+					if(isANumber(obj)) {
+						if(isAFloatNumber(obj)) {
+							d2 = (float)obj;
+							if(d < d2) {
+								success(Thread.currentThread().getStackTrace()[1].getMethodName());
+								return true;
+							}
+							else {
+								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+								return false;
+							}
+							l = (long)obj;
+							if(d < l) {
+								success(Thread.currentThread().getStackTrace()[1].getMethodName());
+								return true;
+							}
+							else {
+								fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+								return false;
+							}
+						}
+					}
+					fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
+					return false;
+				}
 	
 	//Char**********************************************************************************************
 	
