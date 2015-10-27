@@ -27,8 +27,13 @@ public class Test_polynomialsTest
     {
         Polynomial p = new Polynomial(3,5);
         Polynomial p1 = (p.plus(new Polynomial(2,5))).minus(new Polynomial(1,9));
-        Polynomial p2 = (p.plus(new Polynomial(2,4))).minus(new Polynomial(1,9));
+        Polynomial p2 = (p.plus(new Polynomial(2,5))).minus(new Polynomial(1,9));
         assertTrue(Test_polynomials.equals_Test(p1,p2));
+        
+        Polynomial p = new Polynomial(3,5);
+        Polynomial p1 = (p.plus(new Polynomial(2,5))).minus(new Polynomial(1,9));
+        Polynomial p2 = (p.plus(new Polynomial(2,4))).minus(new Polynomial(1,9));
+        assertFalse(Test_polynomials.equals_Test(p1,p2));
     }
 
     
