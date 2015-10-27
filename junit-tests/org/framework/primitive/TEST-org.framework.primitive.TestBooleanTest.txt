@@ -1,5 +1,5 @@
 Testsuite: org.framework.primitive.TestBooleanTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,026 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,017 sec
 
-Testcase: equals_Test took 0,004 sec
+Testcase: equals_Test took 0,002 sec
 Testcase: notEquals_Test took 0 sec

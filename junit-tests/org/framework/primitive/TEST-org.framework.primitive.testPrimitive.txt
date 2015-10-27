@@ -1,7 +1,7 @@
 Testsuite: org.framework.primitive.testPrimitive
-Tests run: 33, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0,051 sec
+Tests run: 33, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0,049 sec
 
-Testcase: valueWithinByteRange_Test_Int took 0,007 sec
+Testcase: valueWithinByteRange_Test_Int took 0,005 sec
 Testcase: less_Test_Byte took 0,001 sec
 Testcase: less_Test_Long took 0,004 sec
 	FAILED
@@ -9,8 +9,8 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.less_Test_Long(Unknown Source)
 
-Testcase: equals_Test_Double took 0,001 sec
-Testcase: divisor_Test_Byte took 0 sec
+Testcase: equals_Test_Double took 0 sec
+Testcase: divisor_Test_Byte took 0,001 sec
 Testcase: divisor_Test_Long took 0 sec
 Testcase: integerValue_Test_Double took 0,001 sec
 	FAILED
@@ -25,10 +25,10 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.sameIntegerValue_Test_Float(Unknown Source)
 
-Testcase: less_Test_Float took 0 sec
-Testcase: less_Test_Short took 0,001 sec
-Testcase: equals_Char_Test took 0 sec
-Testcase: testequalsTestBoolean took 0,008 sec
+Testcase: less_Test_Float took 0,001 sec
+Testcase: less_Test_Short took 0 sec
+Testcase: equals_Char_Test took 0,001 sec
+Testcase: testequalsTestBoolean took 0,009 sec
 	FAILED
 
 Expected: is <25>
@@ -66,8 +66,8 @@ Testcase: greater_Test_Long took 0,001 sec
 Testcase: divisor_Test_Short took 0 sec
 Testcase: equals_Short_Test took 0 sec
 Testcase: equals_Test_Long took 0 sec
-Testcase: valueWithinShortRange_Test_Long took 0 sec
-Testcase: equals_TestByte took 0,001 sec
+Testcase: valueWithinShortRange_Test_Long took 0,001 sec
+Testcase: equals_TestByte took 0 sec
 	FAILED
 
 Expected: is <49>
@@ -78,8 +78,8 @@ Expected: is <49>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.framework.primitive.testPrimitive.equals_TestByte(Unknown Source)
 
-Testcase: equals_Test_Int took 0 sec
-Testcase: valueWithinIntRange_Test_Long took 0,001 sec
+Testcase: equals_Test_Int took 0,001 sec
+Testcase: valueWithinIntRange_Test_Long took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -93,4 +93,4 @@ junit.framework.AssertionFailedError
 
 Testcase: divisor_Test_Int took 0 sec
 Testcase: greater_Test_Double took 0 sec
-Testcase: valueWithinShortRange_Test_Int took 0,001 sec
+Testcase: valueWithinShortRange_Test_Int took 0 sec
