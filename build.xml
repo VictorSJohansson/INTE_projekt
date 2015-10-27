@@ -2,73 +2,57 @@
 	<description>
 		Projekt INTE HT2015
 	</description>
-	
-	<property name="src" location="src"/>
-	<property name="build" location="build"/>
-	<property name="dist" location="dist"/>
-	
+
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+	<property name="dist" location="dist" />
+
 	<target name="init">
 		<!-- Create the time stamp -->
-		<tstamp/>
+		<tstamp />
 		<!-- Create the build directory structure used by compile -->
-		<mkdir dir="${build}"/>
+		<mkdir dir="${build}" />
 	</target>
-	
-	<!-- Run jUnit -->
-	<target name="junit" depends="init">
-		
-		<junit printsummary="yes" haltonfailure="no">
-		
-			<classpath>
-				<fileset dir="lib">
-					<include name="**/*.jar"/>
-				</fileset>
-			</classpath>
-			
-		</junit>
-	
-	</target>
-			
-	
-	<target name="compile" depends="init, junit"
-			description="compile the source">
+
+	<target name="compile" depends="init" description="compile the source">
 		<!-- Compile the java code from ${src} into ${build} -->
-		
-		<path id="master-classpath">
+
+
+		<!-- Used William Brendel's suggested solution to create the solution below: 
+		http://stackoverflow.com/questions/722774/getting-ant-javac-to-recognise-a-classpath -->
+		<path id="junit-classpath">
 			<fileset dir="lib">
-				<include name="**/*.jar"/>
+				<include name="**/*.jar" />
 			</fileset>
-			
-			<pathelement path="${build}"/>
+
+			<pathelement path="${build}" />
 		</path>
-		
-		
-		<javac includeantruntime="false" destdir ="${build}">
-			<src path="${src}"/>
-			<classpath refid="master-classpath"/>
+
+
+		<javac includeantruntime="false" destdir="${build}">
+			<src path="${src}" />
+			<classpath refid="junit-classpath" />
 		</javac>
-		
-		
-		
+
+
+
 	</target>
-	
-	
-	
+
+
+
 	<!-- IS NOT RUNNING SINCE DEFAULT = compile -->
-	
-	<target name="dist" depends="compile"
-		description="generate the distribution">
-	<!-- Create the distribution directory -->
-		<mkdir dir="${dist}/lib"/>
-		
-	<!-- Put everything in ${build} into the TestFramework-${DSTAMP}.jar file -->
-		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}.jar" basedir="${build}"/>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib" />
+
+		<!-- Put everything in ${build} into the TestFramework-${DSTAMP}.jar file -->
+		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}.jar" basedir="${build}" />
 	</target>
-	
-	<target name="clean"
-		description="clean up">
-	<!-- Delete the ${build} and ${dist} directory trees -->
-		<delete dir="${build}"/>
-		<delete dir="${dist}"/>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
 	</target>
 </project>
