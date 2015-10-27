@@ -124,11 +124,16 @@ public class Primitive {
 		if(isANumber(obj)) {
 			if(isAFloatNumber(obj)) {
 				f = (float)obj;
-				if(f == b)
+				if(f == b) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
 					return true;
+				}
 				s = (short)obj;
-				if(s == b)
+				if(s == b) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
 					return true;
+				}
+				
 			}
 		}
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), b, obj);
@@ -208,11 +213,15 @@ public class Primitive {
 			if(isANumber(obj)) {
 				if(isAFloatNumber(obj)) {
 					f = (float)obj;
-					if(f == s)
+					if(f == s) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
 						return true;
+					}
 					i = (int)obj;
-					if(i == s)
+					if(i == s) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
 						return true;
+					}
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), s, obj);
@@ -311,11 +320,15 @@ public class Primitive {
 				if(isANumber(obj)) {
 					if(isAFloatNumber(obj)) {
 						f = (float)obj;
-						if(f == i)
+						if(f == i) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
 							return true;
+						}
 						l = (long)obj;
-						if(l == i)
+						if(l == i) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
 							return true;
+						}
 					}
 				}
 				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), i, obj);
@@ -424,11 +437,15 @@ public class Primitive {
 				if(isANumber(obj)) {
 					if(isAFloatNumber(obj)) {
 						f = (float)obj;
-						if(f == l)
+						if(f == l) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
 							return true;
+						}
 						l2 = (long)obj;
-						if(l2 == l)
-							return true;
+						if(l2 == l) {
+							success(Thread.currentThread().getStackTrace()[1].getMethodName());
+							return true; 
+						}
 					}
 				}
 				fail(Thread.currentThread().getStackTrace()[1].getMethodName(), l, obj);
@@ -494,11 +511,15 @@ public class Primitive {
 		if(isANumber(obj)) {
 			if(isAFloatNumber(obj)) {
 				f2 = (float)obj;
-				if(f == f2)
+				if(f == f2) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
 					return true;
+				}
 				l = (long)obj;
-				if(f == l)
+				if(f == l) {
+					success(Thread.currentThread().getStackTrace()[1].getMethodName());
 					return true;
+				}
 			}
 		}
 		fail(Thread.currentThread().getStackTrace()[1].getMethodName(), f, obj);
@@ -601,11 +622,15 @@ public class Primitive {
 			if(isANumber(obj)) {
 				if(isAFloatNumber(obj)) {
 					d2 = (float)obj;
-					if(d == d2)
+					if(d == d2) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
 						return true;
+					}
 					l = (long)obj;
-					if(d == l)
+					if(d == l) {
+						success(Thread.currentThread().getStackTrace()[1].getMethodName());
 						return true;
+					}
 				}
 			}
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), d, obj);
@@ -631,7 +656,7 @@ public class Primitive {
     //Byte-Short****************************************************************************************
     
     /*The following tests will support equals, greater and less between byte and short.
-     * 
+     * NOTE: These methods may be irrelevant after I've(John Thorelli) implemented the rest of the "method(primitiveType, Object)" methods
      */
     
     public static boolean equals(short s, byte b) {
