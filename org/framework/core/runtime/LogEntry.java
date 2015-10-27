@@ -35,7 +35,7 @@ public class LogEntry {
 		return fails;
 	}
 	
-	public ArrayList getSubtask(){
+	public ArrayList<Subtask> getSubtask(){
 		return tasks;
 	}
 }
