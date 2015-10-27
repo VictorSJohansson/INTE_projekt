@@ -2,7 +2,7 @@ package org.framework.primitive;
 
 import static org.junit.Assert.*;
 
-import org.test.framework.core.runtime.TestLogger;
+import org.framework.core.runtime.TestLogger;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.*;
 import org.junit.runner.RunWith;

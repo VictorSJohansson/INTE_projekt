@@ -1,8 +1,8 @@
 package org.framework.primitive;
 
-import org.test.framework.core.runtime.TestLogger;
-import org.test.framework.core.runtime.FailEntry;
-import org.test.framework.core.runtime.SuccessfulEntry;
+import org.framework.core.runtime.TestLogger;
+import org.framework.core.runtime.FailEntry;
+import org.framework.core.runtime.SuccessfulEntry;
 
 /**
  * This class will contain test cases for all of javas primitive variables. 

@@ -1,6 +1,6 @@
-package org.test.framework.primitive.different;
+package org.framework.primitive.different;
 
-import org.test.framework.primitive.Primitive;
+import org.framework.primitive.Primitive;
 
 public class PrimitiveDifferent extends Primitive {
 

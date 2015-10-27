@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import org.test.framework.object.Test_MathematicalObjectsTest;
+import org.framework.object.Test_MathematicalObjectsTest;
 
 
 @RunWith(value = Suite.class)

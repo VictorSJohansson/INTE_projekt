@@ -1,7 +1,7 @@
 package org.framework.core.runtime;
 
-import org.test.framework.core.runtime.OurFramework;
-import org.test.framework.core.runtime.Test;
+import org.framework.core.runtime.OurFramework;
+import org.framework.core.runtime.Test;
 
 public class TestClassWithSetup implements Test {
 
