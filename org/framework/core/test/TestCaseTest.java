@@ -56,12 +56,12 @@ public class TestCaseTest {
 		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Constructor_Parameter_CanRun");
 		}
 		catch (IllegalAccessException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IllegalAccessException - testTestCaseClass_Constructor_Parameter_CanRun");
 		}
 
 	}
@@ -77,12 +77,12 @@ public class TestCaseTest {
 		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Method_Run_TestResultIsCorrect");
 		}
 		catch (IllegalAccessException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IllegalAccessException - testTestCaseClass_Method_Run_TestResultIsCorrect");
 		}
 
 	}
@@ -98,12 +98,12 @@ public class TestCaseTest {
 		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Method_Run_TestResultIsIncorrect");
 		}
 		catch (IllegalAccessException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IllegalAccessException - testTestCaseClass_Method_Run_TestResultIsIncorrect");
 		}
 
 	}
@@ -114,13 +114,19 @@ public class TestCaseTest {
 		try
 		{
 			Object instance = TestClassWithSetup.class.newInstance();
-			new TestCase("testMethod", instance).run();
+			TestCase t = new TestCase("testMethod", instance);
+			t.run();
 			assertThat(((TestClassWithSetup) instance).getSetup(), is(true));
 		}
-		catch (InstantiationException | IllegalAccessException e)
+		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Method_Setup_addSetupValue");
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			System.out.println("IllegalAccessException - testTestCaseClass_Method_Setup_addSetupValue");
 		}
 	}
 
@@ -130,13 +136,19 @@ public class TestCaseTest {
 		try
 		{
 			Object instance = TestClassWithSetup.class.newInstance();
-			new TestCase("testMethod", instance).run();
+			TestCase t = new TestCase("testMethod", instance);
+			t.run();
 			assertThat(((TestClassWithSetup) instance).getTeardown(), is(true));
 		}
-		catch (InstantiationException | IllegalAccessException e)
+		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Method_Teardown_addTeardownValue");
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			System.out.println("IllegalAccessException - testTestCaseClass_Method_Teardown_addTeardownValue");
 		}
 	}
 
@@ -151,12 +163,12 @@ public class TestCaseTest {
 		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - testTestCaseClass_Method_run_testNullPointerException_onMethodName");
 		}
 		catch (IllegalAccessException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IllegalAccessException - testTestCaseClass_Method_run_testNullPointerException_onMethodName");
 		}
 	}
 

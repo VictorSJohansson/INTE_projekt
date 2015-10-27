@@ -1,0 +1,9 @@
+Testsuite: org.framework.object.Test_MathematicalObjectsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,252 sec
+
+Testcase: test_identical_TwoRectangles took 0,063 sec
+Testcase: test_identical_TwoCircles took 0,174 sec
+Testcase: test_equals_TwoRectangles took 0 sec
+Testcase: test_identical_Polygons took 0 sec
+Testcase: test_equals_TwoCircles took 0 sec
+Testcase: test_is_a_Square took 0 sec
