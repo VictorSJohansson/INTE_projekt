@@ -7,8 +7,8 @@ public class FailTask extends Subtask{
 	private Object value1;
 	private Object value2;
 	
-	public FailTask(String testName, Object value1, Object value2){
-		super(testName);
+	public FailTask(String taskName, Object value1, Object value2){
+		super(taskName);
 		this.value1=value1;
 		this.value2=value2;
 	}
@@ -21,6 +21,11 @@ public class FailTask extends Subtask{
 	//Returns the second value
 	public Object getValue2(){
 		return value2;
+	}
+	
+	public String toString(){
+		String str = "FAILED: " + taskName + " " + value1 + " compared to " + value2;
+		return str;
 	}
 	
 	/*
