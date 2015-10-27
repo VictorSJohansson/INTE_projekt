@@ -1,16 +1,13 @@
 package org.framework.core.runtime;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Field;
-
 
 public class FailTask extends Subtask{
 
-	
 	private Object value1;
 	private Object value2;
 	
-	public FailedTask(String testName, Object value1, Object value2){
+	public FailTask(String testName, Object value1, Object value2){
 		super(testName);
 		this.value1=value1;
 		this.value2=value2;

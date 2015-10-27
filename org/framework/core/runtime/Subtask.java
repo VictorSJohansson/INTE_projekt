@@ -3,7 +3,7 @@ package org.framework.core.runtime;
 public class Subtask {
 	String taskName;
 	
-	public SubTask(String taskName){
+	public Subtask(String taskName){
 		this.taskName=taskName;
 	}
 	
