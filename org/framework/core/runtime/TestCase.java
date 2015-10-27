@@ -133,4 +133,9 @@ public class TestCase implements Test {
 		else
 			this.setup();
 	}
+	
+	public String getMethodName()
+	{
+		return this.methodName;
+	}
 }

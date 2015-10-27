@@ -1,7 +1,7 @@
-package org.framework.core.runtime;
+package org.framework.core.test;
 
 import org.junit.Test;
-import org.test.framework.TestClassWithSetup;
+import org.framework.core.test.target.TestClassWithSetup;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -12,6 +12,9 @@ import org.hamcrest.core.IsNull;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matcher.*;
+
+import org.framework.core.runtime.*;
+import org.framework.core.test.target.*;
 
 public class TestCaseTest {
 
@@ -26,7 +29,7 @@ public class TestCaseTest {
 	@Test
 	public void testTestCaseClass_Constructor_NullConstructor_methodName()
 	{
-		assertThat(tc.methodName, IsNull.nullValue());
+		assertThat(tc.getMethodName(), IsNull.nullValue());
 	}
 
 	@Test(expected = NullPointerException.class)

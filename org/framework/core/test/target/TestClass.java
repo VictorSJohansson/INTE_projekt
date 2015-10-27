@@ -1,4 +1,6 @@
-package org.framework.core.runtime;
+package org.framework.core.test.target;
+
+import org.framework.core.runtime.OurFramework;
 
 public class TestClass {
 

@@ -1,4 +1,4 @@
-package org.test.framework.primitive;
+package org.framework.primitive;
 
 import static org.junit.Assert.*;
 import org.junit.After;

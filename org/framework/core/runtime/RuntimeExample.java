@@ -1,5 +1,7 @@
 package org.framework.core.runtime;
 
+import org.framework.core.test.target.*;
+
 public class RuntimeExample {
 
 	public static void main(String[] args)

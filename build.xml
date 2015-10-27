@@ -47,7 +47,7 @@
 		<mkdir dir="${dist}/lib" />
 
 		<!-- Put everything in ${build} into the TestFramework-${tstamp}.jar file -->
-		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}-${TSTAMP}.jar" basedir="${build}" />
+		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}-${TSTAMP}.jar" basedir="${compile}" />
 	</target>
 
 	<target name="clean" description="clean up">

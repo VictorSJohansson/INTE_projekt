@@ -1,4 +1,4 @@
-package org.framework.core.runtime;
+package org.framework.core.test;
 
 import org.junit.Test;
 import org.junit.Test;
@@ -12,6 +12,10 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matcher.*;
+
+import org.framework.core.runtime.Runtime;
+import org.framework.core.runtime.OurFramework;
+import org.framework.core.test.target.*;
 
 public class TestRuntime {
 

@@ -1,7 +1,8 @@
-package org.framework.core.runtime;
+package org.framework.core.test;
 import org.hamcrest.core.IsNull;
 import org.junit.Test;
 import org.junit.Before;
+import org.framework.core.runtime.FailEntry;
 
 import static org.junit.Assert.*;
 

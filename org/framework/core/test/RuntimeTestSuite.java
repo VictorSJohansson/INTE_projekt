@@ -1,4 +1,4 @@
-package org.framework.core.runtime;
+package org.framework.core.test;
 
 
 import org.junit.runner.RunWith;
