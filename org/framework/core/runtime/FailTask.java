@@ -32,7 +32,7 @@ public class FailTask extends Subtask{
 	 * The following method returns a string with the value of the expected object, weather it be
 	 * of any primitve datatypes.
 	 */
-	public String getValue(Object entryObject){
+	/*public String getValue(Object entryObject){
 		try{
 			for (Field field : entryObject.getClass().getDeclaredFields()){
 		
@@ -46,6 +46,6 @@ public class FailTask extends Subtask{
 				e.printStackTrace();
 			}
 		return "failed to find a value";
-	}
+	}*/
 
 }
