@@ -16,8 +16,8 @@ public class TestShortTest {
 	
 	@Test //Tests the functionality of equals_Test()  
     public void equals_Test() {
-        assertTrue(TestShort.short_Equals(Short.MAX_VALUE, Short.MAX_VALUE));
-        assertFalse(TestShort.short_Equals(Short.MAX_VALUE, Short.MIN_VALUE));
+        assertTrue(TestShort.equals(Short.MAX_VALUE, Short.MAX_VALUE));
+        assertFalse(TestShort.equals(Short.MAX_VALUE, Short.MIN_VALUE));
         
     }
 	

@@ -46,7 +46,7 @@ public class TestRuntime {
 
 	public void helpMethod_ListIsSame()
 	{
-		List<Class<?>> classList = rt.classList;
+		List<Class<?>> classList = rt.getClassList();
 		assertThat(classList.get(0).getName(), is(TEST_CLASS_ONE.getName()));
 	}
 

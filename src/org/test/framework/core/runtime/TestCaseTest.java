@@ -61,7 +61,7 @@ public class TestCaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+
 	}
 
 	@Test
@@ -105,7 +105,7 @@ public class TestCaseTest {
 		}
 
 	}
-	
+
 	@Test
 	public void testTestCaseClass_Method_Setup_addSetupValue()
 	{
@@ -113,7 +113,7 @@ public class TestCaseTest {
 		{
 			Object instance = TestClassWithSetup.class.newInstance();
 			new TestCase("testMethod", instance).run();
-			assertThat(((TestClassWithSetup) instance).setup, is(true));
+			assertThat(((TestClassWithSetup) instance).getSetup(), is(true));
 		}
 		catch (InstantiationException | IllegalAccessException e)
 		{
@@ -121,7 +121,7 @@ public class TestCaseTest {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void testTestCaseClass_Method_Teardown_addTeardownValue()
 	{
@@ -129,7 +129,7 @@ public class TestCaseTest {
 		{
 			Object instance = TestClassWithSetup.class.newInstance();
 			new TestCase("testMethod", instance).run();
-			assertThat(((TestClassWithSetup) instance).teardown, is(true));
+			assertThat(((TestClassWithSetup) instance).getTeardown(), is(true));
 		}
 		catch (InstantiationException | IllegalAccessException e)
 		{
@@ -137,23 +137,38 @@ public class TestCaseTest {
 			e.printStackTrace();
 		}
 	}
-	
-	@Test(expected=NullPointerException.class)
+
+	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Method_run_testNullPointerException_onMethodName()
 	{
-		overrideTestCaseTestBeforeAnnotation(null, TestClassWithSetup.class.newInstance());
+		try
+		{
+			overrideTestCaseTestBeforeAnnotation(null,
+					TestClassWithSetup.class.newInstance());
+		}
+		catch (InstantiationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	@Test(expected=NullPointerException.class)
+	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Method_run_testNullPointerException_onInstance()
 	{
 		overrideTestCaseTestBeforeAnnotation("testMethod", null);
 	}
 
-	public void overrideTestCaseTestBeforeAnnotation(String methodName, String instance)
+	public void overrideTestCaseTestBeforeAnnotation(String methodName,
+			Object instance)
 	{
-		tc = new TestClass(methodName, instance);
+		tc = new TestCase(methodName, instance);
 		tc.run();
 	}
-	
+
 }

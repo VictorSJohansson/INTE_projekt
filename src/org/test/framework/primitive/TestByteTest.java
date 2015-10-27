@@ -16,8 +16,8 @@ public class TestByteTest {
 	
 	@Test //Tests the functionality of equals_Test()  
     public void equals_Test() {
-        assertTrue(TestByte.byte_Equals(Byte.MAX_VALUE, Byte.MAX_VALUE));
-        assertFalse(TestByte.byte_Equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
+        assertTrue(TestByte.equals(Byte.MAX_VALUE, Byte.MAX_VALUE));
+        assertFalse(TestByte.equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
         
     }
 	

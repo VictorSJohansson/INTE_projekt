@@ -147,4 +147,9 @@ public class Runtime {
 			}
 		}
 	}
+	
+	public List<Class<?>> getClassList()
+	{
+		return new ArrayList<Class<?>>(classList);
+	}
 }

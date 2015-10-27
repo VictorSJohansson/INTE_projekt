@@ -14,8 +14,8 @@ import org.junit.Test;
 public class TestFloatTest {
 	
     public void equals_Test() {
-        assertTrue(TestFloat.float_Equals(Float.MAX_VALUE, Float.MAX_VALUE));
-        assertFalse(TestFloat.float_Equals(Float.MAX_VALUE, Float.MIN_VALUE));
+        assertTrue(TestFloat.equals(Float.MAX_VALUE, Float.MAX_VALUE));
+        assertFalse(TestFloat.equals(Float.MAX_VALUE, Float.MIN_VALUE));
         
     }
 	

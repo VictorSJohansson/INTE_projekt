@@ -46,9 +46,9 @@ public class TestLongTest {
     
 	@Test
 	public void valueWithinIntRange_Test() { //added by John Thorelli 20/10/2015
-		long x = Int.MAX_VALUE + 1;
+		long x = Integer.MAX_VALUE + 1;
 		assertFalse(TestLong.valueWithinIntRange(x));
-		x = Int.MIN_VALUE - 1;
+		x = Integer.MIN_VALUE - 1;
 		assertFalse(TestLong.valueWithinIntRange(x));
 		x = 0;
 		assertTrue(TestLong.valueWithinIntRange(x));

@@ -6,8 +6,8 @@ import org.test.framework.core.runtime.Test;
 
 public class TestClassWithSetup implements Test {
 
-	boolean setup = false;
-	boolean teardown = false;
+	private boolean setup = false;
+	private boolean teardown = false;
 	
 	@Override
 	public void setup()
@@ -27,4 +27,13 @@ public class TestClassWithSetup implements Test {
 
 	}
 
+	public boolean getSetup()
+	{
+		return this.setup;
+	}
+	
+	public boolean getTeardown()
+	{
+		return this.teardown;
+	}
 }

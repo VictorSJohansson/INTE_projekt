@@ -8,7 +8,7 @@ package org.test.framework.primitive;
  */
 public class TestFloat {
 
-	public static boolean equals(short x, float y) {
+	public static boolean equals(float x, float y) {
 		// TODO Auto-generated method stub
 		return y == x;
 	}

@@ -47,7 +47,7 @@ public class testPrimitive {
 		assertThat(failCount, is(TestLogger.getSize()));
 		Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
 		failCount++;
-		assertThat(logCount, is(TestLogger.getSize()));
+		assertThat(failCount, is(TestLogger.getSize()));
 		System.out.println(TestLogger.getSize());
        // assertEquals(logCount, TestLogger.getSize());
         //assertFalse(Primitive.byte_Equals(Byte.MAX_VALUE, Byte.MIN_VALUE));
@@ -81,8 +81,8 @@ public class testPrimitive {
 	
 	@Test //Tests the functionality of equals_Test()  
     public void equals_Short_Test() {
-        assertTrue(Primitive.short_Equals(Short.MAX_VALUE, Short.MAX_VALUE));
-        assertFalse(Primitive.short_Equals(Short.MAX_VALUE, Short.MIN_VALUE));
+        assertTrue(Primitive.equals(Short.MAX_VALUE, Short.MAX_VALUE));
+        assertFalse(Primitive.equals(Short.MAX_VALUE, Short.MIN_VALUE));
         
     }
 	
@@ -126,7 +126,7 @@ public class testPrimitive {
     @Test
     public void equals_Test_Int()
     {
-        assertTrue(Primitive.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+        assertTrue(Primitive.equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
         
     }
     
@@ -137,7 +137,7 @@ public class testPrimitive {
     @Test
     public void greater_Test_Int()
     {
-        assertTrue(Primitive.int_Greater(5,3));
+        assertTrue(Primitive.greater(5,3));
         
     }
     
@@ -147,7 +147,7 @@ public class testPrimitive {
     @Test
     public void less_Test_Int()
     {
-        assertTrue(Primitive.int_Less(3,5));
+        assertTrue(Primitive.less(3,5));
         
     }
     
@@ -157,7 +157,7 @@ public class testPrimitive {
     @Test
     public void divisor_Test_Int()
     {
-        assertTrue(Primitive.int_Divisor(3,6));
+        assertTrue(Primitive.divisor(3,6));
         
     }
     
@@ -217,9 +217,9 @@ public class testPrimitive {
     
 	@Test
 	public void valueWithinIntRange_Test_Long() { //added by John Thorelli 20/10/2015
-		long x = Int.MAX_VALUE + 1;
+		long x = Integer.MAX_VALUE + 1;
 		assertFalse(Primitive.valueWithinIntRange(x));
-		x = Int.MIN_VALUE - 1;
+		x = Integer.MIN_VALUE - 1;
 		assertFalse(Primitive.valueWithinIntRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinIntRange(x));
@@ -248,8 +248,8 @@ public class testPrimitive {
 	//Float*********************************************************************************************
 	
 	public void equals_Test_Float() {
-        assertTrue(Primitive.float_Equals(Float.MAX_VALUE, Float.MAX_VALUE));
-        assertFalse(Primitive.float_Equals(Float.MAX_VALUE, Float.MIN_VALUE));
+        assertTrue(Primitive.equals(Float.MAX_VALUE, Float.MAX_VALUE));
+        assertFalse(Primitive.equals(Float.MAX_VALUE, Float.MIN_VALUE));
         
     }
 	
@@ -312,7 +312,6 @@ public class testPrimitive {
     public void integerValue_Test_Double()
     {
         assertTrue(Primitive.equalIntegerValue(2.3, 1.4));
-       
     }
     
     @Test

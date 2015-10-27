@@ -22,7 +22,7 @@ public class TestIntTest
     @Test
     public void equals_Test()
     {
-        assertTrue(TestInt.int_Equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+        assertTrue(TestInt.equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
         
     }
     
@@ -33,7 +33,7 @@ public class TestIntTest
     @Test
     public void greater_Test()
     {
-        assertTrue(TestInt.int_Greater(5,3));
+        assertTrue(TestInt.greater(5,3));
         
     }
     
@@ -43,7 +43,7 @@ public class TestIntTest
     @Test
     public void less_Test()
     {
-        assertTrue(TestInt.int_Less(3,5));
+        assertTrue(TestInt.less(3,5));
         
     }
     
@@ -53,7 +53,7 @@ public class TestIntTest
     @Test
     public void divisor_Test()
     {
-        assertTrue(TestInt.int_Divisor(3,6));
+        assertTrue(TestInt.divisor(3,6));
         
     }
     

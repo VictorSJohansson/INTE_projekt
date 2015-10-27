@@ -56,7 +56,7 @@ public class TestLong {
     }
 
 	public static boolean valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
-		if(x < Int.MIN_VALUE || x > Int.MAX_VALUE)
+		if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE)
 			return false;
 		return true;
 	}

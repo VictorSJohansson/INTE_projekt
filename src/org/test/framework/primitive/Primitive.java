@@ -159,7 +159,7 @@ public class Primitive {
 		}
 		else{
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
-			return false;;
+			return false;
 		}
 	}
 	
@@ -168,9 +168,11 @@ public class Primitive {
 		// TODO Auto-generated method stub
 		if (x < y){
 			success(Thread.currentThread().getStackTrace()[1].getMethodName());
+			return true;
 		}
 		else{
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
+			return false;
 		}
 	}
 
@@ -422,7 +424,7 @@ public class Primitive {
 				if(isANumber(obj)) {
 					if(isAFloatNumber(obj)) {
 						f = (float)obj;
-						if(f == l2)
+						if(f == l)
 							return true;
 						l2 = (long)obj;
 						if(l2 == l)
