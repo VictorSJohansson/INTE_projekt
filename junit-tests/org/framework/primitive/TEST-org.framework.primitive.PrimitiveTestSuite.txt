@@ -1,43 +1,41 @@
 Testsuite: org.framework.primitive.PrimitiveTestSuite
-Tests run: 66, Failures: 15, Errors: 0, Skipped: 0, Time elapsed: 0,097 sec
+Tests run: 66, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 0,113 sec
+------------- Standard Output ---------------
+50
+------------- ---------------- ---------------
 
-Testcase: equals_Test took 0,008 sec
+Testcase: equals_Test took 0,018 sec
 Testcase: notEquals_Test took 0 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: equals_Test took 0 sec
-Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0,001 sec
-Testcase: integerValue_Test took 0,004 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
-	at org.framework.primitive.TestDoubleTest.integerValue_Test(Unknown Source)
-
+Testcase: greater_Test took 0 sec
+Testcase: equals_Test took 0 sec
+Testcase: integerValue_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: valueWithinFloatRange_Test took 0,001 sec
+Testcase: valueWithinFloatRange_Test took 0,005 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.TestDoubleTest.valueWithinFloatRange_Test(Unknown Source)
 
-Testcase: sameIntegerValue_Test took 0,002 sec
+Testcase: sameIntegerValue_Test took 0,003 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.TestFloatTest.sameIntegerValue_Test(Unknown Source)
 
 Testcase: greater_Test took 0 sec
-Testcase: less_Test took 0 sec
+Testcase: less_Test took 0,001 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
 Testcase: valueWithinByteRange_Test took 0 sec
-Testcase: valueWithinIntRange_Test took 0,001 sec
+Testcase: valueWithinIntRange_Test took 0,005 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -45,7 +43,7 @@ junit.framework.AssertionFailedError
 
 Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec
-Testcase: equalsTest took 0,001 sec
+Testcase: equalsTest took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -60,7 +58,7 @@ junit.framework.AssertionFailedError
 	at org.framework.primitive.TestLongTest.lessTest(Unknown Source)
 
 Testcase: valueWithinByteRange_Test_Int took 0,002 sec
-Testcase: less_Test_Byte took 0 sec
+Testcase: less_Test_Byte took 0,001 sec
 Testcase: less_Test_Long took 0,001 sec
 	FAILED
 null
@@ -76,17 +74,17 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.integerValue_Test_Double(Unknown Source)
 
-Testcase: valueWithinByteRange_Test_Long took 0 sec
-Testcase: sameIntegerValue_Test_Float took 0,002 sec
+Testcase: valueWithinByteRange_Test_Long took 0,001 sec
+Testcase: sameIntegerValue_Test_Float took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.sameIntegerValue_Test_Float(Unknown Source)
 
 Testcase: less_Test_Float took 0,001 sec
-Testcase: less_Test_Short took 0 sec
+Testcase: less_Test_Short took 0,002 sec
 Testcase: equals_Char_Test took 0 sec
-Testcase: testequalsTestBoolean took 0,011 sec
+Testcase: testequalsTestBoolean took 0,009 sec
 	FAILED
 
 Expected: is <25>
@@ -98,11 +96,11 @@ Expected: is <25>
 	at org.framework.primitive.testPrimitive.testequalsTestBoolean(Unknown Source)
 
 Testcase: greater_Test_Int took 0 sec
-Testcase: less_Test_Int took 0 sec
+Testcase: less_Test_Int took 0,001 sec
 Testcase: less_Test_Double took 0 sec
-Testcase: greater_Test_Float took 0 sec
+Testcase: greater_Test_Float took 0,001 sec
 Testcase: greater_Test_Short took 0 sec
-Testcase: valueWithinByteRange_Test_Short took 0 sec
+Testcase: valueWithinByteRange_Test_Short took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -119,24 +117,14 @@ Expected: is <36>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.framework.primitive.testPrimitive.notEquals_Test(Unknown Source)
 
-Testcase: greater_Test_Byte took 0 sec
+Testcase: greater_Test_Byte took 0,002 sec
 Testcase: greater_Test_Long took 0 sec
-Testcase: divisor_Test_Short took 0,001 sec
+Testcase: divisor_Test_Short took 0 sec
 Testcase: equals_Short_Test took 0 sec
 Testcase: equals_Test_Long took 0 sec
 Testcase: valueWithinShortRange_Test_Long took 0 sec
-Testcase: equals_TestByte took 0,003 sec
-	FAILED
-
-Expected: is <49>
-     but: was <0>
-junit.framework.AssertionFailedError: 
-Expected: is <49>
-     but: was <0>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.framework.primitive.testPrimitive.equals_TestByte(Unknown Source)
-
-Testcase: equals_Test_Int took 0,002 sec
+Testcase: equals_TestByte took 0,001 sec
+Testcase: equals_Test_Int took 0 sec
 Testcase: valueWithinIntRange_Test_Long took 0,001 sec
 	FAILED
 null
@@ -151,9 +139,9 @@ junit.framework.AssertionFailedError
 
 Testcase: divisor_Test_Int took 0 sec
 Testcase: greater_Test_Double took 0 sec
-Testcase: valueWithinShortRange_Test_Int took 0 sec
+Testcase: valueWithinShortRange_Test_Int took 0,003 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec
-Testcase: less_Test took 0 sec
+Testcase: less_Test took 0,001 sec
 Testcase: valueWithinByteRange_Test took 0 sec

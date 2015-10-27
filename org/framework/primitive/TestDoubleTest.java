@@ -51,8 +51,7 @@ public class TestDoubleTest
     @Test
     public void integerValue_Test()
     {
-        assertTrue(TestDouble.equalIntegerValue(2.3, 1.4));
-       
+        assertFalse(TestDouble.equalIntegerValue(2.3, 1.4));
     }
     
     @Test

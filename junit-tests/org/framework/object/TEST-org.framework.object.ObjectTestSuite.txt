@@ -1,9 +1,9 @@
 Testsuite: org.framework.object.ObjectTestSuite
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,034 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,235 sec
 
-Testcase: test_identical_TwoRectangles took 0,004 sec
-Testcase: test_identical_TwoCircles took 0,001 sec
+Testcase: test_identical_TwoRectangles took 0,092 sec
+Testcase: test_identical_TwoCircles took 0,106 sec
 Testcase: test_equals_TwoRectangles took 0 sec
-Testcase: test_identical_Polygons took 0 sec
+Testcase: test_identical_Polygons took 0,001 sec
 Testcase: test_equals_TwoCircles took 0 sec
 Testcase: test_is_a_Square took 0 sec

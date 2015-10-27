@@ -24,12 +24,12 @@ public class TestCase implements Test {
 		catch (InstantiationException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("InstantationException - TestCase");
 		}
 		catch (IllegalAccessException e)
 		{
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IllegalAccessException - TestCase");
 		}
 	}
 
@@ -86,7 +86,7 @@ public class TestCase implements Test {
 		{	
 			result.testStarted();
 
-			runTeardown();
+			runSetup();
 			
 			instance.getClass().getMethod(methodName).invoke(instance);
 		}

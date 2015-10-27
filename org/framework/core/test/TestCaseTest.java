@@ -29,7 +29,7 @@ public class TestCaseTest {
 	@Test
 	public void testTestCaseClass_Constructor_NullConstructor_methodName()
 	{
-		assertThat(tc.getMethodName(), is(false));
+		assertThat(tc.getMethodName(), is(nullValue()));
 	}
 
 	@Test(expected = NullPointerException.class)
