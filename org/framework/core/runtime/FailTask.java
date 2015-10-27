@@ -1,4 +1,4 @@
-package org.test.framework.core.runtime;
+package org.framework.core.runtime;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Field;

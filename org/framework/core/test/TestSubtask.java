@@ -1,3 +1,5 @@
+package org.framework.core.test;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -24,7 +26,7 @@ public class TestSubtask {
 	@Test
 	public void testSubtaskTestName_TestNameIsCorrect(){
 		Subtask task = new Subtask("test");
-		assertEquals(Subtask.getTaskName(), "test");
+		assertEquals(task.getTaskName(), "test");
 	}
 
 }
