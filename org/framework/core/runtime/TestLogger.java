@@ -43,13 +43,15 @@ public class TestLogger {
 	 * Print information of failed tests to console
 	 */
 	public static void summary(){
-		String timeStamp = new SimpleDateFormat("yyyy:MM:dd_HH:mm:ss").format(Calendar.getInstance().getTime());
+		String timeStamp = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss").format(Calendar.getInstance().getTime());
 		System.out.println(timeStamp);
+		System.out.println(tests.size() + " tests run");
 		for (LogEntry entry : tests){
 			System.out.println(entry.getTestName() + " " + entry.getSubtasks.size() + " run, " + entry.getFails() + " failed.");
 			for(Subtask task :LogEntry.getSubtasks)
 			{
-				System.out.println(task.getTaskName());
+				System.out.println(" -" + task.toString());
+				
 			}
 				/*
 			if (entry instanceof FailEntry){

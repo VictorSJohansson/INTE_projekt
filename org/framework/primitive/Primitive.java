@@ -1,8 +1,8 @@
 package org.framework.primitive;
 
 import org.framework.core.runtime.TestLogger;
-import org.framework.core.runtime.FailEntry;
-import org.framework.core.runtime.SuccessfulEntry;
+import org.framework.core.runtime.FailTask;
+import org.framework.core.runtime.SuccessfulTask;
 
 /**
  * This class will contain test cases for all of javas primitive variables. 
@@ -1060,7 +1060,7 @@ public class Primitive {
      * one parameter.
      */
     public static void fail(String testName, Object value1, Object value2){
-    	TestLogger.appendSubtask(new FailedTask(testName, value1, value2));
+    	TestLogger.appendSubtask(new FailTask(testName, value1, value2));
     }
     
 
