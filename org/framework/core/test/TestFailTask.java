@@ -1,6 +1,7 @@
 package org.framework.core.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 
 import org.hamcrest.core.IsNull;
@@ -26,7 +27,7 @@ public class TestFailTask {
 	public void testFailTaskTestName_TestNameIsCorrect(){
 		FailTask task = new FailTask("test", null, null);
 		assertEquals(task.getTaskName(), "test");
-		assertNotEquals(task.getTaskName(), "tesp");
+		assertNotEquals(task.getTaskName(), "test");
 	}
 	
 	@Test
@@ -47,6 +48,6 @@ public class TestFailTask {
 	public void testFailTasktoString(){
 		FailTask task = new FailTask("test", 1, 2);
 		String str = "FAILED: " + "test" + " " + 1 + " compared to " + 2;
-		assertEquals(task.toString(), str)
+		assertEquals(task.toString(), str);
 	}
 }

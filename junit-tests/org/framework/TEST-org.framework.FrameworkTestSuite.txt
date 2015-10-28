@@ -1,5 +1,5 @@
 Testsuite: org.framework.FrameworkTestSuite
-Tests run: 95, Failures: 14, Errors: 0, Skipped: 0, Time elapsed: 0,287 sec
+Tests run: 116, Failures: 17, Errors: 2, Skipped: 0, Time elapsed: 0,274 sec
 ------------- Standard Output ---------------
 InstantationException - TestCase
 InstantationException - TestCase
@@ -14,53 +14,108 @@ InstantationException - TestCase
 InstantationException - TestCase
 ------------- ---------------- ---------------
 
-Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,011 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,008 sec
+Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,012 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,006 sec
 Testcase: testRuntimeClass_Method_ExecuteMethodSeveralConstructorParameter took 0 sec
 Testcase: testRuntimeClass_Method_executeMethodSuccess took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0 sec
-Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromList took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0,001 sec
+Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromList took 0 sec
 Testcase: testRuntimeClass_Constructor_ParameterConstructor took 0 sec
 Testcase: testRuntimeClass_Method_executeMethodFailed took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteThreeTest took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteThreeTest took 0 sec
 Testcase: testRuntimeClass_Constructor_EmptyConstructor took 0 sec
-Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,001 sec
+Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,007 sec
+	FAILED
+
+Expected: is "testOurNextMethod"
+     but: was "testMethod"
+junit.framework.AssertionFailedError: 
+Expected: is "testOurNextMethod"
+     but: was "testMethod"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.framework.core.test.TestRuntime.testRuntimeClass_Method_getListOfAnnotationMethod(Unknown Source)
+
 Testcase: testRuntimeClass_Method_AddClass_AddOneClass took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0 sec
-Testcase: testTestCaseClass_Constructor_EmptyConstructor_cannotRun took 0,001 sec
-Testcase: testTestCaseClass_Method_Run_TestResultIsIncorrect took 0 sec
-Testcase: testTestCaseClass_Method_run_testNullPointerException_onMethodName took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0,001 sec
+Testcase: testTestCaseClass_Constructor_EmptyConstructor_cannotRun took 0 sec
+Testcase: testTestCaseClass_Method_Run_TestResultIsIncorrect took 0,001 sec
+Testcase: testTestCaseClass_Method_run_testNullPointerException_onMethodName took 0 sec
 Testcase: testTestCaseClass_Method_Run_TestResultIsCorrect took 0 sec
-Testcase: testTestCaseClass_Constructor_NullConstructor_cannotRun took 0,001 sec
+Testcase: testTestCaseClass_Constructor_NullConstructor_cannotRun took 0 sec
 Testcase: testTestCaseClass_Method_Setup_addSetupValue took 0 sec
 Testcase: testTestCaseClass_Method_run_testNullPointerException_onInstance took 0 sec
-Testcase: testTestCaseClass_Method_Teardown_addTeardownValue took 0,001 sec
+Testcase: testTestCaseClass_Method_Teardown_addTeardownValue took 0 sec
 Testcase: testTestCaseClass_Constructor_NullConstructor_methodName took 0,001 sec
 Testcase: testTestCaseClass_Constructor_Parameter_CanRun took 0 sec
-Testcase: test_identical_TwoRectangles took 0,063 sec
-Testcase: test_identical_TwoCircles took 0,097 sec
+Testcase: testFailTaskValue2IsCorrect took 0,001 sec
+Testcase: testFailTaskValue1IsCorrect took 0 sec
+Testcase: testFailTaskTestName_TestNameIsCorrect took 0,001 sec
+	FAILED
+Values should be different. Actual: test
+junit.framework.AssertionFailedError: Values should be different. Actual: test
+	at org.framework.core.test.TestFailTask.testFailTaskTestName_TestNameIsCorrect(Unknown Source)
+
+Testcase: testFailTasktoString took 0 sec
+Testcase: testFailTaskConstructorIsNull_NullTestName took 0 sec
+Testcase: testLogEntryAddTask took 0 sec
+	Caused an ERROR
+Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.framework.core.test.TestLogEntry.testLogEntryAddTask(Unknown Source)
+
+Testcase: testLogEntryGetFails took 0,001 sec
+	FAILED
+expected:<0> but was:<1>
+junit.framework.AssertionFailedError: expected:<0> but was:<1>
+	at org.framework.core.test.TestLogEntry.testLogEntryGetFails(Unknown Source)
+
+Testcase: testLogEntryConstructorIsNull_NullTestName took 0,001 sec
+Testcase: testLogEntryTestName_TestNameIsCorrect took 0 sec
+Testcase: testSubtaskTestName_TestNameIsCorrect took 0 sec
+Testcase: testSubtaskConstructorIsNull_NullTestName took 0 sec
+Testcase: testSuccessfulTaskTestName_TestNameIsCorrect took 0 sec
+Testcase: testSuccessfulTaskConstructorIsNull_NullTestName took 0 sec
+Testcase: testTestLoggerAppend took 0 sec
+Testcase: test_identical_TwoRectangles took 0,056 sec
+Testcase: test_identical_TwoCircles took 0,093 sec
 Testcase: test_equals_TwoRectangles took 0 sec
-Testcase: test_identical_Polygons took 0,001 sec
+Testcase: test_identical_Polygons took 0 sec
 Testcase: test_equals_TwoCircles took 0 sec
 Testcase: test_is_a_Square took 0 sec
-Testcase: equals_Test took 0,004 sec
+Testcase: initializationError took 0,001 sec
+	Caused an ERROR
+No runnable methods
+java.lang.Exception: No runnable methods
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+
+Testcase: test_Degree took 0,002 sec
+Testcase: test_Plus took 0 sec
+Testcase: test_Minus took 0 sec
+Testcase: test_Roots took 0,001 sec
+Testcase: Test_equals_test took 0,001 sec
+Testcase: test_Common_Root_test took 0,001 sec
+Testcase: equals_Test took 0,003 sec
 Testcase: notEquals_Test took 0 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
 Testcase: equals_Test took 0,001 sec
-Testcase: greater_Test took 0 sec
-Testcase: equals_Test took 0,001 sec
+Testcase: greater_Test took 0,001 sec
+Testcase: equals_Test took 0 sec
 Testcase: integerValue_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: valueWithinFloatRange_Test took 0,003 sec
+Testcase: valueWithinFloatRange_Test took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.TestDoubleTest.valueWithinFloatRange_Test(Unknown Source)
 
-Testcase: sameIntegerValue_Test took 0,001 sec
+Testcase: sameIntegerValue_Test took 0,002 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -82,7 +137,7 @@ junit.framework.AssertionFailedError
 
 Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec
-Testcase: equalsTest took 0,004 sec
+Testcase: equalsTest took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -97,17 +152,17 @@ junit.framework.AssertionFailedError
 	at org.framework.primitive.TestLongTest.lessTest(Unknown Source)
 
 Testcase: valueWithinByteRange_Test_Int took 0,001 sec
-Testcase: less_Test_Byte took 0,004 sec
-Testcase: less_Test_Long took 0,001 sec
+Testcase: less_Test_Byte took 0,001 sec
+Testcase: less_Test_Long took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.less_Test_Long(Unknown Source)
 
 Testcase: equals_Test_Double took 0 sec
-Testcase: divisor_Test_Byte took 0 sec
-Testcase: divisor_Test_Long took 0,002 sec
-Testcase: integerValue_Test_Double took 0 sec
+Testcase: divisor_Test_Byte took 0,001 sec
+Testcase: divisor_Test_Long took 0 sec
+Testcase: integerValue_Test_Double took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -123,7 +178,7 @@ junit.framework.AssertionFailedError
 Testcase: less_Test_Float took 0,001 sec
 Testcase: less_Test_Short took 0 sec
 Testcase: equals_Char_Test took 0 sec
-Testcase: testequalsTestBoolean took 0,004 sec
+Testcase: testequalsTestBoolean took 0,001 sec
 	FAILED
 
 Expected: is <33>
@@ -135,10 +190,10 @@ Expected: is <33>
 	at org.framework.primitive.testPrimitive.testequalsTestBoolean(Unknown Source)
 
 Testcase: greater_Test_Int took 0 sec
-Testcase: less_Test_Int took 0,001 sec
+Testcase: less_Test_Int took 0 sec
 Testcase: less_Test_Double took 0 sec
-Testcase: greater_Test_Float took 0,001 sec
-Testcase: greater_Test_Short took 0 sec
+Testcase: greater_Test_Float took 0 sec
+Testcase: greater_Test_Short took 0,001 sec
 Testcase: valueWithinByteRange_Test_Short took 0,001 sec
 	FAILED
 null
@@ -156,12 +211,12 @@ Expected: is <33>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.framework.primitive.testPrimitive.notEquals_Test(Unknown Source)
 
-Testcase: greater_Test_Byte took 0 sec
+Testcase: greater_Test_Byte took 0,001 sec
 Testcase: greater_Test_Long took 0 sec
-Testcase: divisor_Test_Short took 0,001 sec
-Testcase: equals_Short_Test took 0 sec
+Testcase: divisor_Test_Short took 0 sec
+Testcase: equals_Short_Test took 0,001 sec
 Testcase: equals_Test_Long took 0 sec
-Testcase: valueWithinShortRange_Test_Long took 0,001 sec
+Testcase: valueWithinShortRange_Test_Long took 0 sec
 Testcase: equals_TestByte took 0,001 sec
 	FAILED
 
@@ -188,7 +243,7 @@ junit.framework.AssertionFailedError
 
 Testcase: divisor_Test_Int took 0,001 sec
 Testcase: greater_Test_Double took 0 sec
-Testcase: valueWithinShortRange_Test_Int took 0 sec
+Testcase: valueWithinShortRange_Test_Int took 0,001 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec

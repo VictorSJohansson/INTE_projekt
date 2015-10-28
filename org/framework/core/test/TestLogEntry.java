@@ -4,7 +4,15 @@ import org.hamcrest.core.IsNull;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matcher.*;
+
 import org.framework.core.runtime.LogEntry;
+import org.framework.core.runtime.FailTask;
+import org.framework.core.runtime.SuccessfulTask;
+import org.framework.core.runtime.Subtask;
+
 
 import static org.junit.Assert.*;
 
@@ -31,22 +39,22 @@ public class TestLogEntry {
 	@Test
 	public void testLogEntryGetFails(){
 		entry = new LogEntry("test");
-		FailTask task = new FailTask("task");
-		assertEquals(task.getFails(), 1);
-		assertNotEquals(task.getFails(), 10);
+//		FailTask task = new FailTask("task", null, null);
+		assertEquals(entry.getFails(), 1);
+		assertNotEquals(entry.getFails(), 10);
 	}
 	
 	@Test
 	public void testLogEntryAddTask(){
 		entry = new LogEntry("test");
 		Subtask task = new Subtask("task");
-		assertThat(entry.getSubtasks().get(0) == task);
+		assertThat(entry.getSubtask().get(0), is(task));
 		
-		FailTask task = new FailTask("task", 1, 1);
-		assertThat(entry.getSubtasks().get(0) == task);
+		task = new FailTask("task", 1, 1);
+		assertThat(entry.getSubtask().get(0), is(task));
 		
-		SuccessfulTask task = new SuccessTask("task");
-		assertThat(entry.getSubtasks().get(0) == task);
+		task = new SuccessfulTask("task");
+		assertThat(entry.getSubtask().get(0), is(task));
 	}
 
 

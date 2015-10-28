@@ -1,7 +1,7 @@
 Testsuite: org.framework.primitive.TestIntTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,026 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,018 sec
 
-Testcase: greater_Test took 0,007 sec
+Testcase: greater_Test took 0,006 sec
 Testcase: equals_Test took 0 sec
 Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec

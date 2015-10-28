@@ -1,5 +1,19 @@
 Testsuite: org.framework.core.test.TestLogEntry
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,029 sec
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0,038 sec
 
-Testcase: testLogEntryConstructorIsNull_NullTestName took 0,008 sec
+Testcase: testLogEntryAddTask took 0,009 sec
+	Caused an ERROR
+Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.framework.core.test.TestLogEntry.testLogEntryAddTask(Unknown Source)
+
+Testcase: testLogEntryGetFails took 0,001 sec
+	FAILED
+expected:<0> but was:<1>
+junit.framework.AssertionFailedError: expected:<0> but was:<1>
+	at org.framework.core.test.TestLogEntry.testLogEntryGetFails(Unknown Source)
+
+Testcase: testLogEntryConstructorIsNull_NullTestName took 0,004 sec
 Testcase: testLogEntryTestName_TestNameIsCorrect took 0 sec
