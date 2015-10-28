@@ -27,7 +27,7 @@ public class TestFailTask {
 	public void testFailTaskTestName_TestNameIsCorrect(){
 		FailTask task = new FailTask("test", null, null);
 		assertEquals(task.getTaskName(), "test");
-		assertNotEquals(task.getTaskName(), "test");
+		assertNotEquals(task.getTaskName(), "tesp");
 	}
 	
 	@Test

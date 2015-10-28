@@ -7,4 +7,10 @@ import org.junit.Test;
 
 public class LaserDomeTest {
 
+	@Test
+	public void emptyTest()
+	{
+		
+	}
+	
 }

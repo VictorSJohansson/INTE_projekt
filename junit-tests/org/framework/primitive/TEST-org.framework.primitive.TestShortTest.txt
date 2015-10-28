@@ -1,5 +1,5 @@
 Testsuite: org.framework.primitive.TestShortTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,017 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,019 sec
 
 Testcase: greater_Test took 0,005 sec
 Testcase: equals_Test took 0 sec

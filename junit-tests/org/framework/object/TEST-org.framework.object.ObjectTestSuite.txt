@@ -1,20 +1,14 @@
 Testsuite: org.framework.object.ObjectTestSuite
-Tests run: 13, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0,043 sec
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,056 sec
 
-Testcase: test_identical_TwoRectangles took 0,002 sec
+Testcase: test_identical_TwoRectangles took 0,003 sec
 Testcase: test_identical_TwoCircles took 0 sec
-Testcase: test_equals_TwoRectangles took 0,001 sec
-Testcase: test_identical_Polygons took 0,001 sec
+Testcase: test_equals_TwoRectangles took 0 sec
+Testcase: test_identical_Polygons took 0 sec
 Testcase: test_equals_TwoCircles took 0 sec
 Testcase: test_is_a_Square took 0 sec
-Testcase: initializationError took 0,004 sec
-	Caused an ERROR
-No runnable methods
-java.lang.Exception: No runnable methods
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-
-Testcase: test_Degree took 0,007 sec
+Testcase: emptyTest took 0 sec
+Testcase: test_Degree took 0,002 sec
 Testcase: test_Plus took 0 sec
 Testcase: test_Minus took 0 sec
 Testcase: test_Roots took 0,001 sec

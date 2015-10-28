@@ -1,7 +1,7 @@
 Testsuite: org.framework.primitive.TestDoubleTest
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,038 sec
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,023 sec
 
-Testcase: greater_Test took 0,007 sec
+Testcase: greater_Test took 0,006 sec
 Testcase: equals_Test took 0 sec
 Testcase: integerValue_Test took 0 sec
 Testcase: less_Test took 0 sec

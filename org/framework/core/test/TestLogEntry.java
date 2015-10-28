@@ -39,7 +39,7 @@ public class TestLogEntry {
 	@Test
 	public void testLogEntryGetFails(){
 		entry = new LogEntry("test");
-//		FailTask task = new FailTask("task", null, null);
+		entry.addTask(new FailTask("task", null, null));
 		assertEquals(entry.getFails(), 1);
 		assertNotEquals(entry.getFails(), 10);
 	}
@@ -48,13 +48,17 @@ public class TestLogEntry {
 	public void testLogEntryAddTask(){
 		entry = new LogEntry("test");
 		Subtask task = new Subtask("task");
+		entry.addTask(task);
+		
 		assertThat(entry.getSubtask().get(0), is(task));
 		
 		task = new FailTask("task", 1, 1);
-		assertThat(entry.getSubtask().get(0), is(task));
+		entry.addTask(task);
+		assertThat(entry.getSubtask().get(1), is(task));
 		
 		task = new SuccessfulTask("task");
-		assertThat(entry.getSubtask().get(0), is(task));
+		entry.addTask(task);
+		assertThat(entry.getSubtask().get(2), is(task));
 	}
 
 

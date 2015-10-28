@@ -1,25 +1,25 @@
 Testsuite: org.framework.primitive.testPrimitive
-Tests run: 33, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0,036 sec
+Tests run: 33, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0,069 sec
 
-Testcase: valueWithinByteRange_Test_Int took 0,004 sec
+Testcase: valueWithinByteRange_Test_Int took 0,008 sec
 Testcase: less_Test_Byte took 0,001 sec
-Testcase: less_Test_Long took 0,002 sec
+Testcase: less_Test_Long took 0,006 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.less_Test_Long(Unknown Source)
 
 Testcase: equals_Test_Double took 0 sec
-Testcase: divisor_Test_Byte took 0 sec
+Testcase: divisor_Test_Byte took 0,001 sec
 Testcase: divisor_Test_Long took 0 sec
-Testcase: integerValue_Test_Double took 0,001 sec
+Testcase: integerValue_Test_Double took 0,002 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.integerValue_Test_Double(Unknown Source)
 
-Testcase: valueWithinByteRange_Test_Long took 0 sec
-Testcase: sameIntegerValue_Test_Float took 0,001 sec
+Testcase: valueWithinByteRange_Test_Long took 0,001 sec
+Testcase: sameIntegerValue_Test_Float took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -27,27 +27,27 @@ junit.framework.AssertionFailedError
 
 Testcase: less_Test_Float took 0 sec
 Testcase: less_Test_Short took 0 sec
-Testcase: equals_Char_Test took 0 sec
-Testcase: testequalsTestBoolean took 0,003 sec
+Testcase: equals_Char_Test took 0,001 sec
+Testcase: testequalsTestBoolean took 0,009 sec
 Testcase: greater_Test_Int took 0 sec
 Testcase: less_Test_Int took 0 sec
 Testcase: less_Test_Double took 0 sec
-Testcase: greater_Test_Float took 0,001 sec
-Testcase: greater_Test_Short took 0 sec
+Testcase: greater_Test_Float took 0 sec
+Testcase: greater_Test_Short took 0,001 sec
 Testcase: valueWithinByteRange_Test_Short took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.valueWithinByteRange_Test_Short(Unknown Source)
 
-Testcase: notEquals_Test took 0,001 sec
-Testcase: greater_Test_Byte took 0 sec
+Testcase: notEquals_Test took 0,004 sec
+Testcase: greater_Test_Byte took 0,001 sec
 Testcase: greater_Test_Long took 0 sec
-Testcase: divisor_Test_Short took 0,001 sec
+Testcase: divisor_Test_Short took 0 sec
 Testcase: equals_Short_Test took 0 sec
-Testcase: equals_Test_Long took 0 sec
+Testcase: equals_Test_Long took 0,001 sec
 Testcase: valueWithinShortRange_Test_Long took 0 sec
-Testcase: equals_TestByte took 0,002 sec
+Testcase: equals_TestByte took 0,003 sec
 	FAILED
 
 Expected: is <0>
@@ -59,13 +59,13 @@ Expected: is <0>
 	at org.framework.primitive.testPrimitive.equals_TestByte(Unknown Source)
 
 Testcase: equals_Test_Int took 0 sec
-Testcase: valueWithinIntRange_Test_Long took 0 sec
+Testcase: valueWithinIntRange_Test_Long took 0,002 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.valueWithinIntRange_Test_Long(Unknown Source)
 
-Testcase: valueWithinFloatRange_Test_Double took 0 sec
+Testcase: valueWithinFloatRange_Test_Double took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -73,4 +73,4 @@ junit.framework.AssertionFailedError
 
 Testcase: divisor_Test_Int took 0 sec
 Testcase: greater_Test_Double took 0 sec
-Testcase: valueWithinShortRange_Test_Int took 0,001 sec
+Testcase: valueWithinShortRange_Test_Int took 0 sec

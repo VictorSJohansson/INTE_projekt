@@ -125,6 +125,8 @@ public class Runtime {
 			suite.run(result);
 		}
 
+		
+		
 		return result;
 	}
 
