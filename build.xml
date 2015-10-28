@@ -17,7 +17,17 @@
 	
 	<!-- dist where distribution will be created -->
 	<property name="dist" location="dist" />
-
+	
+	<!-- dist where distribution will be created -->
+	<property name="findbugs.dir" location="Findbugs" />
+	
+	<property name="emma.dir" location="Emma" />
+	
+	
+	<property name="findbugs.home" value="C:/Program Files (x86)/findbugs-3.0.1" />
+	
+	<property name="emma.home" value="C:/Program Files (x86)/emma-2.0.5312" />
+	
 	
 	<!-- Used William Brendel's suggested solution to create the solution below: 
 	http://stackoverflow.com/questions/722774/getting-ant-javac-to-recognise-a-classpath 
@@ -40,7 +50,7 @@
 	<target name="compile" depends="init" description="compile the source">
 		<!-- Compile the java code from ${src} into ${compile} -->
 
-		<javac includeantruntime="false" destdir="${compile}">
+		<javac includeantruntime="false" destdir="${compile}" debug="true">
 			<src path="${src}" />
 			<classpath refid="junit-classpath" />
 		</javac>
@@ -52,7 +62,7 @@
 		<mkdir dir="${dist}/lib" />
 
 		<!-- Put everything in ${build} into the TestFramework-${tstamp}.jar file -->
-		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}-${TSTAMP}.jar" basedir="${compile}" />
+		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}.jar" basedir="${compile}" />
 	</target>
 
 	<target name="junit-directories" description ="creates junit test directories">
@@ -61,6 +71,34 @@
 			<mkdir dir="${tests}/org/framework/object/" />
 			<mkdir dir="${tests}/org/framework/just_fun" />
 			<mkdir dir="${tests}/org/framework/primitive/" />
+	</target>
+	
+	<target name="findbugs" depends="dist">
+		<taskdef name="findbugs" 
+		classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+		
+		<mkdir dir="${findbugs.dir}" />
+		
+		<findbugs home="${findbugs.home}"
+              output="xml"
+              outputFile="${findbugs.dir}/bcel-fb.xml">
+			<auxClasspath path="${basedir}/lib/hamcrest-core-1.3.jar" />
+			<auxClasspath path="${basedir}/lib/junit-4.12.jar" />
+			<sourcePath path="${basedir}/org/" />
+			<class location="${basedir}/dist/lib/TestFramework-${DSTAMP}.jar" />
+		</findbugs>
+	</target>
+	
+	<!-- Source code from: http://emma.sourceforge.net/userguide/ar01s03s02.html -->
+	<target name="emma" description="turns on EMMA's on-the-fly instrumentation mode" >
+		<property name="emma.enabled" value="true" />
+	</target>
+
+	<target name="run" depends="compile" description="runs the examples" >
+		<emmajava enabled="${emma.enabled}" libclasspathref="emma.lib" 
+              classname="Main"
+              classpathref="run.classpath">
+		</emmajava>
 	</target>
 	
 	<target name="run-alljunittests" 
@@ -507,7 +545,12 @@
 		<delete dir="${compile}" />
 	</target>
 	
-	<target name="clean-all" depends="clean-compile, clean-dist, clean-tests" description="clean up all">
+	<target name="clean-findbugs" description="clean up">
+		<!-- Delete the ${findbugs.dir} directory trees -->
+		<delete dir="${findbugs.dir}" />
+	</target>
+	
+	<target name="clean-all" depends="clean-compile, clean-dist, clean-tests, clean-findbugs" description="clean up all">
 	<!-- Delete the ${compile}, ${dist} and ${tests} directory trees -->
 	</target>
 	
