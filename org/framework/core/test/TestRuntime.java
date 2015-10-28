@@ -57,7 +57,7 @@ public class TestRuntime {
 	public void testRuntimeClass_Method_getListOfAnnotationMethod()
 	{
 		List<String> list = rt.getMethodNames(ANNOTATION, TEST_CLASS_ONE);
-		assertThat(list.get(0), is("testOurNextMethod"));
+		assertThat(list.get(0), anyOf(is("testMethod"), is("testOurNextMethod")));
 	}
 
 	@Test
