@@ -1,14 +1,14 @@
 Testsuite: org.framework.primitive.PrimitiveTestSuite
-Tests run: 66, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 0,115 sec
+Tests run: 66, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 0,056 sec
 
-Testcase: equals_Test took 0,01 sec
+Testcase: equals_Test took 0,005 sec
 Testcase: notEquals_Test took 0 sec
 Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: equals_Test took 0,001 sec
-Testcase: greater_Test took 0,001 sec
+Testcase: equals_Test took 0 sec
+Testcase: greater_Test took 0 sec
 Testcase: equals_Test took 0 sec
 Testcase: integerValue_Test took 0 sec
 Testcase: less_Test took 0 sec
@@ -18,7 +18,7 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.TestDoubleTest.valueWithinFloatRange_Test(Unknown Source)
 
-Testcase: sameIntegerValue_Test took 0,002 sec
+Testcase: sameIntegerValue_Test took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -32,7 +32,7 @@ Testcase: valueWithinShortRange_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
 Testcase: valueWithinByteRange_Test took 0 sec
-Testcase: valueWithinIntRange_Test took 0,001 sec
+Testcase: valueWithinIntRange_Test took 0,003 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -54,7 +54,7 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.TestLongTest.lessTest(Unknown Source)
 
-Testcase: valueWithinByteRange_Test_Int took 0,002 sec
+Testcase: valueWithinByteRange_Test_Int took 0,001 sec
 Testcase: less_Test_Byte took 0 sec
 Testcase: less_Test_Long took 0 sec
 	FAILED
@@ -64,7 +64,7 @@ junit.framework.AssertionFailedError
 
 Testcase: equals_Test_Double took 0 sec
 Testcase: divisor_Test_Byte took 0 sec
-Testcase: divisor_Test_Long took 0,001 sec
+Testcase: divisor_Test_Long took 0 sec
 Testcase: integerValue_Test_Double took 0,001 sec
 	FAILED
 null
@@ -78,16 +78,16 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.sameIntegerValue_Test_Float(Unknown Source)
 
-Testcase: less_Test_Float took 0,001 sec
+Testcase: less_Test_Float took 0 sec
 Testcase: less_Test_Short took 0 sec
 Testcase: equals_Char_Test took 0 sec
-Testcase: testequalsTestBoolean took 0,005 sec
+Testcase: testequalsTestBoolean took 0,003 sec
 Testcase: greater_Test_Int took 0 sec
-Testcase: less_Test_Int took 0 sec
+Testcase: less_Test_Int took 0,001 sec
 Testcase: less_Test_Double took 0 sec
 Testcase: greater_Test_Float took 0 sec
-Testcase: greater_Test_Short took 0 sec
-Testcase: valueWithinByteRange_Test_Short took 0,001 sec
+Testcase: greater_Test_Short took 0,001 sec
+Testcase: valueWithinByteRange_Test_Short took 0 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -99,8 +99,8 @@ Testcase: greater_Test_Long took 0 sec
 Testcase: divisor_Test_Short took 0 sec
 Testcase: equals_Short_Test took 0 sec
 Testcase: equals_Test_Long took 0 sec
-Testcase: valueWithinShortRange_Test_Long took 0,001 sec
-Testcase: equals_TestByte took 0,003 sec
+Testcase: valueWithinShortRange_Test_Long took 0 sec
+Testcase: equals_TestByte took 0,002 sec
 	FAILED
 
 Expected: is <0>
@@ -111,7 +111,7 @@ Expected: is <0>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.framework.primitive.testPrimitive.equals_TestByte(Unknown Source)
 
-Testcase: equals_Test_Int took 0 sec
+Testcase: equals_Test_Int took 0,001 sec
 Testcase: valueWithinIntRange_Test_Long took 0 sec
 	FAILED
 null
@@ -124,7 +124,7 @@ null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.testPrimitive.valueWithinFloatRange_Test_Double(Unknown Source)
 
-Testcase: divisor_Test_Int took 0,001 sec
+Testcase: divisor_Test_Int took 0 sec
 Testcase: greater_Test_Double took 0 sec
 Testcase: valueWithinShortRange_Test_Int took 0 sec
 Testcase: greater_Test took 0,001 sec
