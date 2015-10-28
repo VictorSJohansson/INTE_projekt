@@ -1,13 +1,10 @@
 Testsuite: org.framework.primitive.TestDoubleTest
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,023 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
 
-Testcase: greater_Test took 0,006 sec
-Testcase: equals_Test took 0 sec
-Testcase: integerValue_Test took 0 sec
-Testcase: less_Test took 0 sec
-Testcase: valueWithinFloatRange_Test took 0,003 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
-	at org.framework.primitive.TestDoubleTest.valueWithinFloatRange_Test(Unknown Source)
+	Caused an ERROR
+org.framework.primitive.TestDoubleTest
+java.lang.ClassNotFoundException: org.framework.primitive.TestDoubleTest
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
 

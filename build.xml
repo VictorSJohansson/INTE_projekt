@@ -30,7 +30,7 @@
 		<pathelement path="${compile}" />
 	</path>
 	
-	<target name="init">
+	<target name="init" depends="clean-compile">
 		<!-- Create the time stamp -->
 		<tstamp />
 		<!-- Create the compile directory -->
@@ -492,13 +492,23 @@
 		</junit>	
 	</target>
 
-
-	
-	
-	<target name="clean" description="clean up">
-		<!-- Delete the ${build} and ${dist} directory trees -->
-		<delete dir="${compile}" />
+	<target name="clean-dist" description="clean up">
+		<!-- Delete the ${dist} directory trees -->
 		<delete dir="${dist}" />
+	</target>
+	
+	<target name="clean-tests" description="clean up">
+		<!-- Delete the ${tests} directory trees -->
 		<delete dir="${tests}" />
 	</target>
+	
+	<target name="clean-compile" description="clean up">
+		<!-- Delete the ${compile} directory trees -->
+		<delete dir="${compile}" />
+	</target>
+	
+	<target name="clean-all" depends="clean-compile, clean-dist, clean-tests" description="clean up all">
+	<!-- Delete the ${compile}, ${dist} and ${tests} directory trees -->
+	</target>
+	
 </project>

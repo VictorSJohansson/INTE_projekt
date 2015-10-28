@@ -1,11 +1,10 @@
 Testsuite: org.framework.primitive.TestFloatTest
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,03 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
 
-Testcase: sameIntegerValue_Test took 0,007 sec
-	FAILED
-null
-junit.framework.AssertionFailedError
-	at org.framework.primitive.TestFloatTest.sameIntegerValue_Test(Unknown Source)
+	Caused an ERROR
+org.framework.primitive.TestFloatTest
+java.lang.ClassNotFoundException: org.framework.primitive.TestFloatTest
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
 
-Testcase: greater_Test took 0 sec
-Testcase: less_Test took 0 sec

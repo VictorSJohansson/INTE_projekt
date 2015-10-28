@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import org.framework.core.test.RuntimeTestSuite;
 import org.framework.object.ObjectTestSuite;
-import org.framework.primitive.PrimitiveTestSuite;
+import org.framework.primitive.tests.PrimitiveTestSuite;
 
 @RunWith(value = Suite.class)
 @SuiteClasses(value =

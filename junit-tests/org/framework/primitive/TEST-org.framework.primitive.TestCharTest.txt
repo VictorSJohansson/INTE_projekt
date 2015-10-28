@@ -1,4 +1,10 @@
 Testsuite: org.framework.primitive.TestCharTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,022 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
 
-Testcase: equals_Test took 0,005 sec
+	Caused an ERROR
+org.framework.primitive.TestCharTest
+java.lang.ClassNotFoundException: org.framework.primitive.TestCharTest
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+

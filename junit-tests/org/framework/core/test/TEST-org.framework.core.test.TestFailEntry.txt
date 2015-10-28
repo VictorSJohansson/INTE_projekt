@@ -1,9 +1,10 @@
 Testsuite: org.framework.core.test.TestFailEntry
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,024 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
 
-Testcase: testFailEntryValue_Value2IsCorrect took 0,002 sec
-Testcase: testFailEntryValue_Value1IsCorrect took 0 sec
-Testcase: testFailEntryConstructorIsNull_Value1IsNull took 0,004 sec
-Testcase: testFailEntryConstructorIsNull_Value2IsNull took 0 sec
-Testcase: testFailEntryConstructorIsNull_NullTestName took 0 sec
-Testcase: testFailEntryTestName_TestNameIsCorrect took 0 sec
+	Caused an ERROR
+org.framework.core.test.TestFailEntry
+java.lang.ClassNotFoundException: org.framework.core.test.TestFailEntry
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+
