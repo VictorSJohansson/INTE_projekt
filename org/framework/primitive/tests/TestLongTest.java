@@ -19,7 +19,7 @@ public class TestLongTest {
 	 */
 	@Test
 	public void equalsTest(){
-		assertTrue(TestLong.equals(1234567, 1234567));	
+		assertTrue(TestLong.equals(1234567L, 1234567L));	
 	}
 	
 	/*
@@ -35,7 +35,7 @@ public class TestLongTest {
 	 */
 	@Test
 	public void lessTest(){
-		assertTrue(TestLong.less(123456, 12345));
+		assertTrue(TestLong.less(12345L, 123456L));
 	}
 
     @Test
@@ -48,9 +48,11 @@ public class TestLongTest {
     
 	@Test
 	public void valueWithinIntRange_Test() { //added by John Thorelli 20/10/2015
-		long x = Integer.MAX_VALUE + 1;
+		long x = Integer.MAX_VALUE;
+		x+= 1;
 		assertFalse(TestLong.valueWithinIntRange(x));
-		x = Integer.MIN_VALUE - 1;
+		x = Integer.MIN_VALUE;
+		x-= 1;
 		assertFalse(TestLong.valueWithinIntRange(x));
 		x = 0;
 		assertTrue(TestLong.valueWithinIntRange(x));

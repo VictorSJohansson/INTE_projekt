@@ -58,9 +58,11 @@ public class TestDoubleTest
     
     @Test
 	public void valueWithinFloatRange_Test() { //added by John Thorelli 20/10/2015
-		double x = Float.MAX_VALUE + 1;
+		double x = Float.MAX_VALUE;
+		x+= 1.0;
 		assertFalse(TestDouble.valueWithinFloatRange(x));
-		x = Float.MIN_VALUE - 1;
+		x = Float.MIN_VALUE;
+		x-= 1.0;
 		assertFalse(TestDouble.valueWithinFloatRange(x));
 		x = 0;
 		assertTrue(TestDouble.valueWithinFloatRange(x));

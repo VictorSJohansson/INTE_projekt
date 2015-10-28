@@ -18,7 +18,8 @@ public class TestLong {
 	public static boolean equals(long x, long y){
 		
 		int a = Long.compare(x, y);
-		if(a==1){
+		
+		if(a==0){
 			return true;
 		}
 		else 
@@ -44,9 +45,9 @@ public class TestLong {
 	public static boolean less(long x, long y){
 		
 		int a = Long.compare(x, y);
-		if(a<0){
+
+		if(a<0)
 			return true;
-		}
 		else 
 			return false;
 	}
@@ -56,9 +57,12 @@ public class TestLong {
     }
 
 	public static boolean valueWithinIntRange(long x) { //added by John Thorelli 20/10/2015
-		if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE)
+		if(x < Integer.MIN_VALUE)
 			return false;
-		return true;
+		else if(x > Integer.MAX_VALUE)
+			return false;
+		else
+			return true;
 	}
 
 	public static boolean valueWithinShortRange(long x) { //added by John Thorelli 20/10/2015
