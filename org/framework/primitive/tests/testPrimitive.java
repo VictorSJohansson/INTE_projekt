@@ -200,7 +200,9 @@ public class testPrimitive {
 	 */
 	@Test
 	public void less_Test_Long(){
-		assertTrue(Primitive.less(123455, 12346));
+		long x = 123455;
+		long y = 123456;
+		assertTrue(Primitive.less(x, y));
 	}
 
     @Test
@@ -307,8 +309,11 @@ public class testPrimitive {
     @Test
     public void integerValue_Test_Double()
     {
-    	assertTrue(Primitive.equalIntegerValue(2.3, 2.4));
-        assertFalse(Primitive.equalIntegerValue(2.3, 1.4));
+    	Double d1 = 2.3;
+    	Double d2 = 2.4;
+    	assertTrue(Primitive.equalIntegerValue(d1, d2));
+    	d2 = 1.4;
+        assertFalse(Primitive.equalIntegerValue(d1, d2));
     }
     
     @Test
