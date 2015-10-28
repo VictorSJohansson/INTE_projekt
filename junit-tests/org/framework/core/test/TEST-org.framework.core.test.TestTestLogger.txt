@@ -1,4 +1,4 @@
 Testsuite: org.framework.core.test.TestTestLogger
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,026 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,02 sec
 
 Testcase: testTestLoggerAppend took 0,003 sec
