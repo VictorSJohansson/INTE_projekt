@@ -888,7 +888,11 @@ public class Primitive {
   }
 
 	public static boolean valueWithinFloatRange(double x) { //added by John Thorelli 20/10/2015
-		if(x < Float.MIN_VALUE || x > Float.MAX_VALUE){
+		if(x < Float.MIN_VALUE){
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, null);
+			return false;
+		}
+		else if(x > Float.MAX_VALUE){
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, null);
 			return false;
 		}

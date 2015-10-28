@@ -109,9 +109,11 @@ public class testPrimitive {
 	
 	@Test
 	public void valueWithinByteRange_Test_Short() {
-		short x = Byte.MAX_VALUE + 1;
+		short x = Byte.MAX_VALUE;
+		short x += 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
-		x = Byte.MIN_VALUE - 1;
+		x = Byte.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinByteRange(x));
@@ -165,9 +167,11 @@ public class testPrimitive {
     
 	@Test
 	public void valueWithinShortRange_Test_Int() { //added by John Thorelli 20/10/2015
-		int x = Short.MAX_VALUE + 1;
+		int x = Short.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
-		x = Short.MIN_VALUE - 1;
+		x = Short.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinShortRange(x));
@@ -175,9 +179,11 @@ public class testPrimitive {
 	
 	@Test
 	public void valueWithinByteRange_Test_Int() { //added by John Thorelli 20/10/2015
-		int x = Byte.MAX_VALUE + 1;
+		int x = Byte.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
-		x = Byte.MIN_VALUE - 1;
+		x = Byte.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinByteRange(x));
@@ -221,9 +227,11 @@ public class testPrimitive {
     
 	@Test
 	public void valueWithinIntRange_Test_Long() { //added by John Thorelli 20/10/2015
-		long x = Integer.MAX_VALUE + 1;
+		long x = Integer.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinIntRange(x));
-		x = Integer.MIN_VALUE - 1;
+		x = Integer.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinIntRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinIntRange(x));
@@ -231,9 +239,11 @@ public class testPrimitive {
 	
 	@Test
 	public void valueWithinShortRange_Test_Long() { //added by John Thorelli 20/10/2015
-		long x = Short.MAX_VALUE + 1;
+		long x = Short.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
-		x = Short.MIN_VALUE - 1;
+		x = Short.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinShortRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinShortRange(x));
@@ -241,9 +251,11 @@ public class testPrimitive {
 	
 	@Test
 	public void valueWithinByteRange_Test_Long() { //added by John Thorelli 20/10/2015
-		long x = Byte.MAX_VALUE + 1;
+		long x = Byte.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
-		x = Byte.MIN_VALUE - 1;
+		x = Byte.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinByteRange(x));
@@ -324,9 +336,11 @@ public class testPrimitive {
     
     @Test
 	public void valueWithinFloatRange_Test_Double() { //added by John Thorelli 20/10/2015
-		double x = Float.MAX_VALUE + 1;
+		double x = Float.MAX_VALUE;
+		x += 1;
 		assertFalse(Primitive.valueWithinFloatRange(x));
-		x = Float.MIN_VALUE - 1;
+		x = Float.MIN_VALUE;
+		x -= 1;
 		assertFalse(Primitive.valueWithinFloatRange(x));
 		x = 0;
 		assertTrue(Primitive.valueWithinFloatRange(x));
