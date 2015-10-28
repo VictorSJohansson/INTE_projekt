@@ -36,9 +36,12 @@ public class testPrimitive {
 	
 	@Test //Tests the functionality of equals_Test()  
     public void equals_TestByte() {
-		
-		assertFalse(Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE));
-		assertFalse(Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE));
+		byte a = Byte.MAX_VALUE;
+		byte b = Byte.MIN_VALUE;
+		assertFalse(Primitive.equals(a, b));
+		assertFalse(Primitive.equals(b, a));
+		b = a;
+		assertTrue(Primitve.equals(b, a));
 		//Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE);
 		//assertThat(failCount, is(TestLogger.getSize()));
 		//Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
@@ -122,7 +125,10 @@ public class testPrimitive {
     @Test
     public void equals_Test_Int()
     {
-        assertFalse(Primitive.equals(Integer.MAX_VALUE,Integer.MAX_VALUE));
+    	int a = Integer.MAX_VALUE;
+    	int b = Integer.MIN_VALUE;
+        assertFalse(Primitive.equals(a, b));
+        assertTrue(Primitveequals(a, a));
         
     }
     
