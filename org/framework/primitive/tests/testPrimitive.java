@@ -41,7 +41,7 @@ public class testPrimitive {
 		assertFalse(Primitive.equals(a, b));
 		assertFalse(Primitive.equals(b, a));
 		b = a;
-		assertTrue(Primitve.equals(b, a));
+		assertTrue(Primitive.equals(b, a));
 		//Primitive.equals(Byte.MAX_VALUE, Byte.MAX_VALUE);
 		//assertThat(failCount, is(TestLogger.getSize()));
 		//Primitive.equals(Byte.MIN_VALUE, Byte.MAX_VALUE);
@@ -110,7 +110,7 @@ public class testPrimitive {
 	@Test
 	public void valueWithinByteRange_Test_Short() {
 		short x = Byte.MAX_VALUE;
-		short x += 1;
+		x += 1;
 		assertFalse(Primitive.valueWithinByteRange(x));
 		x = Byte.MIN_VALUE;
 		x -= 1;
@@ -130,7 +130,7 @@ public class testPrimitive {
     	int a = Integer.MAX_VALUE;
     	int b = Integer.MIN_VALUE;
         assertFalse(Primitive.equals(a, b));
-        assertTrue(Primitveequals(a, a));
+        assertTrue(Primitive.equals(a, a));
         
     }
     
