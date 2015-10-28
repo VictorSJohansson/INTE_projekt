@@ -170,7 +170,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.PrimitiveTestSuite" 
+			<test name="org.framework.primitive.tests.PrimitiveTestSuite" 
 				todir="${tests}/org/framework/Primitive/"/>
 		</junit>	
 	</target>
@@ -367,7 +367,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestBooleanTest" 
+			<test name="org.framework.primitive.tests.TestBooleanTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -382,7 +382,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestByteTest" 
+			<test name="org.framework.primitive.tests.TestByteTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -397,7 +397,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestCharTest" 
+			<test name="org.framework.primitive.tests.TestCharTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -412,7 +412,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestDoubleTest" 
+			<test name="org.framework.primitive.tests.TestDoubleTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -427,7 +427,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestFloatTest" 
+			<test name="org.framework.primitive.tests.TestFloatTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -442,7 +442,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestIntTest" 
+			<test name="org.framework.primitive.tests.TestIntTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -457,7 +457,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestLongTest" 
+			<test name="org.framework.primitive.tests.TestLongTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -472,7 +472,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.testPrimitive" 
+			<test name="org.framework.primitive.tests.testPrimitive" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>
@@ -487,7 +487,7 @@
 			<formatter type="plain" usefile="false"/>
 			<formatter type="plain" />
 			
-			<test name="org.framework.primitive.TestShortTest" 
+			<test name="org.framework.primitive.tests.TestShortTest" 
 				todir="${tests}/org/framework/primitive/"/>	
 		</junit>	
 	</target>

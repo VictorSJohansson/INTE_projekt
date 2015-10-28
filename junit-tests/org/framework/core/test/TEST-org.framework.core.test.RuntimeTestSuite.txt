@@ -1,5 +1,5 @@
 Testsuite: org.framework.core.test.RuntimeTestSuite
-Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,051 sec
+Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,049 sec
 ------------- Standard Output ---------------
 InstantationException - TestCase
 InstantationException - TestCase
@@ -14,40 +14,40 @@ InstantationException - TestCase
 InstantationException - TestCase
 ------------- ---------------- ---------------
 
-Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,009 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,007 sec
+Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,008 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,006 sec
 Testcase: testRuntimeClass_Method_ExecuteMethodSeveralConstructorParameter took 0 sec
-Testcase: testRuntimeClass_Method_executeMethodSuccess took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0,001 sec
+Testcase: testRuntimeClass_Method_executeMethodSuccess took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0 sec
 Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromList took 0 sec
 Testcase: testRuntimeClass_Constructor_ParameterConstructor took 0 sec
 Testcase: testRuntimeClass_Method_executeMethodFailed took 0 sec
 Testcase: testRuntimeClass_Method_Execute_RunExecuteThreeTest took 0,001 sec
 Testcase: testRuntimeClass_Constructor_EmptyConstructor took 0 sec
-Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,001 sec
+Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,002 sec
 Testcase: testRuntimeClass_Method_AddClass_AddOneClass took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0,001 sec
-Testcase: testTestCaseClass_Constructor_EmptyConstructor_cannotRun took 0 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0 sec
+Testcase: testTestCaseClass_Constructor_EmptyConstructor_cannotRun took 0,001 sec
 Testcase: testTestCaseClass_Method_Run_TestResultIsIncorrect took 0 sec
-Testcase: testTestCaseClass_Method_run_testNullPointerException_onMethodName took 0,002 sec
+Testcase: testTestCaseClass_Method_run_testNullPointerException_onMethodName took 0,001 sec
 Testcase: testTestCaseClass_Method_Run_TestResultIsCorrect took 0 sec
 Testcase: testTestCaseClass_Constructor_NullConstructor_cannotRun took 0 sec
-Testcase: testTestCaseClass_Method_Setup_addSetupValue took 0 sec
+Testcase: testTestCaseClass_Method_Setup_addSetupValue took 0,001 sec
 Testcase: testTestCaseClass_Method_run_testNullPointerException_onInstance took 0 sec
 Testcase: testTestCaseClass_Method_Teardown_addTeardownValue took 0 sec
 Testcase: testTestCaseClass_Constructor_NullConstructor_methodName took 0,001 sec
 Testcase: testTestCaseClass_Constructor_Parameter_CanRun took 0,001 sec
 Testcase: testFailTaskValue2IsCorrect took 0 sec
-Testcase: testFailTaskValue1IsCorrect took 0,001 sec
+Testcase: testFailTaskValue1IsCorrect took 0 sec
 Testcase: testFailTaskTestName_TestNameIsCorrect took 0 sec
 Testcase: testFailTasktoString took 0 sec
 Testcase: testFailTaskConstructorIsNull_NullTestName took 0 sec
-Testcase: testLogEntryAddTask took 0,001 sec
-Testcase: testLogEntryGetFails took 0 sec
+Testcase: testLogEntryAddTask took 0 sec
+Testcase: testLogEntryGetFails took 0,001 sec
 Testcase: testLogEntryConstructorIsNull_NullTestName took 0 sec
 Testcase: testLogEntryTestName_TestNameIsCorrect took 0 sec
 Testcase: testSubtaskTestName_TestNameIsCorrect took 0 sec
 Testcase: testSubtaskConstructorIsNull_NullTestName took 0 sec
 Testcase: testSuccessfulTaskTestName_TestNameIsCorrect took 0 sec
-Testcase: testSuccessfulTaskConstructorIsNull_NullTestName took 0,001 sec
+Testcase: testSuccessfulTaskConstructorIsNull_NullTestName took 0 sec
 Testcase: testTestLoggerAppend took 0 sec

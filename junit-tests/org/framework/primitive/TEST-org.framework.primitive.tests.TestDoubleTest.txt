@@ -1,0 +1,13 @@
+Testsuite: org.framework.primitive.tests.TestDoubleTest
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,037 sec
+
+Testcase: greater_Test took 0,01 sec
+Testcase: equals_Test took 0 sec
+Testcase: integerValue_Test took 0 sec
+Testcase: less_Test took 0 sec
+Testcase: valueWithinFloatRange_Test took 0,006 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
+	at org.framework.primitive.tests.TestDoubleTest.valueWithinFloatRange_Test(Unknown Source)
+
