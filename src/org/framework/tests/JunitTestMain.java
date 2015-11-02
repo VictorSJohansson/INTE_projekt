@@ -27,13 +27,13 @@ public class JunitTestMain
 	@Test
 	public void testMainClass_Method_getZeroParameterFromMain()
 	{
-		assertThat(main.getParameters().length, is(0));
+		assertThat(main.getParameters().size(), is(0));
 	}
 
 	@Test
 	public void testMainClass_Method_addOneParameterToMain()
 	{
 		main.addParameter("");
-		assertThat(main.getParameters().length, is(1));
+		assertThat(main.getParameters().size(), is(1));
 	}
 }

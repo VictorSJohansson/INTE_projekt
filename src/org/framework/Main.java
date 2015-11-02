@@ -1,19 +1,21 @@
 package org.framework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main
 {
 	
-	String[] parameters = new String[0]; 
+	List<String> parameters = new ArrayList<>(); 
 	
-	public String[] getParameters()
+	public List<String> getParameters()
 	{
 		return parameters;
 	}
 	
 	public void addParameter(String parameter)
 	{
-		parameters = new String[1];
-		parameters[0] = parameter;
+		parameters.add(parameter);
 	}
 	
 	
