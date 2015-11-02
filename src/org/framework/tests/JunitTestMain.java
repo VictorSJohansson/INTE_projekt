@@ -25,6 +25,12 @@ public class JunitTestMain
 	}
 	
 	@Test
+	public void testMainClass_Constructor_createsARuntimeObject()
+	{
+		assertThat(main.runtime, is(IsNull.notNullValue()));
+	}
+	
+	@Test
 	public void testMainClass_Method_getZeroParameterFromMain()
 	{
 		assertThat(main.getParameters().size(), is(0));
