@@ -40,7 +40,7 @@ public class JunitTestMain
 	@Test(expected=NullPointerException.class)
 	public void testMainClass_Method_addNullParameterToMain()
 	{
-		main.addParameter(null);
+		main.addParameter(null, "");
 	}
 	
 	@Test

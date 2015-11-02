@@ -21,5 +21,14 @@ public class Main
 		parameters.add(parameter);
 	}
 	
+	public void addParameter(String... cl)
+	{
+		parameters.add("");
+		parameters.add("");
+		parameters.add("");
+		parameters.add("");
+		parameters.add("");
+	}
+	
 	
 }
