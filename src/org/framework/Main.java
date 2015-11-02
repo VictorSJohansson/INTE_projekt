@@ -8,5 +8,10 @@ public class Main
 		return new String[0];
 	}
 	
+	public static void addParameter(String parameter)
+	{
+		
+	}
+	
 	
 }
