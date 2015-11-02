@@ -10,7 +10,7 @@ public class Main
 	List<String> parameters;
 	public Runtime runtime;
 	
-	private int parametersRan;
+	private static int parametersRan;
 	
 	public Main()
 	{
@@ -52,7 +52,7 @@ public class Main
 	
 	public static void main(String[]args)
 	{
-		
+		parametersRan = args.length;
 	}
 	
 	public boolean wasRun()

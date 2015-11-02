@@ -97,6 +97,14 @@ public class JunitTestMain
 		assertThat(main.getParametersRan(), is(1));
 	}
 	
+	@Test
+	public void testMainClass_Method_ensureParametersAreRemovedAfterRun()
+	{
+		main.addParameter("");
+		runMain(1);
+		assertThat(main.getParameters().size(), is(0));
+	}
+	
 	
 	
 	
