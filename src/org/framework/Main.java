@@ -9,6 +9,7 @@ public class Main
 {
 	List<String> parameters;
 	public Runtime runtime;
+	private static boolean wasRun;
 	
 	private static int parametersRan;
 	
@@ -17,6 +18,7 @@ public class Main
 		parameters = new ArrayList<>(); 
 		runtime = new Runtime();
 		parametersRan = 0;
+		wasRun = false;
 	}
 	
 	public List<String> getParameters()
@@ -48,16 +50,18 @@ public class Main
 	public void run()
 	{
 		parametersRan = parameters.size();
+		parameters.clear();
 	}
 	
 	public static void main(String[]args)
 	{
 		parametersRan = args.length;
+		wasRun = true;
 	}
 	
 	public boolean wasRun()
 	{
-		return true;
+		return wasRun;
 	}
 	
 }

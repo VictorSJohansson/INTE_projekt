@@ -13,6 +13,7 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matcher.*;
 
 import org.framework.Main;
+import org.framework.tests.target.TestClassForMain;
 
 public class JunitTestMain
 {
@@ -105,8 +106,18 @@ public class JunitTestMain
 		assertThat(main.getParameters().size(), is(0));
 	}
 	
-	
-	
-	
-	
+	@Test
+	public void testMainClass_Method_sendStringParameterToMainMethodAndEnsureItIsAViableClass()
+	{
+		try
+		{
+			main.addParameter("org.framework.tests.target.TestClassForMain");
+			assertThat(Class.forName(main.getParameters().get(0)).getClass(), instanceOf(TestClassForMain.class.getClass()) );
+			
+		}
+		catch (ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+	}
 }
