@@ -7,8 +7,15 @@ import org.framework.core.runtime.Runtime;
 
 public class Main
 {
-	List<String> parameters = new ArrayList<>(); 
-	public Runtime runtime = new Runtime();
+	List<String> parameters;
+	public Runtime runtime;
+	
+	
+	public Main()
+	{
+		parameters = new ArrayList<>(); 
+		runtime = new Runtime();
+	}
 	
 	public List<String> getParameters()
 	{
