@@ -21,13 +21,12 @@ public class Main
 		parameters.add(parameter);
 	}
 	
-	public void addParameter(String... cl)
+	public void addParameter(String... string)
 	{
-		parameters.add("");
-		parameters.add("");
-		parameters.add("");
-		parameters.add("");
-		parameters.add("");
+		for(String token : string)
+		{
+			addParameter(token);
+		}
 	}
 	
 	
