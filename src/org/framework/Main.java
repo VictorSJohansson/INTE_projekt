@@ -15,6 +15,9 @@ public class Main
 	
 	public void addParameter(String parameter)
 	{
+		if(parameter == null)
+			throw new NullPointerException();
+		
 		parameters.add(parameter);
 	}
 	
