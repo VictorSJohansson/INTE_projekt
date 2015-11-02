@@ -10,7 +10,7 @@ public class Main
 	
 	public List<String> getParameters()
 	{
-		return parameters;
+		return new ArrayList<String>(parameters);
 	}
 	
 	public void addParameter(String parameter)
