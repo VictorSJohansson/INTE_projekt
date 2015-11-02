@@ -10,10 +10,13 @@ public class Main
 	List<String> parameters;
 	public Runtime runtime;
 	
+	private int parametersRan;
+	
 	public Main()
 	{
 		parameters = new ArrayList<>(); 
 		runtime = new Runtime();
+		parametersRan = 0;
 	}
 	
 	public List<String> getParameters()
@@ -37,16 +40,24 @@ public class Main
 		}
 	}
 	
-	public int getParametersRun()
+	public int getParametersRan()
 	{
-		return 0;
+		return parametersRan;
 	}
 	
 	public void run()
 	{
+		parametersRan = parameters.size();
+	}
+	
+	public static void main(String[]args)
+	{
 		
 	}
 	
-	
+	public boolean wasRun()
+	{
+		return true;
+	}
 	
 }

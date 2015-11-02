@@ -57,22 +57,48 @@ public class JunitTestMain
 	}
 	
 	@Test
-	public void testMainClass_Method_runMainWithZeroArgument()
+	public void testMainClass_Method_runWithZeroArgument()
 	{
-		runMain();
+		runMain(0);
 	}
 	
 	@Test
-	public void testMainClass_Method_runMainWithOneArgument()
+	public void testMainClass_Method_runWithOneArgument()
 	{
 		main.addParameter("");
-		runMain();
+		runMain(1);
+	}
+	
+	@Test
+	public void testMainClass_Method_runWithSeveralArgument()
+	{
+		main.addParameter("","","","","");
+		runMain(5);
 	}
 	
 	public void runMain(int expected)
 	{
 		main.run();
-		assertThat(main.getParametersRun(), is(expected));		
+		assertThat(main.getParametersRan(), is(expected));		
 	}
+	
+	@Test
+	public void testMainClass_Method_runMainMethodWithZeroArgument()
+	{
+		Main.main(new String[]{});
+		assertThat(main.wasRun(), is(true));
+	}
+	
+	@Test
+	public void testMainClass_Method_runMainMethodWithOneArgument()
+	{
+		Main.main(new String[]{"test"});
+		assertThat(main.wasRun(), is(true));
+		assertThat(main.getParametersRan(), is(1));
+	}
+	
+	
+	
+	
 	
 }
