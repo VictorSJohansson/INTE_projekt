@@ -38,8 +38,15 @@ public class JunitTestMain
 	}
 	
 	@Test(expected=NullPointerException.class)
-	public void testMainClass_Method_AddNullParameterToMain()
+	public void testMainClass_Method_addNullParameterToMain()
 	{
 		main.addParameter(null);
+	}
+	
+	@Test
+	public void testMainClass_Method_addSeveralParameterToMain()
+	{
+		main.addParameter("","","","","");
+		assertThat(main.getParameters().size(), is(5));
 	}
 }
