@@ -1,5 +1,5 @@
 Testsuite: org.framework.core.test.JunitTestSubtask
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,031 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,035 sec
 
-Testcase: testSubtaskTestName_TestNameIsCorrect took 0,004 sec
+Testcase: testSubtaskTestName_TestNameIsCorrect took 0,005 sec
 Testcase: testSubtaskConstructorIsNull_NullTestName took 0,003 sec

@@ -1,13 +1,214 @@
 Testsuite: org.framework.tests.JunitTestMain
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,227 sec
+------------- Standard Output ---------------
+2015:11:02 16:20:53
+5 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
 
-	Caused an ERROR
-org.framework.tests.JunitTestMain
-java.lang.ClassNotFoundException: org.framework.tests.JunitTestMain
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Unknown Source)
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
 
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+2015:11:02 16:20:53
+6 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+2015:11:02 16:20:53
+7 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+test_runMainMethodWithOneArgument is not a viable class
+0 run, 0 failed.
+
+2015:11:02 16:20:53
+8 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+test_runMainMethodWithOneArgument is not a viable class
+0 run, 0 failed.
+
+testOurPrimitiveClass: FAILED7 run, 3 failed.
+  -less
+  -FAILED: less 5 compared to 4
+  -equals
+  -FAILED: equals 4 compared to 6
+  -valueWithinByteRange
+  -FAILED: valueWithinByteRange 1000 compared to null
+  -valueWithinByteRange
+
+2015:11:02 16:20:53
+9 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+test_runMainMethodWithOneArgument is not a viable class
+0 run, 0 failed.
+
+testOurPrimitiveClass: FAILED7 run, 3 failed.
+  -less
+  -FAILED: less 5 compared to 4
+  -equals
+  -FAILED: equals 4 compared to 6
+  -valueWithinByteRange
+  -FAILED: valueWithinByteRange 1000 compared to null
+  -valueWithinByteRange
+
+test_ensureParametersAreRemovedAfterRun is not a viable class
+0 run, 0 failed.
+
+2015:11:02 16:20:53
+9 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+test_runMainMethodWithOneArgument is not a viable class
+0 run, 0 failed.
+
+testOurPrimitiveClass: FAILED7 run, 3 failed.
+  -less
+  -FAILED: less 5 compared to 4
+  -equals
+  -FAILED: equals 4 compared to 6
+  -valueWithinByteRange
+  -FAILED: valueWithinByteRange 1000 compared to null
+  -valueWithinByteRange
+
+test_ensureParametersAreRemovedAfterRun is not a viable class
+0 run, 0 failed.
+
+2015:11:02 16:20:53
+9 tests run
+test_runWithSeveralArgument_1 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_2 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_3 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_4 is not a viable class
+0 run, 0 failed.
+
+test_runWithSeveralArgument_5 is not a viable class
+0 run, 0 failed.
+
+test_runWithOneArgument is not a viable class
+0 run, 0 failed.
+
+test_runMainMethodWithOneArgument is not a viable class
+0 run, 0 failed.
+
+testOurPrimitiveClass: FAILED7 run, 3 failed.
+  -less
+  -FAILED: less 5 compared to 4
+  -equals
+  -FAILED: equals 4 compared to 6
+  -valueWithinByteRange
+  -FAILED: valueWithinByteRange 1000 compared to null
+  -valueWithinByteRange
+
+test_ensureParametersAreRemovedAfterRun is not a viable class
+0 run, 0 failed.
+
+------------- ---------------- ---------------
+
+Testcase: testMainClass_Method_runWithSeveralArgument took 0,052 sec
+Testcase: testMainClass_Method_runWithOneArgument took 0,004 sec
+Testcase: testMainClass_Method_addOneParameterToMain took 0,001 sec
+Testcase: testMainClass_Method_runMainMethodWithOneArgument took 0,002 sec
+Testcase: testMainClass_Method_sendStringParameterToMainMethodAndEnsureItIsAViableClass took 0,03 sec
+Testcase: testMainClass_Method_getZeroParameterFromMain took 0 sec
+Testcase: testMainClass_Method_addSeveralParameterToMain took 0 sec
+Testcase: testMainClass_Method_ensureParametersAreRemovedAfterRun took 0,002 sec
+Testcase: testMainClass_Method_runMainMethodWithZeroArgument took 0,001 sec
+Testcase: testMainClass_Method_addNullParameterToMain took 0,001 sec
+Testcase: testMainClass_Method_runWithZeroArgument took 0,005 sec
+Testcase: testMainClass_Constructor_createsARuntimeObject took 0,002 sec

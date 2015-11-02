@@ -1,24 +1,24 @@
 Testsuite: org.framework.primitive.tests.JunitPrimitiveTestSuite
-Tests run: 66, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0,192 sec
+Tests run: 66, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0,302 sec
 
-Testcase: equals_Test took 0,007 sec
+Testcase: equals_Test took 0,008 sec
 Testcase: notEquals_Test took 0 sec
-Testcase: greater_Test took 0 sec
+Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: divisor_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: equals_Test took 0 sec
-Testcase: greater_Test took 0 sec
+Testcase: equals_Test took 0,001 sec
+Testcase: greater_Test took 0,001 sec
 Testcase: equals_Test took 0 sec
 Testcase: integerValue_Test took 0 sec
 Testcase: less_Test took 0 sec
-Testcase: valueWithinFloatRange_Test took 0,003 sec
+Testcase: valueWithinFloatRange_Test took 0,005 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.tests.JunitTestDoubleTest.valueWithinFloatRange_Test(JunitTestDoubleTest.java:63)
 
-Testcase: sameIntegerValue_Test took 0,002 sec
+Testcase: sameIntegerValue_Test took 0,008 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
@@ -38,39 +38,39 @@ Testcase: divisor_Test took 0 sec
 Testcase: equalsTest took 0 sec
 Testcase: greaterTest took 0 sec
 Testcase: valueWithinByteRange_Test took 0 sec
-Testcase: lessTest took 0,001 sec
+Testcase: lessTest took 0 sec
 Testcase: valueWithinByteRange_Test_Int took 0,002 sec
 Testcase: less_Test_Byte took 0,001 sec
 Testcase: less_Test_Long took 0 sec
-Testcase: equals_Test_Double took 0 sec
-Testcase: divisor_Test_Byte took 0,001 sec
-Testcase: divisor_Test_Long took 0 sec
+Testcase: equals_Test_Double took 0,001 sec
+Testcase: divisor_Test_Byte took 0 sec
+Testcase: divisor_Test_Long took 0,001 sec
 Testcase: integerValue_Test_Double took 0 sec
 Testcase: valueWithinByteRange_Test_Long took 0 sec
-Testcase: sameIntegerValue_Test_Float took 0 sec
+Testcase: sameIntegerValue_Test_Float took 0,001 sec
 Testcase: less_Test_Float took 0,001 sec
-Testcase: less_Test_Short took 0,001 sec
-Testcase: equals_Char_Test took 0,001 sec
+Testcase: less_Test_Short took 0,002 sec
+Testcase: equals_Char_Test took 0 sec
 Testcase: testequalsTestBoolean took 0 sec
 Testcase: greater_Test_Int took 0 sec
-Testcase: less_Test_Int took 0 sec
-Testcase: less_Test_Double took 0 sec
+Testcase: less_Test_Int took 0,001 sec
+Testcase: less_Test_Double took 0,001 sec
 Testcase: greater_Test_Float took 0,001 sec
-Testcase: greater_Test_Short took 0 sec
-Testcase: valueWithinByteRange_Test_Short took 0 sec
+Testcase: greater_Test_Short took 0,001 sec
+Testcase: valueWithinByteRange_Test_Short took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
 	at org.framework.primitive.tests.JunitTestPrimitive.valueWithinByteRange_Test_Short(JunitTestPrimitive.java:114)
 
 Testcase: notEquals_Test took 0 sec
-Testcase: greater_Test_Byte took 0 sec
-Testcase: greater_Test_Long took 0 sec
-Testcase: divisor_Test_Short took 0 sec
-Testcase: equals_Short_Test took 0 sec
+Testcase: greater_Test_Byte took 0,001 sec
+Testcase: greater_Test_Long took 0,002 sec
+Testcase: divisor_Test_Short took 0,003 sec
+Testcase: equals_Short_Test took 0,001 sec
 Testcase: equals_Test_Long took 0 sec
-Testcase: valueWithinShortRange_Test_Long took 0,001 sec
-Testcase: equals_TestByte took 0 sec
+Testcase: valueWithinShortRange_Test_Long took 0 sec
+Testcase: equals_TestByte took 0,001 sec
 Testcase: equals_Test_Int took 0 sec
 Testcase: valueWithinIntRange_Test_Long took 0,001 sec
 Testcase: valueWithinFloatRange_Test_Double took 0 sec
@@ -80,10 +80,10 @@ junit.framework.AssertionFailedError
 	at org.framework.primitive.tests.JunitTestPrimitive.valueWithinFloatRange_Test_Double(JunitTestPrimitive.java:341)
 
 Testcase: divisor_Test_Int took 0 sec
-Testcase: greater_Test_Double took 0 sec
+Testcase: greater_Test_Double took 0,001 sec
 Testcase: valueWithinShortRange_Test_Int took 0 sec
-Testcase: greater_Test took 0 sec
-Testcase: equals_Test took 0,001 sec
-Testcase: divisor_Test took 0 sec
+Testcase: greater_Test took 0,001 sec
+Testcase: equals_Test took 0 sec
+Testcase: divisor_Test took 0,001 sec
 Testcase: less_Test took 0 sec
 Testcase: valueWithinByteRange_Test took 0 sec

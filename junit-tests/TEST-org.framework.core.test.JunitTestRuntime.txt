@@ -1,16 +1,16 @@
 Testsuite: org.framework.core.test.JunitTestRuntime
-Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,081 sec
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,119 sec
 
-Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,011 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,01 sec
+Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromArray took 0,008 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteTwoTest took 0,009 sec
 Testcase: testRuntimeClass_Method_ExecuteMethodSeveralConstructorParameter took 0,001 sec
 Testcase: testRuntimeClass_Method_executeMethodSuccess took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunSeveralExecuteTest took 0,003 sec
 Testcase: testRuntimeClass_Method_addClass_TryAddSeveralClassesFromList took 0 sec
-Testcase: testRuntimeClass_Constructor_ParameterConstructor took 0 sec
+Testcase: testRuntimeClass_Constructor_ParameterConstructor took 0,001 sec
 Testcase: testRuntimeClass_Method_executeMethodFailed took 0,001 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteThreeTest took 0,003 sec
-Testcase: testRuntimeClass_Constructor_EmptyConstructor took 0 sec
-Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,001 sec
-Testcase: testRuntimeClass_Method_AddClass_AddOneClass took 0 sec
-Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteThreeTest took 0,005 sec
+Testcase: testRuntimeClass_Constructor_EmptyConstructor took 0,002 sec
+Testcase: testRuntimeClass_Method_getListOfAnnotationMethod took 0,004 sec
+Testcase: testRuntimeClass_Method_AddClass_AddOneClass took 0,001 sec
+Testcase: testRuntimeClass_Method_Execute_RunExecuteOneTest took 0,002 sec
