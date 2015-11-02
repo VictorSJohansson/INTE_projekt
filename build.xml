@@ -5,25 +5,24 @@
 
 	<!-- Tests is used by junit to print report -->
 	<property name="tests" location="junit-tests" />
-	
+
 	<!-- Lib is where junit jarfiles are stored -->
 	<property name="lib" location="lib" />
-	
+
 	<!-- src where the java package is located -->
 	<property name="src" location="src" />
-	
+
 	<!-- compile where javac will put the compiled version -->
 	<property name="compile" location="bin" />
-	
+
 	<!-- dist where distribution will be created -->
 	<property name="dist" location="dist" />
-	
-	<!-- dist where distribution will be created -->
+
+	<!-- Where findbugs will be created -->
 	<property name="findbugs.dir" location="Findbugs" />
-	
 	<property name="findbugs.home" value="C:/Program Files (x86)/findbugs-3.0.1" />
 
-	
+
 	<!-- Used William Brendel's suggested solution to create the solution below: 
 	http://stackoverflow.com/questions/722774/getting-ant-javac-to-recognise-a-classpath 
 	Combined the solution with Oers suggested solution:
@@ -34,7 +33,7 @@
 		</fileset>
 		<pathelement path="${compile}" />
 	</path>
-	
+
 	<target name="init" depends="clean-compile">
 		<!-- Create the time stamp -->
 		<tstamp />
@@ -50,7 +49,7 @@
 			<classpath refid="junit-classpath" />
 		</javac>
 	</target>
-	
+
 	<target name="dist" depends="compile" description="generate the distribution">
 		<!-- Create the distribution directory -->
 		<mkdir dir="${dist}/lib" />
@@ -58,64 +57,58 @@
 		<!-- Put everything in ${build} into the TestFramework-${tstamp}.jar file -->
 		<jar jarfile="${dist}/lib/TestFramework-${DSTAMP}.jar" basedir="${compile}" />
 	</target>
-	
+
 	<target name="findbugs" depends="dist">
-		<taskdef name="findbugs" 
-		classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
-		
+		<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
+
 		<mkdir dir="${findbugs.dir}" />
-		
-		<findbugs home="${findbugs.home}"
-              output="xml"
-              outputFile="${findbugs.dir}/bcel-fb.xml">
+
+		<findbugs home="${findbugs.home}" output="xml" outputFile="${findbugs.dir}/bcel-fb.xml">
 			<auxClasspath path="${basedir}/lib/hamcrest-core-1.3.jar" />
 			<auxClasspath path="${basedir}/lib/junit-4.12.jar" />
 			<sourcePath path="${basedir}/org/" />
 			<class location="${basedir}/dist/lib/TestFramework-${DSTAMP}.jar" />
 		</findbugs>
 	</target>
-		
+
 	<!-- Run junit tests -->
-	<target name="run-junit" depends="compile" 
-		description="Run all our junit tests">
-			
+	<target name="run-junit" depends="compile" description="Run all our junit tests">
 		<junit printsummary="yes" haltonfailure="no">
 			<classpath refid="junit-classpath" />
 
-			<formatter type="plain" usefile="false"/>
+			<formatter type="plain" usefile="false" />
 			<formatter type="plain" />
-			
+
 			<batchtest fork="yes" todir="${tests}">
-			    <fileset dir="${src}">
-			      <include name="**/*Junit*.java"/>
-			    </fileset>
-			  </batchtest>
-			
-		</junit>	
+				<fileset dir="${src}">
+					<include name="**/*Junit*.java" />
+				</fileset>
+			</batchtest>
+		</junit>
 	</target>
 
 	<target name="clean-dist" description="clean up">
 		<!-- Delete the ${dist} directory trees -->
 		<delete dir="${dist}" />
 	</target>
-	
+
 	<target name="clean-tests" description="clean up">
 		<!-- Delete the ${tests} directory trees -->
 		<delete dir="${tests}" />
 	</target>
-	
+
 	<target name="clean-compile" description="clean up">
 		<!-- Delete the ${compile} directory trees -->
 		<delete dir="${compile}" />
 	</target>
-	
+
 	<target name="clean-findbugs" description="clean up">
 		<!-- Delete the ${findbugs.dir} directory trees -->
 		<delete dir="${findbugs.dir}" />
 	</target>
-	
+
 	<target name="clean-all" depends="clean-compile, clean-dist, clean-tests, clean-findbugs" description="clean up all">
-	<!-- Delete the ${compile}, ${dist} and ${tests} directory trees -->
+		<!-- Delete the ${compile}, ${dist} and ${tests} directory trees -->
 	</target>
-	
+
 </project>

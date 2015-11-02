@@ -1,7 +1,5 @@
 package org.framework.tests;
 
-import org.framework.Main;
-
 import org.junit.Test;
 import org.junit.Test;
 import org.junit.Before;
@@ -14,14 +12,17 @@ import org.hamcrest.core.IsNull;
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matcher.*;
 
-import org.framework.core.runtime.*;
-import org.framework.core.test.target.*;
+import org.framework.Main;
 
 public class JunitTestMain
 {
+	
+	
 	@Test
-	public void nothing()
+	public void testMainClass_Method_SendZeroParameterToMain()
 	{
-		
+		Main m = new Main();
+		m.addParameters(new String[]{});
+		assertThat(m.getParameters().length(), is(0));
 	}
 }
