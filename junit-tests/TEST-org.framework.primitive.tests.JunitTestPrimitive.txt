@@ -1,16 +1,16 @@
-Testsuite: org.framework.primitive.tests.testPrimitive
-Tests run: 33, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0,14 sec
+Testsuite: org.framework.primitive.tests.JunitTestPrimitive
+Tests run: 33, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0,096 sec
 
-Testcase: valueWithinByteRange_Test_Int took 0,008 sec
+Testcase: valueWithinByteRange_Test_Int took 0,007 sec
 Testcase: less_Test_Byte took 0,001 sec
 Testcase: less_Test_Long took 0 sec
 Testcase: equals_Test_Double took 0 sec
 Testcase: divisor_Test_Byte took 0 sec
 Testcase: divisor_Test_Long took 0,001 sec
 Testcase: integerValue_Test_Double took 0 sec
-Testcase: valueWithinByteRange_Test_Long took 0 sec
+Testcase: valueWithinByteRange_Test_Long took 0,001 sec
 Testcase: sameIntegerValue_Test_Float took 0 sec
-Testcase: less_Test_Float took 0 sec
+Testcase: less_Test_Float took 0,001 sec
 Testcase: less_Test_Short took 0,001 sec
 Testcase: equals_Char_Test took 0,001 sec
 Testcase: testequalsTestBoolean took 0 sec
@@ -23,24 +23,24 @@ Testcase: valueWithinByteRange_Test_Short took 0,005 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
-	at org.framework.primitive.tests.testPrimitive.valueWithinByteRange_Test_Short(testPrimitive.java:114)
+	at org.framework.primitive.tests.JunitTestPrimitive.valueWithinByteRange_Test_Short(JunitTestPrimitive.java:114)
 
-Testcase: notEquals_Test took 0,001 sec
+Testcase: notEquals_Test took 0 sec
 Testcase: greater_Test_Byte took 0 sec
-Testcase: greater_Test_Long took 0 sec
+Testcase: greater_Test_Long took 0,001 sec
 Testcase: divisor_Test_Short took 0 sec
-Testcase: equals_Short_Test took 0,001 sec
-Testcase: equals_Test_Long took 0,001 sec
-Testcase: valueWithinShortRange_Test_Long took 0 sec
-Testcase: equals_TestByte took 0,001 sec
+Testcase: equals_Short_Test took 0 sec
+Testcase: equals_Test_Long took 0 sec
+Testcase: valueWithinShortRange_Test_Long took 0,001 sec
+Testcase: equals_TestByte took 0 sec
 Testcase: equals_Test_Int took 0 sec
 Testcase: valueWithinIntRange_Test_Long took 0 sec
-Testcase: valueWithinFloatRange_Test_Double took 0,002 sec
+Testcase: valueWithinFloatRange_Test_Double took 0,001 sec
 	FAILED
 null
 junit.framework.AssertionFailedError
-	at org.framework.primitive.tests.testPrimitive.valueWithinFloatRange_Test_Double(testPrimitive.java:341)
+	at org.framework.primitive.tests.JunitTestPrimitive.valueWithinFloatRange_Test_Double(JunitTestPrimitive.java:341)
 
-Testcase: divisor_Test_Int took 0 sec
+Testcase: divisor_Test_Int took 0,001 sec
 Testcase: greater_Test_Double took 0 sec
 Testcase: valueWithinShortRange_Test_Int took 0 sec

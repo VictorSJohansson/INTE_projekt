@@ -1,0 +1,8 @@
+Testsuite: org.framework.core.test.JunitTestFailTask
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,039 sec
+
+Testcase: testFailTaskValue2IsCorrect took 0,007 sec
+Testcase: testFailTaskValue1IsCorrect took 0 sec
+Testcase: testFailTaskTestName_TestNameIsCorrect took 0 sec
+Testcase: testFailTasktoString took 0 sec
+Testcase: testFailTaskConstructorIsNull_NullTestName took 0,002 sec

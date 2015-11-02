@@ -76,8 +76,8 @@
 	</target>
 		
 	<!-- FrameworkTestSuite -->
-	<target name="junit-suite-FrameworkTestSuite" depends="compile" 
-		description="run junit testsuite FrameworkTestSuite">
+	<target name="run-junit" depends="compile" 
+		description="Run all our junit tests">
 			
 		<junit printsummary="yes" haltonfailure="no">
 			<classpath refid="junit-classpath" />
