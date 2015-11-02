@@ -37,11 +37,15 @@ public class Main
 		}
 	}
 	
-	public int parametersRun()
+	public int getParametersRun()
 	{
 		return 0;
 	}
 	
+	public void run()
+	{
+		
+	}
 	
 	
 	

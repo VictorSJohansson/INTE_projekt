@@ -57,9 +57,18 @@ public class JunitTestMain
 	}
 	
 	@Test
-	public void testMainClass_Method_runMainWithZeroArguments()
+	public void testMainClass_Method_runMainWithZeroArgument()
 	{
 		main.run();
-		assertThat(main.getParameters(), is(0));
+		assertThat(main.getParametersRun(), is(0));
 	}
+	
+	@Test
+	public void testMainClass_Method_runMainWithOneArgument()
+	{
+		main.addParameter("");
+		main.run();
+		assertThat(main.getParametersRun(), is(1));
+	}
+	
 }
