@@ -16,17 +16,24 @@ import org.framework.Main;
 
 public class JunitTestMain
 {
+	private Main main;
+	
+	@Before
+	public void createMainObject()
+	{
+		main = new Main();
+	}
 	
 	@Test
 	public void testMainClass_Method_getZeroParameterFromMain()
 	{
-		assertThat(Main.getParameters().length, is(0));
+		assertThat(main.getParameters().length, is(0));
 	}
 
 	@Test
 	public void testMainClass_Method_addOneParameterToMain()
 	{
-		Main.addParameter("");
-		assertThat(Main.getParameters().length, is(1));
+		main.addParameter("");
+		assertThat(main.getParameters().length, is(1));
 	}
 }

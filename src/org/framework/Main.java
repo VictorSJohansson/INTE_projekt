@@ -3,14 +3,17 @@ package org.framework;
 public class Main
 {
 	
-	public static String[] getParameters()
+	String[] parameters = new String[0]; 
+	
+	public String[] getParameters()
 	{
-		return new String[0];
+		return parameters;
 	}
 	
-	public static void addParameter(String parameter)
+	public void addParameter(String parameter)
 	{
-		
+		parameters = new String[1];
+		parameters[0] = parameter;
 	}
 	
 	
