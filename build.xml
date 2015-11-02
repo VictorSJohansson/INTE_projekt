@@ -42,7 +42,7 @@
 		<mkdir dir="${compile}" />
 	</target>
 
-	<target name="compile" depends="init" description="compile the source">
+	<target name="compile" depends="init" description="compile the source code">
 		<!-- Compile the java code from ${src} into ${compile} -->
 
 		<javac includeantruntime="false" destdir="${compile}" debug="true">
@@ -50,7 +50,7 @@
 			<classpath refid="junit-classpath" />
 		</javac>
 	</target>
-
+	
 	<target name="dist" depends="compile" description="generate the distribution">
 		<!-- Create the distribution directory -->
 		<mkdir dir="${dist}/lib" />
@@ -75,7 +75,7 @@
 		</findbugs>
 	</target>
 		
-	<!-- FrameworkTestSuite -->
+	<!-- Run junit tests -->
 	<target name="run-junit" depends="compile" 
 		description="Run all our junit tests">
 			
