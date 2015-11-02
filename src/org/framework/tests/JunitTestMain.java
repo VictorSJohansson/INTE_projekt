@@ -55,4 +55,11 @@ public class JunitTestMain
 		main.addParameter("","","","","");
 		assertThat(main.getParameters().size(), is(5));
 	}
+	
+	@Test
+	public void testMainClass_Method_runMainWithZeroArguments()
+	{
+		main.run();
+		assertThat(main.getParameters(), is(0));
+	}
 }

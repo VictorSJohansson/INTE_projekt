@@ -10,7 +10,6 @@ public class Main
 	List<String> parameters;
 	public Runtime runtime;
 	
-	
 	public Main()
 	{
 		parameters = new ArrayList<>(); 
@@ -36,6 +35,11 @@ public class Main
 		{
 			addParameter(token);
 		}
+	}
+	
+	public int parametersRun()
+	{
+		return 0;
 	}
 	
 	
