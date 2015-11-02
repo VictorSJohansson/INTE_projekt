@@ -21,8 +21,6 @@ public class JunitTestMain
 	@Test
 	public void testMainClass_Method_SendZeroParameterToMain()
 	{
-		Main m = new Main();
-		m.addParameters(new String[]{});
-		assertThat(m.getParameters().length(), is(0));
+		assertThat(Main.getParameters().length(), is(0));
 	}
 }
