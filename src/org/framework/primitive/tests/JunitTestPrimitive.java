@@ -13,6 +13,10 @@ import org.framework.primitive.*;
 public class JunitTestPrimitive {
 	
 	
+	@Test
+	public void testIsANumber(){
+		//assertTrue(Primitive.isANumber(1));
+	}
 	/*@Before
 	public void initialize()
 	{
@@ -24,12 +28,14 @@ public class JunitTestPrimitive {
 	@Test
 	public void testequalsTestBoolean(){
 		assertTrue(Primitive.equals(true, true));
+		assertFalse(Primitive.equals(true,  false));
 	}
 	
 	//tests boolean_NotEquals
 	@Test
 	public void notEquals_Test(){
 		assertTrue(Primitive.notEquals(true, false));
+		assertFalse(Primitive.notEquals(true,  true));
 	}
 	
 	//Byte**********************************************************************************************
@@ -75,6 +81,8 @@ public class JunitTestPrimitive {
 		assertTrue(Primitive.divisor(x, y));
 		assertFalse(Primitive.divisor(y, x));
 	}
+	
+	
 	
 	//Short*********************************************************************************************
 	
@@ -142,6 +150,7 @@ public class JunitTestPrimitive {
     public void greater_Test_Int()
     {
         assertTrue(Primitive.greater(5,3));
+        assertFalse(Primitive.greater(3, 5));
         
     }
     
@@ -152,6 +161,7 @@ public class JunitTestPrimitive {
     public void less_Test_Int()
     {
         assertTrue(Primitive.less(3,5));
+        assertFalse(Primitive.less(5, 2));
         
     }
     
@@ -162,6 +172,7 @@ public class JunitTestPrimitive {
     public void divisor_Test_Int()
     {
         assertTrue(Primitive.divisor(3,6));
+        assertFalse(Primitive.divisor(6, 3));
         
     }
     
@@ -196,7 +207,11 @@ public class JunitTestPrimitive {
 	 */
 	@Test
 	public void equals_Test_Long(){
-		assertTrue(Primitive.equals(1234567, 1234567));	
+		long x = 12345;
+		long y = 12345;
+		assertTrue(Primitive.equals(x, y));
+		y=12346;
+		assertFalse(Primitive.equals(x,  y));
 	}
 	
 	/*
@@ -204,7 +219,10 @@ public class JunitTestPrimitive {
 	 */
 	@Test
 	public void greater_Test_Long(){
-		assertTrue(Primitive.greater(234567, 234566));
+		long x = 234568;
+		long y = 234567;
+		assertTrue(Primitive.greater(x, y));
+		assertFalse(Primitive.greater(y, x));
 	}
 	
 	/*
@@ -215,6 +233,7 @@ public class JunitTestPrimitive {
 		long x = 123455;
 		long y = 123456;
 		assertTrue(Primitive.less(x, y));
+		assertFalse(Primitive.less(y,  x));
 	}
 
     @Test
@@ -289,6 +308,16 @@ public class JunitTestPrimitive {
 		assertFalse(Primitive.sameIntegerValue((float)8.5, (float)9.5));
 	}
 	
+	@Test
+	public void testIsAFloatNumber(){
+		float f = 3.1f;
+		assertTrue(Primitive.isAFloatNumber(f));
+		double d = 2.2;
+		assertTrue(Primitive.isAFloatNumber(d));
+		int i = 1;
+		assertFalse(Primitive.isAFloatNumber(i));
+	}
+	
 	//Doubble*******************************************************************************************
 	
     /**
@@ -298,6 +327,7 @@ public class JunitTestPrimitive {
     public void equals_Test_Double()
     {
         assertTrue(Primitive.equals(1.5, 1.5));
+        assertFalse(Primitive.equals(1.5, 1.2));
         
     }
     
@@ -308,6 +338,7 @@ public class JunitTestPrimitive {
     public void greater_Test_Double()
     {
         assertTrue(Primitive.greater(1.5, 1.4));
+        assertFalse(Primitive.greater(1.4, 1.6));
         
     }
     
@@ -318,6 +349,7 @@ public class JunitTestPrimitive {
     public void less_Test_Double()
     {
         assertTrue(Primitive.less(1.3, 1.4));
+        assertFalse(Primitive.less(1.6, 1.3));
        
     }
     
