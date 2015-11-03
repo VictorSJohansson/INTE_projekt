@@ -258,11 +258,11 @@ public class Primitive {
 		// TODO Auto-generated method stub
 		if(x < Byte.MIN_VALUE || x > Byte.MAX_VALUE){
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, null);
-			return true;
+			return false;
 		}
 		else{
 			success(Thread.currentThread().getStackTrace()[1].getMethodName());
-			return false;
+			return true;
 		}
 	}
 	
@@ -522,7 +522,7 @@ public class Primitive {
 	public static boolean equals(long x, long y){
 		
 		int a = Long.compare(x, y);
-		if(a == 1){
+		if(a == 0){
 			success(Thread.currentThread().getStackTrace()[1].getMethodName());
 			return true;
 		}
@@ -538,7 +538,7 @@ public class Primitive {
 	public static boolean greater(long x, long y){
 		
 		int a = Long.compare(x, y);
-		if(a == 0){
+		if(a > 0){
 			success(Thread.currentThread().getStackTrace()[1].getMethodName());
 			return true;
 		}
@@ -888,11 +888,7 @@ public class Primitive {
   }
 
 	public static boolean valueWithinFloatRange(double x) { //added by John Thorelli 20/10/2015
-		if(x < Float.MIN_VALUE){
-			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, null);
-			return false;
-		}
-		else if(x > Float.MAX_VALUE){
+		if(x < Float.MIN_VALUE || x > Float.MAX_VALUE){
 			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, null);
 			return false;
 		}
@@ -909,7 +905,7 @@ public class Primitive {
 		}
 		else{
 			success(Thread.currentThread().getStackTrace()[1].getMethodName());
-			return false;
+			return true;
 		}
 	}
 	

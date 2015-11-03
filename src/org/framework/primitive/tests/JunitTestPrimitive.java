@@ -117,14 +117,12 @@ public class JunitTestPrimitive {
 	
 	@Test
 	public void valueWithinByteRange_Test_Short() {
-		short x = Byte.MAX_VALUE;
-		x += 1;
-		assertFalse(Primitive.valueWithinByteRange(x));
-		x = Byte.MIN_VALUE;
-		x -= 1;
-		assertFalse(Primitive.valueWithinByteRange(x));
-		x = 0;
+		short x = 100;
 		assertTrue(Primitive.valueWithinByteRange(x));
+		x = 128;
+		assertFalse(Primitive.valueWithinByteRange(x));
+		x = -129;
+		assertFalse(Primitive.valueWithinByteRange(x));
 	}
 	
 	//Int***********************************************************************************************
@@ -207,10 +205,10 @@ public class JunitTestPrimitive {
 	 */
 	@Test
 	public void equals_Test_Long(){
-		long x = 12345;
-		long y = 12345;
+		long x = 12345l;
+		long y = 12345l;
 		assertTrue(Primitive.equals(x, y));
-		y=12346;
+		y=12346l;
 		assertFalse(Primitive.equals(x,  y));
 	}
 	
@@ -219,8 +217,8 @@ public class JunitTestPrimitive {
 	 */
 	@Test
 	public void greater_Test_Long(){
-		long x = 234568;
-		long y = 234567;
+		long x = Long.MAX_VALUE;
+		long y = Long.MAX_VALUE-1;
 		assertTrue(Primitive.greater(x, y));
 		assertFalse(Primitive.greater(y, x));
 	}
@@ -368,15 +366,21 @@ public class JunitTestPrimitive {
     
     @Test
 	public void valueWithinFloatRange_Test_Double() { //added by John Thorelli 20/10/2015
-		double x = Float.MAX_VALUE;
-		x += 1;
-		assertFalse(Primitive.valueWithinFloatRange(x));
-		x = Float.MIN_VALUE;
-		x -= 1;
-		assertFalse(Primitive.valueWithinFloatRange(x));
-		x = 0;
+		double x = (double) Float.MAX_VALUE;
 		assertTrue(Primitive.valueWithinFloatRange(x));
+		x = Double.MAX_VALUE;
+		assertFalse(Primitive.valueWithinFloatRange(x));
+		x = Double.MIN_VALUE;
+		assertFalse(Primitive.valueWithinFloatRange(x));
 	}
+    
+    @Test
+    public void valueWithinIntRange_Test_Double(){	//added by Victor Johansson 3/11/2015
+    	double x = 2.0;
+    	assertTrue(Primitive.valueWithinIntRange(x));
+    	x=Double.MAX_VALUE;
+    	assertFalse(Primitive.valueWithinIntRange(x));
+    }
 	
 	//Char**********************************************************************************************
     
@@ -384,10 +388,45 @@ public class JunitTestPrimitive {
 	 * Tests if equals_Char() method works properly.
 	 *
 	 */
+    
+    @Test
+    public void equals_Char_Test_Char(){
+    	assertTrue(Primitive.equals('a', 'a'));
+    	assertFalse(Primitive.equals('a', 'b'));
+    }
 	@Test
 	public void equals_Char_Test()
 	{
 		assertTrue(TestChar.equals('a','a'));
 		assertFalse(TestChar.equals('a','b'));
+	}
+	
+	//Other*******************************************************************
+	
+	@Test
+	public void equals_ShortFloat_Test(){
+		short s = 2;
+		float f = 2.0f;
+		assertTrue(Primitive.equals(s, f));
+		f = 2.1f;
+		assertFalse(Primitive.equals(s, f));
+	}
+	
+	@Test
+	public void equals_ShortByte_Test(){
+		short s = 2;
+		byte b = 2;
+		assertTrue(Primitive.equals(s, b));
+		b = 3;
+		assertFalse(Primitive.equals(s,  b));
+	}
+	
+	@Test
+	public void greater_Short_Byte(){
+		short s = 10;
+		byte b = 9;
+		assertTrue(Primitive.greater(s, b));
+		b = 11;
+		assertFalse(Primitive.greater(s,  b));
 	}
 }

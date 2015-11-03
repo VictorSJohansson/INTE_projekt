@@ -58,13 +58,11 @@ public class JunitTestDoubleTest
     
     @Test
 	public void valueWithinFloatRange_Test() { //added by John Thorelli 20/10/2015
-		double x = Float.MAX_VALUE;
-		x+= 1.0;
+		double x = Double.MAX_VALUE;
 		assertFalse(TestDouble.valueWithinFloatRange(x));
-		x = Float.MIN_VALUE;
-		x-= 1.0;
+		x = (double) Float.MIN_VALUE;
 		assertFalse(TestDouble.valueWithinFloatRange(x));
-		x = 0;
+		x = (double) Float.MIN_VALUE;
 		assertTrue(TestDouble.valueWithinFloatRange(x));
 	}
 }

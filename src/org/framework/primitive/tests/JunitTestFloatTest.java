@@ -38,7 +38,7 @@ public class JunitTestFloatTest {
 	@Test
 	public void sameIntegerValue_Test() {
 		assertTrue(TestFloat.sameIntegerValue((float)5.3, (float)5.7));
-		assertFalse(TestFloat.sameIntegerValue((float)8.5, (float)8.5));
+		assertFalse(TestFloat.sameIntegerValue((float)8.5, (float)9.1));
 	}
 }
 
