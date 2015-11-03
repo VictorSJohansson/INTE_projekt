@@ -44,6 +44,10 @@ public class TestLogger {
 		}
 
 	}
+	
+	public static LogEntry getLastEntry(){
+		return tests.get(tests.size() - 1);
+	}
 
 	/*
 	 * Print information of tests to console
@@ -80,7 +84,7 @@ public class TestLogger {
 	public static int getSize() {
 		return tests.size();
 	}
-
+	
 	/*
 	 * Save all test information to file
 	 */
