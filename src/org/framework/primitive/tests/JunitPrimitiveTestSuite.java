@@ -7,10 +7,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(value = Suite.class)
 @SuiteClasses(value =
-{ JunitTestBooleanTest.class, JunitTestByteTest.class, JunitTestCharTest.class,
-		JunitTestDoubleTest.class, JunitTestFloatTest.class,
-		JunitTestIntTest.class, JunitTestLongTest.class,
-		JunitTestPrimitive.class, JunitTestShortTest.class })
+{ 
+		JunitTestPrimitive.class, })
 public class JunitPrimitiveTestSuite {
 
 }
