@@ -24,7 +24,7 @@ public class FailTask extends Subtask{
 	}
 	
 	public String toString(){
-		String str = "FAILED: " + taskName + " " + value1 + " compared to " + value2;
+		String str = "-FAILED:		" + taskName + " " + value1 + " compared to " + value2;
 		return str;
 	}
 	

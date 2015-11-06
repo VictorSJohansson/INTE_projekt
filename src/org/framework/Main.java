@@ -14,8 +14,8 @@ public class Main {
 	List<String> parameters;
 	public Runtime runtime;
 
-	private static boolean wasRun;
-	private static int parametersRan;
+	private boolean wasRun = false;
+	private int parametersRan = 0;
 
 	public Main()
 	{

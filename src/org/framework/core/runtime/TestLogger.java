@@ -42,7 +42,6 @@ public class TestLogger {
 		if (tests.size() > 0) {
 			tests.get(tests.size() - 1).addTask(task);
 		}
-
 	}
 	
 	public static LogEntry getLastEntry(){
@@ -53,18 +52,15 @@ public class TestLogger {
 	 * Print information of tests to console
 	 */
 	public static void summary() {
-		String timeStamp = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss")
-				.format(Calendar.getInstance().getTime());
-		
-		System.out.println(timeStamp);
+	
 		System.out.println(tests.size() + " tests run");		//all tests run
 		
 		for (LogEntry entry : tests) {
 			
-			System.out.print(entry.getTestName());
+			System.out.print(entry.getTestName() +  ":	");
 			
 			if (entry.getFails() > 0) {							//check if test failed
-				System.out.print(": FAILED");
+				System.out.print(" FAILED ");
 			}
 			
 			System.out.println(entry.getSubtask().size() + " run, "
@@ -73,8 +69,7 @@ public class TestLogger {
 			for (Subtask task : entry.getSubtask()) {			//show methods called by
 				System.out.println("  -" + task.toString());	//that particular test
 
-			}	
-			System.out.println("");					
+			}					
 		}
 	}
 
@@ -83,6 +78,11 @@ public class TestLogger {
 	 */
 	public static int getSize() {
 		return tests.size();
+	}
+	
+
+	public static void flush(){
+		tests = new ArrayList<LogEntry>();
 	}
 	
 	/*

@@ -5,10 +5,13 @@ import org.framework.core.test.target.TestClassWithSetup;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.rules.*;
+import org.junit.Rule;
 
 import static org.junit.Assert.*;
 
 import org.hamcrest.core.IsNull;
+import org.framework.core.runtime.SuccessfulTask;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matcher.*;
@@ -19,24 +22,33 @@ import org.framework.core.test.target.*;
 public class JunitTestCaseTest {
 
 	TestCase tc;
+	
+	@Rule
+	  public ExpectedException exception = ExpectedException.none();
+
 
 	@Before
 	public void initialize()
 	{
 		tc = new TestCase(null);
 	}
-
+	
 	@Test
 	public void testTestCaseClass_Constructor_NullConstructor_methodName()
 	{
 		assertThat(tc.getMethodName(), is(nullValue()));
 	}
+	
 
 	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_NullConstructor_cannotRun()
 	{
+		tc = new TestCase("test", new SuccessfulTask("test2"));
+		System.out.println("Did I break it?");
+		
 		assertThat(tc.run().summary(), is("0 run, 0 failed"));
 	}
+	
 
 	@Test(expected = NullPointerException.class)
 	public void testTestCaseClass_Constructor_EmptyConstructor_cannotRun()

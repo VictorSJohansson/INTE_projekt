@@ -47,7 +47,8 @@ public class JunitTestFailTask {
 	@Test
 	public void testFailTasktoString(){
 		FailTask task = new FailTask("test", 1, 2);
-		String str = "FAILED: " + "test" + " " + 1 + " compared to " + 2;
+		String str = "-FAILED:		test 1 compared to 2";
+		System.out.println(task.toString());
 		assertEquals(task.toString(), str);
 	}
 }
