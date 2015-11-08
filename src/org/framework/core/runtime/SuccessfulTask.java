@@ -9,4 +9,5 @@ public class SuccessfulTask extends Subtask{
 	public String toString(){
 		return taskName;
 	}
+
 }

@@ -30,6 +30,13 @@ public class JunitTest_MathematicalObjectsTest{
         Rectangle r2 = new Rectangle(6,6);
         
         assertTrue(Test_MathematicalObjects.equals_TwoRectangles(r1,r2));
+        
+        r1 = new Rectangle(5,5,6,6);
+        r2 = new Rectangle(5,7);
+        
+        assertFalse(Test_MathematicalObjects.equals_TwoRectangles(r1,r2));
+        r2 = new Rectangle(7,6);
+        assertFalse(Test_MathematicalObjects.equals_TwoRectangles(r2,r1));
 
     }
     
@@ -43,7 +50,15 @@ public class JunitTest_MathematicalObjectsTest{
         Rectangle r2 = new Rectangle(5,5,6,6);
         
         assertTrue(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
-
+        
+        r2 = new Rectangle(5,5,6,7);
+        assertFalse(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
+        r2 = new Rectangle(5,5,7,6);
+        assertFalse(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
+        r2 = new Rectangle(5,6,6,6);
+        assertFalse(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
+        r2 = new Rectangle(6,5,6,6);
+        assertFalse(Test_MathematicalObjects.identical_TwoRectangles(r1,r2));
     }
 
     /**
@@ -55,6 +70,10 @@ public class JunitTest_MathematicalObjectsTest{
         Rectangle r = new Rectangle(5,9,6,6);
         
         assertTrue(Test_MathematicalObjects.is_a_Square(r));
+        
+        r = new Rectangle(5,9,6,7);
+        
+        assertFalse(Test_MathematicalObjects.is_a_Square(r));
 
     }
     
@@ -93,10 +112,26 @@ public class JunitTest_MathematicalObjectsTest{
         int[] p2_x = {1,2,3};
         int[] p1_y = {4,5,6};
         int[] p2_y = {4,5,6};
+        int[] p3_x = {2,3,4};
+        int[] p3_y = {5,6,7};
+        int[] p5_y = {5,6,7,9};
+        
         Polygon p1 = new Polygon(p1_x,p1_y,3);
         Polygon p2 = new Polygon(p2_x,p2_y,3);
         
         assertTrue(Test_MathematicalObjects.identical_Polygons(p1,p2));
+        
+        p2 = new Polygon(p5_y, p5_y, 4);       
+        assertFalse(Test_MathematicalObjects.identical_Polygons(p1,p2));
+        
+        p2 = new Polygon(p3_x, p1_y, 3);       
+        assertFalse(Test_MathematicalObjects.identical_Polygons(p1,p2));
+        
+        p2 = new Polygon(p1_x, p3_y, 3);       
+        assertFalse(Test_MathematicalObjects.identical_Polygons(p1,p2));
+        
+       // p2 = new Polygon(p2_x, p2_x, 3);       
+        //assertFalse(Test_MathematicalObjects.identical_Polygons(p1,p2));
 
     }
 }

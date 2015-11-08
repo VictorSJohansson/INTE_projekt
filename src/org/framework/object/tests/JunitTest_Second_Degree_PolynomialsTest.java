@@ -31,5 +31,19 @@ public class JunitTest_Second_Degree_PolynomialsTest
         Second_Degree_Polynomial p1 = new Second_Degree_Polynomial(1,3,2);
         Second_Degree_Polynomial p2 = new Second_Degree_Polynomial(1,2,1);
         assertTrue(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+        p2 = new Second_Degree_Polynomial(8,8,8);
+        assertFalse(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+        
+        //assertTrue(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+        
+        //p2 = new Second_Degree_Polynomial(3,2,2);
+       // assertTrue(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+        //p2 = new Second_Degree_Polynomial(1,3,1);
+       // assertTrue(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+        
+      //  p2 = new Second_Degree_Polynomial(4,4,3);
+       // assertFalse(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
+      //  p2 = new Second_Degree_Polynomial(5,5,5);
+      //  assertFalse(Test_Second_Degree_Polynomials.test_common_Root(p1,p2));
     }
 }

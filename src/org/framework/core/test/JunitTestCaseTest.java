@@ -1,5 +1,7 @@
 package org.framework.core.test;
 
+import java.lang.reflect.Method;
+
 import org.junit.Test;
 import org.framework.core.test.target.TestClassWithSetup;
 import org.junit.Test;
@@ -19,12 +21,11 @@ import static org.hamcrest.Matcher.*;
 import org.framework.core.runtime.*;
 import org.framework.core.test.target.*;
 
+
 public class JunitTestCaseTest {
 
 	TestCase tc;
-	
-	@Rule
-	  public ExpectedException exception = ExpectedException.none();
+
 
 
 	@Before
@@ -40,13 +41,12 @@ public class JunitTestCaseTest {
 	}
 	
 
-	@Test(expected = NullPointerException.class)
-	public void testTestCaseClass_Constructor_NullConstructor_cannotRun()
+	@Test(expected = IllegalAccessException.class)
+	public void testTestCaseClass_Constructor_IllegalAccess_isThrown()
 	{
-		tc = new TestCase("test", new SuccessfulTask("test2"));
-		System.out.println("Did I break it?");
-		
-		assertThat(tc.run().summary(), is("0 run, 0 failed"));
+		tc = new TestCase("illegallyAccess", new MockMesser());
+		TestResult result = tc.run(new TestResult());
+		assertThat(result.summary(), is("1 run, 1 failed"));
 	}
 	
 
@@ -54,7 +54,10 @@ public class JunitTestCaseTest {
 	public void testTestCaseClass_Constructor_EmptyConstructor_cannotRun()
 	{
 		tc = new TestCase("");
-		assertThat(tc.run().summary(), is("0 run, 0 failed"));
+		//TestResult result = tc.run(new TestResult());
+		//System.out.println("----------------EMPTYCONSTRUCTOR" + result.summary());
+		assertEquals(tc.run(), null);
+		//assertThat(result.summary(), is("0 run, 0 failed"));
 	}
 
 	@Test

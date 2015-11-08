@@ -36,7 +36,15 @@ public class JunitTest_polynomialsTest
         Polynomial p4 = (p3.plus(new Polynomial(2,5))).minus(new Polynomial(1,9));
         Polynomial p5 = (p3.plus(new Polynomial(2,4))).minus(new Polynomial(1,9));
         assertFalse(Test_polynomials.equals_Test(p4,p5));
+        
+        Polynomial p6 = new Polynomial(7,8);
+        Polynomial p7 = new Polynomial(2,4);
+        assertFalse(Test_polynomials.equals_Test(p6,p7));
     }
 
+    @Test
+    public void test_Test_PolynaminalsConstructor(){
+    	Test_polynomials t = new Test_polynomials();
+    }
     
 }

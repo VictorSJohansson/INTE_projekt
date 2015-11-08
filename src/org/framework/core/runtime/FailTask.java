@@ -1,7 +1,5 @@
 package org.framework.core.runtime;
 
-import java.lang.reflect.Field;
-
 public class FailTask extends Subtask{
 
 	private Object value1;

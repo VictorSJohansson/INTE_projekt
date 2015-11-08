@@ -110,7 +110,7 @@ public class Test_MathematicalObjects
         int[] a_yor = a.ypoints;
         int[] b_yor = b.ypoints;
         
-        return Arrays.equals(a_xor, b_xor) && Arrays.equals(a_yor, b_yor) && a_n == b_n;
+        return a_n == b_n && Arrays.equals(a_xor, b_xor) && Arrays.equals(a_yor, b_yor);
         
     }
 }
