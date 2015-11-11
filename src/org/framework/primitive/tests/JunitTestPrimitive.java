@@ -281,9 +281,11 @@ public class JunitTestPrimitive {
 	//Float*********************************************************************************************
 	
 	public void equals_Test_Float() {
-        assertTrue(Primitive.equals(Float.MAX_VALUE, Float.MAX_VALUE));
-        assertFalse(Primitive.equals(Float.MAX_VALUE, Float.MIN_VALUE));
-        
+		float x = 2.0f;
+		float y = 2.0f;
+	    assertTrue(Primitive.equals(x, y));
+	    y=3.0f;
+        assertFalse(Primitive.equals(x, y));     
     }
 	
 	@Test

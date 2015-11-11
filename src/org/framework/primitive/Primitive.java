@@ -701,6 +701,19 @@ public class Primitive {
 			return false;
 		}
 	}
+	
+	public static boolean equals(float x, float y) {
+		// TODO Auto-generated method stub
+
+		if(x == y){
+			success(Thread.currentThread().getStackTrace()[1].getMethodName());
+			return true;
+		}
+		else{
+			fail(Thread.currentThread().getStackTrace()[1].getMethodName(), x, y);
+			return false;
+		}
+	}
 
 	public static boolean greater(float x, float y) {
 		// TODO Auto-generated method stub
