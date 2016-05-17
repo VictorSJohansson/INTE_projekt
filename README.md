@@ -1,5 +1,5 @@
-# INTE_projekt
-Projektarbete 2015 - Introduktion till testning av it-system
+# Simple_Test_Framework
+Projektarbete 2015 - Simple Testing Framework
 
 Master is for functional releases
 
